@@ -1,6 +1,6 @@
 # NLP projekt – Food Hazard Detection (SemEval 2025 Task 9)
 
-Tím: [meno 1], [meno 2], [meno 3]
+Tím: [Alexandra Domonkošová], [Kristína Gvozdiaková], [Alžbeta Jakšová]
 
 Baseline TF-IDF + logistická regresia a lineárny SVM pre obe podúlohy:
 - **ST1:** `hazard-category` (10 tried) a `product-category` (22 tried)
