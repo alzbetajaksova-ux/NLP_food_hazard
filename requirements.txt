@@ -1,4 +1,4 @@
-# Overené s Python 3.13 (notebook beží aj na Python 3.10+)
+# Overené s Python 3.13 (tieto verzie vyžadujú Python 3.11+)
 pandas==3.0.5
 numpy==2.5.3
 scikit-learn==1.9.1
