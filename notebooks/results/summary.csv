@@ -1,0 +1,6 @@
+model,ST1,ST2,hazard-category,product-category,hazard,product,čas [s]
+Majoritná trieda,0.0352,0.0014,0.0536,0.022,0.0021,0.0002,0
+"SVM (title+text, balanced)",0.7225,0.4097,0.7631,0.6825,0.585,0.2202,21
+"LR (title+text, balanced)",0.717,0.4063,0.7431,0.6917,0.5551,0.2472,112
+"SVM (title, bez váh)",0.6634,0.3631,0.6382,0.683,0.4261,0.2596,5
+"LR (title, bez váh)",0.6335,0.3285,0.5999,0.6645,0.3575,0.2469,13
