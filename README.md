@@ -29,12 +29,12 @@ NLP_food_hazard/
 │   ├── baseline_food_hazard.ipynb    trénovanie, výber nastavení na validácii, test, uloženie výsledkov a predikcií
 │   └── eda_chybova_analyza.ipynb     analýza dát, chybová analýza, bootstrap intervaly spoľahlivosti
 ├── results/                          všetko vytvoria notebooky
-│   ├── summary.csv                   skóre na teste (baseline)
-│   ├── predikcie_test.csv            predikcie SVM a LR na teste (baseline, číta ich EDA notebook)
-│   ├── bootstrap.csv                 95 % intervaly a rozdiel SVM − LR (EDA)
-│   ├── chyby_na_komentar.csv         20 chýb s ručným komentárom v stĺpci „dôvod“ (EDA)
-│   └── figures/                      6 obrázkov do správy (EDA)
-└── report/                           správa k 1. etape (PDF) a príloha o použití LLM [doplniť]
+    ├── summary.csv                   skóre na teste (baseline)
+    ├── predikcie_test.csv            predikcie SVM a LR na teste (baseline, číta ich EDA notebook)
+    ├── bootstrap.csv                 95 % intervaly a rozdiel SVM − LR (EDA)
+    ├── chyby_na_komentar.csv         20 chýb s ručným komentárom v stĺpci „dôvod“ (EDA)
+    └── figures/                      6 obrázkov do správy (EDA)
+
 ```
 
 ## Spustenie
