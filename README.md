@@ -22,13 +22,15 @@ Podrobná tabuľka vrátane modelov len na titulku je v `results/summary.csv`.
 NLP_food_hazard/
 ├── README.md
 ├── requirements.txt
+├── dokumentacia_1etapa.docx          správa k 1. etape
+├── priloha_pouzitie_LLM.docx         príloha o použití LLM a AI agentov
 ├── data/
 │   ├── incidents_train.csv, incidents_valid.csv, incidents_test.csv
 │   └── statistics_train.ipynb        starší pomocný prehľad trénovacích dát (spúšťa sa z data/)
 ├── notebooks/
 │   ├── baseline_food_hazard.ipynb    trénovanie, výber nastavení na validácii, test, uloženie výsledkov a predikcií
 │   └── eda_chybova_analyza.ipynb     analýza dát, chybová analýza, bootstrap intervaly spoľahlivosti
-├── results/                          všetko vytvoria notebooky
+└── results/                          všetko vytvoria notebooky
     ├── summary.csv                   skóre na teste (baseline)
     ├── predikcie_test.csv            predikcie SVM a LR na teste (baseline, číta ich EDA notebook)
     ├── bootstrap.csv                 95 % intervaly a rozdiel SVM − LR (EDA)
