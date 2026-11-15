@@ -80,7 +80,8 @@ Všetky systémy 2. etapy ukladajú výstupy v rovnakom formáte a vyhodnocujú 
 src/
 ├── spolocne.py        načítanie dát, tokenizér, oficiálne skóre, ukladanie a načítanie formátov
 ├── vyhodnot.py        skóre, bootstrap intervaly, párové porovnanie, recall@k kandidátov
-└── e0_svm_export.py   E0: predikcie a top-10 kandidátov baseline SVM (valid aj test)
+├── e0_svm_export.py   E0: predikcie a top-10 kandidátov baseline SVM (valid aj test)
+└── e3_hierarchia.py   E3: hierarchia hazard → kategória a produkt z titulku nad ľubovoľným systémom
 results/etapa2/
 ├── predikcie/<systém>_<split>.csv
 └── kandidati/<systém>_<split>.csv
@@ -95,9 +96,12 @@ Názov systému = číslo experimentu a model, napríklad `E0_svm`, `E2_roberta_
 ```bash
 python src/e0_svm_export.py                                   # E0, asi pol minúty
 python src/vyhodnot.py --split valid E0_svm --kandidati E0_svm  # skóre a recall@k na valid
+python src/e3_hierarchia.py --zaklad E0_svm                   # E3 nad SVM, vypíše abláciu na valid
 python src/vyhodnot.py --split valid E3_svm --porovnaj E0_svm --bootstrap 1000
 ```
 
 Pravidlá: nastavenia sa vyberajú len na `valid`. Test sa vyhodnotí jediný raz na konci pre všetky zmrazené systémy (`--split test --povolit-test`); bez prepínača skript test odmietne.
 
 Baseline E0 na valid (kontrola): ST1 0,736, ST2 0,416. Správna trieda medzi top-10 kandidátmi: hazard 96,6 %, produkt 67,6 % (na 1. mieste 82,7 % a 40,9 %).
+
+**E3 nad SVM (valid, k = 5)**: hierarchia zvýši ST1 z 0,736 na 0,747, produkt z titulku zvýši ST2 z 0,416 na 0,426 (párový bootstrap: +0,011 [+0,000; +0,020], lepší v 98 % výberov). Kandidáti E3 majú správny produkt v top-10 v 71,0 % správ (E0: 67,6 %). Hodnota k bola vybraná na valid z možností 3, 5 a 10, preto je výsledok na valid mierne optimistický; potvrdí ho až test na konci. Pri kandidátoch E3 je na 1. mieste produkt z titulku, preto sa top-1 kandidát nemusí zhodovať s predikciou.
