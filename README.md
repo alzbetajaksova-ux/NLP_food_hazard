@@ -71,3 +71,33 @@ V Jupyteri / datalabe: otvoriť notebook v priečinku `notebooks/` a spustiť **
 Dáta sú z [repozitára úlohy](https://github.com/food-hazard-detection-semeval-2025/food-hazard-detection-semeval-2025.github.io/tree/main/data). Podľa stránky úlohy je úplný dataset zverejnený pod licenciou **Creative Commons BY-NC-SA 4.0** na [Zenode](https://zenodo.org/doi/10.5281/zenodo.10820657): pri použití treba uviesť autorov, nesmie sa použiť komerčne a odvodené diela sa musia šíriť pod rovnakou licenciou. Kód organizátorov v ich repozitári má licenciu GPL-3.0.
 
 Citácia úlohy a datasetu: Randl, K. et al. (2025). *SemEval-2025 Task 9: The Food Hazard Detection Challenge.* arXiv:2503.19800.
+
+## 2. etapa: spoločné formáty a skripty (rozpracované)
+
+Všetky systémy 2. etapy ukladajú výstupy v rovnakom formáte a vyhodnocujú sa jedným skriptom, aby sa dali férovo porovnať s baseline (E0).
+
+```
+src/
+├── spolocne.py        načítanie dát, tokenizér, oficiálne skóre, ukladanie a načítanie formátov
+├── vyhodnot.py        skóre, bootstrap intervaly, párové porovnanie, recall@k kandidátov
+└── e0_svm_export.py   E0: predikcie a top-10 kandidátov baseline SVM (valid aj test)
+results/etapa2/
+├── predikcie/<systém>_<split>.csv
+└── kandidati/<systém>_<split>.csv
+```
+
+**Predikcie** (`results/etapa2/predikcie/<systém>_<split>.csv`): jeden riadok na správu, stĺpce `id, hazard-category, product-category, hazard, product`. `id` je poradie správy v splite (0 až n − 1).
+
+**Kandidáti** (`results/etapa2/kandidati/<systém>_<split>.csv`): pre každú správu a každý štítok 10 riadkov, stĺpce `id, stitok, poradie, trieda, skore`. `poradie` 1 je najpravdepodobnejšia trieda; `skore` je skóre modelu (pri SVM `decision_function`, pri transformeri pravdepodobnosť), väčšie = lepšie.
+
+Názov systému = číslo experimentu a model, napríklad `E0_svm`, `E2_roberta_s42`, `E3_svm`, `E4_llm_svm`. Pri ukladaní z Pythonu použite `uloz_predikcie` a `uloz_kandidatov` zo `src/spolocne.py`, ktoré formát skontrolujú.
+
+```bash
+python src/e0_svm_export.py                                   # E0, asi pol minúty
+python src/vyhodnot.py --split valid E0_svm --kandidati E0_svm  # skóre a recall@k na valid
+python src/vyhodnot.py --split valid E3_svm --porovnaj E0_svm --bootstrap 1000
+```
+
+Pravidlá: nastavenia sa vyberajú len na `valid`. Test sa vyhodnotí jediný raz na konci pre všetky zmrazené systémy (`--split test --povolit-test`); bez prepínača skript test odmietne.
+
+Baseline E0 na valid (kontrola): ST1 0,736, ST2 0,416. Správna trieda medzi top-10 kandidátmi: hazard 96,6 %, produkt 67,6 % (na 1. mieste 82,7 % a 40,9 %).
