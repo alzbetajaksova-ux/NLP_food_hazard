@@ -1,0 +1,566 @@
+id,hazard-category,product-category,hazard,product
+0,biological,"meat, egg and dairy products",listeria spp,minced beef meat
+1,biological,"meat, egg and dairy products",listeria spp,minced beef meat
+2,biological,"meat, egg and dairy products",listeria spp,minced beef meat
+3,allergens,ices and desserts,pecan nut,biscuits
+4,biological,"meat, egg and dairy products",listeria spp,minced beef meat
+5,foreign bodies,cereals and bakery products,plastic fragment,biscuits
+6,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+7,packaging defect,alcoholic beverages,packaging defect,biscuits
+8,foreign bodies,"meat, egg and dairy products",plastic fragment,biscuits
+9,biological,seafood,listeria monocytogenes,biscuits
+10,foreign bodies,"meat, egg and dairy products",plastic fragment,biscuits
+11,packaging defect,alcoholic beverages,packaging defect,biscuits
+12,chemical,seafood,Aflatoxin,biscuits
+13,chemical,"soups, broths, sauces and condiments",other not classified chemical hazards,biscuits
+14,foreign bodies,cereals and bakery products,metal fragment,biscuits
+15,chemical,fats and oils,polycyclic aromatic hydrocarbons,biscuits
+16,allergens,prepared dishes and snacks,soybeans and products thereof,chilled pork sausages
+17,biological,"meat, egg and dairy products",escherichia coli,biscuits
+18,biological,cereals and bakery products,moulds,biscuits
+19,biological,non-alcoholic beverages,other not classified biological hazards,biscuits
+20,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+21,allergens,cereals and bakery products,eggs and products thereof,biscuits
+22,foreign bodies,prepared dishes and snacks,metal fragment,biscuits
+23,allergens,confectionery,eggs and products thereof,biscuits
+24,allergens,other food product / mixed,fish and products thereof,biscuits
+25,foreign bodies,"soups, broths, sauces and condiments",metal fragment,biscuits
+26,allergens,ices and desserts,eggs and products thereof,biscuits
+27,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+28,allergens,prepared dishes and snacks,soybeans and products thereof,biscuits
+29,allergens,cereals and bakery products,peanuts and products thereof,biscuits
+30,biological,ices and desserts,escherichia coli,biscuits
+31,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+32,allergens,cereals and bakery products,milk and products thereof,biscuits
+33,chemical,non-alcoholic beverages,chemical compound (high content),biscuits
+34,biological,"meat, egg and dairy products",listeria spp,minced beef meat
+35,biological,"meat, egg and dairy products",listeria spp,minced beef meat
+36,foreign bodies,other food product / mixed,insects,biscuits
+37,foreign bodies,"meat, egg and dairy products",metal fragment,biscuits
+38,biological,seafood,other not classified chemical hazards,biscuits
+39,allergens,"meat, egg and dairy products",cereals containing gluten and products thereof,biscuits
+40,allergens,cereals and bakery products,cereals containing gluten and products thereof,biscuits
+41,other hazard,non-alcoholic beverages,yeasts,biscuits
+42,biological,seafood,other not classified biological hazards,biscuits
+43,biological,prepared dishes and snacks,listeria spp,chilled pork sausages
+44,foreign bodies,prepared dishes and snacks,plastic fragment,biscuits
+45,allergens,"meat, egg and dairy products",eggs and products thereof,hot dogs
+46,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+47,allergens,fruits and vegetables,cereals containing gluten and products thereof,biscuits
+48,allergens,ices and desserts,eggs and products thereof,biscuits
+49,foreign bodies,fruits and vegetables,metal fragment,biscuits
+50,biological,fruits and vegetables,spoilage,biscuits
+51,foreign bodies,cereals and bakery products,glass fragment,biscuits
+52,other hazard,"meat, egg and dairy products",unauthorised operator,biscuits
+53,foreign bodies,cereals and bakery products,metal fragment,biscuits
+54,foreign bodies,prepared dishes and snacks,plastic fragment,biscuits
+55,allergens,"soups, broths, sauces and condiments",labelling/misdescription,biscuits
+56,allergens,cereals and bakery products,peanuts and products thereof,biscuits
+57,biological,"meat, egg and dairy products",escherichia coli,biscuits
+58,chemical,prepared dishes and snacks,high content of cyanide,biscuits
+59,foreign bodies,confectionery,glass fragment,biscuits
+60,foreign bodies,cereals and bakery products,metal fragment,biscuits
+61,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+62,fraud,herbs and spices,labelling/misdescription,biscuits
+63,biological,ices and desserts,salmonella,biscuits
+64,biological,ices and desserts,salmonella,biscuits
+65,biological,ices and desserts,salmonella,biscuits
+66,biological,ices and desserts,salmonella,biscuits
+67,biological,"nuts, nut products and seeds",salmonella,biscuits
+68,biological,cereals and bakery products,other not classified biological hazards,biscuits
+69,foreign bodies,"soups, broths, sauces and condiments",rubber fragments,biscuits
+70,fraud,herbs and spices,peanuts and products thereof,biscuits
+71,other hazard,"meat, egg and dairy products",specified risk material (srm),chilled pork sausages
+72,fraud,ices and desserts,peanuts and products thereof,biscuits
+73,biological,"meat, egg and dairy products",escherichia coli,chilled pork sausages
+74,biological,"meat, egg and dairy products",salmonella,biscuits
+75,biological,fruits and vegetables,salmonella,biscuits
+76,allergens,cereals and bakery products,cereals containing gluten and products thereof,biscuits
+77,allergens,fruits and vegetables,cereals containing gluten and products thereof,biscuits
+78,biological,fruits and vegetables,salmonella,biscuits
+79,other hazard,confectionery,other not classified,biscuits
+80,foreign bodies,cereals and bakery products,metal fragment,biscuits
+81,biological,fruits and vegetables,listeria monocytogenes,biscuits
+82,allergens,cereals and bakery products,soybeans and products thereof,biscuits
+83,foreign bodies,"meat, egg and dairy products",metal fragment,biscuits
+84,biological,prepared dishes and snacks,listeria monocytogenes,chilled pork sausages
+85,biological,prepared dishes and snacks,listeria monocytogenes,biscuits
+86,allergens,other food product / mixed,milk and products thereof,biscuits
+87,allergens,confectionery,eggs and products thereof,biscuits
+88,biological,"meat, egg and dairy products",escherichia coli,chilled pork sausages
+89,biological,prepared dishes and snacks,listeria monocytogenes,chilled pork sausages
+90,biological,herbs and spices,salmonella,biscuits
+91,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,biscuits
+92,allergens,prepared dishes and snacks,soybeans and products thereof,chilled pork sausages
+93,foreign bodies,alcoholic beverages,glass fragment,biscuits
+94,allergens,"meat, egg and dairy products",milk and products thereof,chilled pork sausages
+95,allergens,cereals and bakery products,sulphur dioxide and sulphites,biscuits
+96,foreign bodies,ices and desserts,metal fragment,biscuits
+97,biological,"meat, egg and dairy products",salmonella,chilled pork sausages
+98,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+99,allergens,"meat, egg and dairy products",soybeans and products thereof,chilled pork sausages
+100,biological,ices and desserts,salmonella,biscuits
+101,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+102,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+103,biological,fruits and vegetables,listeria monocytogenes,biscuits
+104,fraud,fruits and vegetables,undeclared additive,biscuits
+105,biological,"nuts, nut products and seeds",salmonella,biscuits
+106,allergens,confectionery,peanuts and products thereof,biscuits
+107,organoleptic aspects,alcoholic beverages,spoilage,biscuits
+108,allergens,fruits and vegetables,sulphur dioxide and sulphites,biscuits
+109,allergens,"meat, egg and dairy products",cereals containing gluten and products thereof,biscuits
+110,foreign bodies,prepared dishes and snacks,glass fragment,biscuits
+111,biological,other food product / mixed,escherichia coli,biscuits
+112,allergens,"meat, egg and dairy products",soybeans and products thereof,biscuits
+113,allergens,"meat, egg and dairy products",milk and products thereof,biscuits
+114,biological,herbs and spices,salmonella,biscuits
+115,allergens,cereals and bakery products,walnut,biscuits
+116,biological,"dietetic foods, food supplements, fortified foods",misdescription,biscuits
+117,biological,"nuts, nut products and seeds",salmonella,biscuits
+118,biological,"nuts, nut products and seeds",salmonella,biscuits
+119,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+120,biological,"nuts, nut products and seeds",salmonella,biscuits
+121,biological,"nuts, nut products and seeds",salmonella,biscuits
+122,biological,"nuts, nut products and seeds",salmonella,biscuits
+123,biological,cereals and bakery products,salmonella,biscuits
+124,biological,confectionery,salmonella,biscuits
+125,allergens,cereals and bakery products,eggs and products thereof,biscuits
+126,allergens,"meat, egg and dairy products",cereals containing gluten and products thereof,biscuits
+127,chemical,"dietetic foods, food supplements, fortified foods",chemical compound (unauthorised),biscuits
+128,fraud,other food product / mixed,misdescription,biscuits
+129,foreign bodies,ices and desserts,metal fragment,chilled pork sausages
+130,biological,herbs and spices,bacillus spp.,biscuits
+131,biological,"meat, egg and dairy products",salmonella,biscuits
+132,chemical,"meat, egg and dairy products",staphylococcus,biscuits
+133,allergens,"meat, egg and dairy products",soybeans and products thereof,biscuits
+134,allergens,herbs and spices,soybeans and products thereof,biscuits
+135,allergens,herbs and spices,soybeans and products thereof,biscuits
+136,allergens,"soups, broths, sauces and condiments",milk and products thereof,biscuits
+137,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+138,fraud,"meat, egg and dairy products",cereals containing gluten and products thereof,biscuits
+139,allergens,ices and desserts,pecan nut,biscuits
+140,chemical,seafood,toxin,biscuits
+141,other hazard,"meat, egg and dairy products",misdescription,biscuits
+142,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+143,allergens,prepared dishes and snacks,cereals containing gluten and products thereof,biscuits
+144,other hazard,"meat, egg and dairy products",misdescription,biscuits
+145,allergens,cereals and bakery products,sesame seeds and products thereof,biscuits
+146,other hazard,"meat, egg and dairy products",misdescription,biscuits
+147,foreign bodies,other food product / mixed,plastic fragment,biscuits
+148,allergens,"nuts, nut products and seeds",peanuts and products thereof,biscuits
+149,biological,"meat, egg and dairy products",escherichia coli,biscuits
+150,biological,"soups, broths, sauces and condiments",listeria monocytogenes,biscuits
+151,biological,"soups, broths, sauces and condiments",listeria monocytogenes,biscuits
+152,allergens,"meat, egg and dairy products",peanuts and products thereof,biscuits
+153,allergens,"meat, egg and dairy products",peanuts and products thereof,biscuits
+154,fraud,"meat, egg and dairy products",misdescription,biscuits
+155,allergens,"meat, egg and dairy products",eggs and products thereof,biscuits
+156,allergens,cereals and bakery products,peanuts and products thereof,biscuits
+157,allergens,"nuts, nut products and seeds",peanuts and products thereof,biscuits
+158,allergens,confectionery,nuts,biscuits
+159,allergens,fruits and vegetables,sulphur dioxide and sulphites,biscuits
+160,allergens,fruits and vegetables,sulphur dioxide and sulphites,biscuits
+161,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+162,allergens,ices and desserts,eggs and products thereof,biscuits
+163,biological,"soups, broths, sauces and condiments",salmonella,biscuits
+164,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+165,fraud,"meat, egg and dairy products",undeclared additive,biscuits
+166,chemical,fats and oils,unauthorised substance ethylene oxide,biscuits
+167,allergens,cereals and bakery products,milk and products thereof,biscuits
+168,biological,seafood,listeria monocytogenes,biscuits
+169,biological,herbs and spices,salmonella,biscuits
+170,foreign bodies,"soups, broths, sauces and condiments",plastic fragment,biscuits
+171,allergens,herbs and spices,cereals containing gluten and products thereof,biscuits
+172,biological,"meat, egg and dairy products",salmonella,biscuits
+173,biological,"meat, egg and dairy products",escherichia coli,biscuits
+174,allergens,non-alcoholic beverages,milk and products thereof,biscuits
+175,fraud,"meat, egg and dairy products",misdescription,biscuits
+176,allergens,non-alcoholic beverages,milk and products thereof,biscuits
+177,biological,prepared dishes and snacks,moulds,biscuits
+178,allergens,non-alcoholic beverages,milk and products thereof,biscuits
+179,organoleptic aspects,"meat, egg and dairy products",soybeans and products thereof,biscuits
+180,foreign bodies,confectionery,glass fragment,biscuits
+181,biological,seafood,clostridium botulinum,biscuits
+182,biological,"meat, egg and dairy products",escherichia coli,biscuits
+183,biological,non-alcoholic beverages,other not classified biological hazards,biscuits
+184,biological,prepared dishes and snacks,salmonella,biscuits
+185,foreign bodies,cereals and bakery products,plastic fragment,biscuits
+186,fraud,other food product / mixed,inspection issues,biscuits
+187,allergens,cereals and bakery products,peanuts and products thereof,biscuits
+188,allergens,cereals and bakery products,milk and products thereof,biscuits
+189,biological,"nuts, nut products and seeds",salmonella,biscuits
+190,biological,fruits and vegetables,escherichia coli,biscuits
+191,biological,cereals and bakery products,salmonella,biscuits
+192,biological,herbs and spices,salmonella,biscuits
+193,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+194,allergens,"nuts, nut products and seeds",cashew,biscuits
+195,allergens,prepared dishes and snacks,nuts,biscuits
+196,allergens,fruits and vegetables,sulphur dioxide and sulphites,biscuits
+197,allergens,prepared dishes and snacks,milk and products thereof,biscuits
+198,biological,fruits and vegetables,listeria monocytogenes,biscuits
+199,allergens,cereals and bakery products,milk and products thereof,biscuits
+200,allergens,cereals and bakery products,milk and products thereof,biscuits
+201,allergens,"dietetic foods, food supplements, fortified foods",soybeans and products thereof,biscuits
+202,foreign bodies,"meat, egg and dairy products",plastic fragment,biscuits
+203,allergens,cereals and bakery products,peanuts and products thereof,biscuits
+204,allergens,"meat, egg and dairy products",soybeans and products thereof,biscuits
+205,allergens,non-alcoholic beverages,soybeans and products thereof,biscuits
+206,biological,"nuts, nut products and seeds",listeria monocytogenes,biscuits
+207,biological,"dietetic foods, food supplements, fortified foods",listeria monocytogenes,biscuits
+208,biological,"nuts, nut products and seeds",listeria monocytogenes,biscuits
+209,biological,fruits and vegetables,salmonella,biscuits
+210,biological,"dietetic foods, food supplements, fortified foods",listeria monocytogenes,biscuits
+211,allergens,cereals and bakery products,peanuts and products thereof,biscuits
+212,biological,confectionery,listeria monocytogenes,biscuits
+213,biological,fruits and vegetables,listeria monocytogenes,biscuits
+214,biological,"nuts, nut products and seeds",salmonella,biscuits
+215,allergens,confectionery,soybeans and products thereof,biscuits
+216,biological,prepared dishes and snacks,listeria monocytogenes,biscuits
+217,biological,"meat, egg and dairy products",escherichia coli,biscuits
+218,allergens,prepared dishes and snacks,eggs and products thereof,biscuits
+219,fraud,seafood,inspection issues,biscuits
+220,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,biscuits
+221,biological,prepared dishes and snacks,listeria monocytogenes,biscuits
+222,allergens,"dietetic foods, food supplements, fortified foods",eggs and products thereof,biscuits
+223,allergens,other food product / mixed,soybeans and products thereof,biscuits
+224,foreign bodies,herbs and spices,plastic fragment,biscuits
+225,foreign bodies,"meat, egg and dairy products",metal fragment,biscuits
+226,fraud,"meat, egg and dairy products",misdescription,biscuits
+227,biological,"nuts, nut products and seeds",salmonella,biscuits
+228,biological,herbs and spices,salmonella,biscuits
+229,biological,"nuts, nut products and seeds",salmonella,biscuits
+230,allergens,ices and desserts,milk and products thereof,chilled pork sausages
+231,biological,seafood,listeria monocytogenes,biscuits
+232,foreign bodies,"meat, egg and dairy products",plastic fragment,biscuits
+233,allergens,"soups, broths, sauces and condiments",eggs and products thereof,biscuits
+234,other hazard,"meat, egg and dairy products",misdescription,biscuits
+235,allergens,"nuts, nut products and seeds",peanuts and products thereof,biscuits
+236,biological,fruits and vegetables,listeria monocytogenes,biscuits
+237,fraud,fruits and vegetables,incorrect use by dates,biscuits
+238,allergens,cereals and bakery products,milk and products thereof,biscuits
+239,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,biscuits
+240,biological,cereals and bakery products,salmonella,biscuits
+241,biological,prepared dishes and snacks,salmonella,biscuits
+242,organoleptic aspects,"soups, broths, sauces and condiments",spoilage,biscuits
+243,biological,cereals and bakery products,salmonella,biscuits
+244,biological,confectionery,salmonella,biscuits
+245,allergens,"soups, broths, sauces and condiments",soybeans and products thereof,biscuits
+246,allergens,"nuts, nut products and seeds",cashew,biscuits
+247,allergens,fruits and vegetables,pecan nut,biscuits
+248,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+249,biological,"meat, egg and dairy products",escherichia coli,biscuits
+250,foreign bodies,"meat, egg and dairy products",metal fragment,biscuits
+251,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+252,allergens,"meat, egg and dairy products",milk and products thereof,biscuits
+253,biological,fruits and vegetables,listeria monocytogenes,biscuits
+254,biological,prepared dishes and snacks,listeria monocytogenes,biscuits
+255,foreign bodies,"meat, egg and dairy products",metal fragment,biscuits
+256,chemical,"soups, broths, sauces and condiments",other not classified chemical hazards,biscuits
+257,chemical,seafood,chemical compound (unauthorised),biscuits
+258,allergens,"soups, broths, sauces and condiments",peanuts and products thereof,biscuits
+259,biological,ices and desserts,listeria monocytogenes,biscuits
+260,biological,fruits and vegetables,escherichia coli,biscuits
+261,biological,"meat, egg and dairy products",escherichia coli,biscuits
+262,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+263,biological,herbs and spices,salmonella,biscuits
+264,biological,"meat, egg and dairy products",escherichia coli,biscuits
+265,biological,"meat, egg and dairy products",escherichia coli,biscuits
+266,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+267,biological,cereals and bakery products,escherichia coli,biscuits
+268,allergens,prepared dishes and snacks,soybeans and products thereof,biscuits
+269,foreign bodies,"meat, egg and dairy products",plastic fragment,biscuits
+270,allergens,cereals and bakery products,cereals containing gluten and products thereof,biscuits
+271,allergens,prepared dishes and snacks,sulphur dioxide and sulphites,biscuits
+272,allergens,herbs and spices,cereals containing gluten and products thereof,biscuits
+273,foreign bodies,prepared dishes and snacks,rubber fragments,biscuits
+274,other hazard,"dietetic foods, food supplements, fortified foods",other not classified,biscuits
+275,biological,cereals and bakery products,norovirus,biscuits
+276,fraud,"meat, egg and dairy products",misdescription,biscuits
+277,allergens,"soups, broths, sauces and condiments",peanuts and products thereof,biscuits
+278,allergens,"meat, egg and dairy products",milk and products thereof,biscuits
+279,foreign bodies,cereals and bakery products,glass fragment,biscuits
+280,allergens,confectionery,peanuts and products thereof,biscuits
+281,allergens,cereals and bakery products,cereals containing gluten and products thereof,biscuits
+282,allergens,alcoholic beverages,milk and products thereof,biscuits
+283,allergens,"soups, broths, sauces and condiments",mustard and products thereof,biscuits
+284,other hazard,"nuts, nut products and seeds",e 425 - konjac unauthorised,biscuits
+285,biological,"soups, broths, sauces and condiments",clostridium botulinum,biscuits
+286,allergens,fruits and vegetables,peanuts and products thereof,biscuits
+287,allergens,prepared dishes and snacks,fish and products thereof,biscuits
+288,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,biscuits
+289,biological,fruits and vegetables,escherichia coli,biscuits
+290,biological,seafood,clostridium botulinum,biscuits
+291,allergens,cereals and bakery products,almond,biscuits
+292,allergens,"meat, egg and dairy products",soybeans and products thereof,biscuits
+293,fraud,prepared dishes and snacks,misdescription,biscuits
+294,allergens,"meat, egg and dairy products",soybeans and products thereof,biscuits
+295,foreign bodies,"meat, egg and dairy products",glass fragment,biscuits
+296,allergens,non-alcoholic beverages,milk and products thereof,biscuits
+297,allergens,"nuts, nut products and seeds",milk and products thereof,biscuits
+298,allergens,confectionery,sesame seeds and products thereof,biscuits
+299,fraud,"meat, egg and dairy products",misbranding,biscuits
+300,allergens,prepared dishes and snacks,cereals containing gluten and products thereof,biscuits
+301,biological,confectionery,salmonella,biscuits
+302,allergens,"dietetic foods, food supplements, fortified foods",sesame seeds and products thereof,biscuits
+303,biological,fruits and vegetables,listeria monocytogenes,biscuits
+304,foreign bodies,cereals and bakery products,insects,biscuits
+305,allergens,herbs and spices,mustard and products thereof,biscuits
+306,organoleptic aspects,"meat, egg and dairy products",bad smell / off odor,biscuits
+307,other hazard,confectionery,insects,biscuits
+308,biological,fruits and vegetables,salmonella,biscuits
+309,chemical,fruits and vegetables,heavy metals,biscuits
+310,biological,fruits and vegetables,salmonella,biscuits
+311,allergens,"cocoa and cocoa preparations, coffee and tea",almond,biscuits
+312,biological,herbs and spices,salmonella,biscuits
+313,allergens,ices and desserts,peanuts and products thereof,biscuits
+314,other hazard,cereals and bakery products,poor hygienic state,biscuits
+315,biological,"meat, egg and dairy products",escherichia coli,biscuits
+316,biological,fruits and vegetables,listeria monocytogenes,biscuits
+317,allergens,cereals and bakery products,cereals containing gluten and products thereof,biscuits
+318,biological,"cocoa and cocoa preparations, coffee and tea",salmonella,biscuits
+319,foreign bodies,"soups, broths, sauces and condiments",plastic fragment,biscuits
+320,allergens,prepared dishes and snacks,milk and products thereof,biscuits
+321,packaging defect,non-alcoholic beverages,bulging packaging,biscuits
+322,foreign bodies,"meat, egg and dairy products",metal fragment,biscuits
+323,foreign bodies,"cocoa and cocoa preparations, coffee and tea",plastic fragment,biscuits
+324,fraud,other food product / mixed,inspection issues,biscuits
+325,chemical,herbs and spices,cashew,biscuits
+326,biological,fruits and vegetables,salmonella,biscuits
+327,fraud,"meat, egg and dairy products",inspection issues,biscuits
+328,organoleptic aspects,non-alcoholic beverages,bad smell / off odor,biscuits
+329,allergens,"meat, egg and dairy products",crustaceans and products thereof,biscuits
+330,fraud,"meat, egg and dairy products",inspection issues,biscuits
+331,allergens,alcoholic beverages,sulphur dioxide and sulphites,biscuits
+332,allergens,prepared dishes and snacks,peanuts and products thereof,chilled pork sausages
+333,biological,fruits and vegetables,listeria monocytogenes,biscuits
+334,biological,prepared dishes and snacks,salmonella,biscuits
+335,biological,fruits and vegetables,salmonella,biscuits
+336,fraud,confectionery,peanuts and products thereof,biscuits
+337,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+338,allergens,cereals and bakery products,cereals containing gluten and products thereof,biscuits
+339,foreign bodies,seafood,metal fragment,biscuits
+340,allergens,seafood,eggs and products thereof,biscuits
+341,fraud,prepared dishes and snacks,misdescription,biscuits
+342,chemical,"cocoa and cocoa preparations, coffee and tea",other not classified chemical hazards,biscuits
+343,fraud,non-alcoholic beverages,eggs and products thereof,biscuits
+344,allergens,"soups, broths, sauces and condiments",milk and products thereof,biscuits
+345,organoleptic aspects,"soups, broths, sauces and condiments",spoilage,biscuits
+346,allergens,"cocoa and cocoa preparations, coffee and tea",pecan nut,biscuits
+347,allergens,fruits and vegetables,sulphur dioxide and sulphites,biscuits
+348,biological,"meat, egg and dairy products",salmonella,biscuits
+349,allergens,prepared dishes and snacks,soybeans and products thereof,chilled pork sausages
+350,allergens,"soups, broths, sauces and condiments",walnut,biscuits
+351,allergens,confectionery,soybeans and products thereof,biscuits
+352,foreign bodies,cereals and bakery products,plastic fragment,biscuits
+353,biological,"meat, egg and dairy products",salmonella,biscuits
+354,allergens,"meat, egg and dairy products",eggs and products thereof,biscuits
+355,allergens,confectionery,walnut,biscuits
+356,foreign bodies,"meat, egg and dairy products",metal fragment,biscuits
+357,allergens,"meat, egg and dairy products",almond,biscuits
+358,organoleptic aspects,"soups, broths, sauces and condiments",spoilage,biscuits
+359,foreign bodies,cereals and bakery products,plastic fragment,biscuits
+360,foreign bodies,fruits and vegetables,insects,biscuits
+361,allergens,prepared dishes and snacks,milk and products thereof,biscuits
+362,allergens,"meat, egg and dairy products",milk and products thereof,biscuits
+363,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+364,allergens,herbs and spices,milk and products thereof,biscuits
+365,allergens,cereals and bakery products,milk and products thereof,biscuits
+366,fraud,seafood,misdescription,biscuits
+367,allergens,"meat, egg and dairy products",peanuts and products thereof,biscuits
+368,allergens,cereals and bakery products,cereals containing gluten and products thereof,biscuits
+369,biological,"meat, egg and dairy products",salmonella,biscuits
+370,allergens,confectionery,milk and products thereof,biscuits
+371,foreign bodies,non-alcoholic beverages,glass fragment,biscuits
+372,biological,fruits and vegetables,listeria monocytogenes,biscuits
+373,allergens,cereals and bakery products,eggs and products thereof,biscuits
+374,biological,"nuts, nut products and seeds",listeria monocytogenes,biscuits
+375,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+376,fraud,"soups, broths, sauces and condiments",hazelnut,biscuits
+377,biological,fruits and vegetables,escherichia coli,biscuits
+378,allergens,"meat, egg and dairy products",soybeans and products thereof,biscuits
+379,allergens,seafood,eggs and products thereof,biscuits
+380,biological,seafood,listeria monocytogenes,biscuits
+381,foreign bodies,"soups, broths, sauces and condiments",plastic fragment,biscuits
+382,allergens,"nuts, nut products and seeds",milk and products thereof,biscuits
+383,fraud,"meat, egg and dairy products",incorrect use by dates,biscuits
+384,allergens,prepared dishes and snacks,cereals containing gluten and products thereof,biscuits
+385,allergens,herbs and spices,eggs and products thereof,biscuits
+386,foreign bodies,"meat, egg and dairy products",plastic fragment,biscuits
+387,biological,"meat, egg and dairy products",escherichia coli,biscuits
+388,chemical,non-alcoholic beverages,heavy metals,biscuits
+389,allergens,prepared dishes and snacks,sesame seeds and products thereof,biscuits
+390,packaging defect,alcoholic beverages,bulging packaging,biscuits
+391,allergens,"dietetic foods, food supplements, fortified foods",soybeans and products thereof,biscuits
+392,allergens,cereals and bakery products,milk and products thereof,biscuits
+393,allergens,fruits and vegetables,sulphur dioxide and sulphites,biscuits
+394,foreign bodies,"meat, egg and dairy products",metal fragment,biscuits
+395,allergens,fruits and vegetables,sulphur dioxide and sulphites,biscuits
+396,allergens,non-alcoholic beverages,milk and products thereof,biscuits
+397,allergens,confectionery,cereals containing gluten and products thereof,biscuits
+398,foreign bodies,"meat, egg and dairy products",bone fragment,biscuits
+399,biological,herbs and spices,salmonella,biscuits
+400,allergens,"meat, egg and dairy products",milk and products thereof,biscuits
+401,allergens,cereals and bakery products,milk and products thereof,biscuits
+402,biological,cereals and bakery products,escherichia coli,biscuits
+403,allergens,"meat, egg and dairy products",soybeans and products thereof,biscuits
+404,fraud,"meat, egg and dairy products",eggs and products thereof,biscuits
+405,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+406,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+407,other hazard,"soups, broths, sauces and condiments",clostridium botulinum,biscuits
+408,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+409,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,biscuits
+410,biological,non-alcoholic beverages,staphylococcus,biscuits
+411,allergens,prepared dishes and snacks,milk and products thereof,biscuits
+412,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+413,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+414,biological,prepared dishes and snacks,listeria monocytogenes,biscuits
+415,allergens,prepared dishes and snacks,mustard and products thereof,biscuits
+416,allergens,"nuts, nut products and seeds",soybeans and products thereof,biscuits
+417,biological,fruits and vegetables,salmonella,biscuits
+418,allergens,"dietetic foods, food supplements, fortified foods",fish and products thereof,biscuits
+419,biological,"nuts, nut products and seeds",salmonella,biscuits
+420,biological,prepared dishes and snacks,listeria monocytogenes,biscuits
+421,allergens,prepared dishes and snacks,eggs and products thereof,biscuits
+422,biological,fruits and vegetables,escherichia coli,biscuits
+423,biological,"soups, broths, sauces and condiments",listeria monocytogenes,biscuits
+424,foreign bodies,cereals and bakery products,plastic fragment,biscuits
+425,foreign bodies,"meat, egg and dairy products",plastic fragment,biscuits
+426,allergens,prepared dishes and snacks,milk and products thereof,biscuits
+427,allergens,non-alcoholic beverages,sesame seeds and products thereof,biscuits
+428,biological,seafood,norovirus,biscuits
+429,allergens,non-alcoholic beverages,celery and products thereof,biscuits
+430,allergens,prepared dishes and snacks,milk and products thereof,biscuits
+431,fraud,other food product / mixed,incorrect use by dates,biscuits
+432,allergens,seafood,eggs and products thereof,biscuits
+433,allergens,prepared dishes and snacks,milk and products thereof,biscuits
+434,allergens,prepared dishes and snacks,milk and products thereof,biscuits
+435,allergens,"nuts, nut products and seeds",nuts,biscuits
+436,allergens,cereals and bakery products,cereals containing gluten and products thereof,biscuits
+437,biological,cereals and bakery products,salmonella,biscuits
+438,biological,seafood,listeria monocytogenes,biscuits
+439,allergens,fruits and vegetables,sulphur dioxide and sulphites,biscuits
+440,allergens,cereals and bakery products,eggs and products thereof,biscuits
+441,biological,fruits and vegetables,listeria monocytogenes,biscuits
+442,chemical,non-alcoholic beverages,patulin,biscuits
+443,fraud,"meat, egg and dairy products",incorrect use by dates,biscuits
+444,packaging defect,seafood,packaging defect,biscuits
+445,biological,"soups, broths, sauces and condiments",moulds,biscuits
+446,allergens,confectionery,milk and products thereof,biscuits
+447,fraud,prepared dishes and snacks,misdescription,biscuits
+448,allergens,seafood,milk and products thereof,biscuits
+449,allergens,ices and desserts,milk and products thereof,biscuits
+450,biological,herbs and spices,salmonella,biscuits
+451,biological,fruits and vegetables,cyclospora,biscuits
+452,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,biscuits
+453,allergens,seafood,eggs and products thereof,biscuits
+454,biological,cereals and bakery products,listeria monocytogenes,biscuits
+455,biological,fruits and vegetables,salmonella,biscuits
+456,biological,fruits and vegetables,salmonella,biscuits
+457,allergens,"soups, broths, sauces and condiments",crustaceans and products thereof,biscuits
+458,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+459,allergens,confectionery,milk and products thereof,biscuits
+460,allergens,confectionery,peanuts and products thereof,biscuits
+461,biological,"meat, egg and dairy products",escherichia coli,biscuits
+462,foreign bodies,"meat, egg and dairy products",plastic fragment,biscuits
+463,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,biscuits
+464,allergens,prepared dishes and snacks,eggs and products thereof,biscuits
+465,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+466,chemical,non-alcoholic beverages,other not classified chemical hazards,biscuits
+467,chemical,cereals and bakery products,unauthorised substance ethylene oxide,biscuits
+468,foreign bodies,"dietetic foods, food supplements, fortified foods",plastic fragment,biscuits
+469,biological,alcoholic beverages,moulds,biscuits
+470,biological,"nuts, nut products and seeds",salmonella,biscuits
+471,chemical,cereals and bakery products,unauthorised substance ethylene oxide,biscuits
+472,biological,fruits and vegetables,escherichia coli,biscuits
+473,allergens,cereals and bakery products,pecan nut,biscuits
+474,allergens,"soups, broths, sauces and condiments",milk and products thereof,biscuits
+475,allergens,prepared dishes and snacks,cereals containing gluten and products thereof,biscuits
+476,biological,prepared dishes and snacks,salmonella,biscuits
+477,chemical,"nuts, nut products and seeds",unauthorised substance ethylene oxide,biscuits
+478,foreign bodies,"meat, egg and dairy products",plastic fragment,biscuits
+479,allergens,herbs and spices,soybeans and products thereof,biscuits
+480,allergens,fruits and vegetables,eggs and products thereof,biscuits
+481,allergens,prepared dishes and snacks,misbranding,minced beef meat
+482,foreign bodies,"soups, broths, sauces and condiments",metal fragment,biscuits
+483,biological,fruits and vegetables,clostridium botulinum,biscuits
+484,allergens,cereals and bakery products,soybeans and products thereof,biscuits
+485,allergens,cereals and bakery products,milk and products thereof,biscuits
+486,allergens,cereals and bakery products,eggs and products thereof,biscuits
+487,foreign bodies,"soups, broths, sauces and condiments",glass fragment,biscuits
+488,allergens,cereals and bakery products,milk and products thereof,biscuits
+489,chemical,"dietetic foods, food supplements, fortified foods",unauthorised substance ethylene oxide,biscuits
+490,biological,pet feed,salmonella,biscuits
+491,allergens,confectionery,almond,biscuits
+492,biological,fats and oils,salmonella,biscuits
+493,biological,prepared dishes and snacks,bacillus spp.,biscuits
+494,allergens,prepared dishes and snacks,sesame seeds and products thereof,biscuits
+495,allergens,"nuts, nut products and seeds",cashew,biscuits
+496,allergens,cereals and bakery products,milk and products thereof,biscuits
+497,allergens,"soups, broths, sauces and condiments",fish and products thereof,biscuits
+498,allergens,fruits and vegetables,cereals containing gluten and products thereof,biscuits
+499,allergens,confectionery,milk and products thereof,biscuits
+500,allergens,cereals and bakery products,sesame seeds and products thereof,biscuits
+501,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+502,foreign bodies,cereals and bakery products,glass fragment,biscuits
+503,other hazard,fruits and vegetables,spoilage,biscuits
+504,allergens,fruits and vegetables,soybeans and products thereof,biscuits
+505,biological,cereals and bakery products,other not classified biological hazards,biscuits
+506,biological,seafood,escherichia coli,biscuits
+507,allergens,"dietetic foods, food supplements, fortified foods",milk and products thereof,biscuits
+508,allergens,ices and desserts,milk and products thereof,biscuits
+509,biological,fruits and vegetables,listeria monocytogenes,biscuits
+510,allergens,fruits and vegetables,sulphur dioxide and sulphites,biscuits
+511,chemical,"dietetic foods, food supplements, fortified foods",chemical compound (unauthorised),biscuits
+512,biological,herbs and spices,salmonella,biscuits
+513,allergens,"cocoa and cocoa preparations, coffee and tea",peanuts and products thereof,biscuits
+514,chemical,ices and desserts,unauthorised substance ethylene oxide,biscuits
+515,allergens,prepared dishes and snacks,milk and products thereof,biscuits
+516,fraud,other food product / mixed,sulphur dioxide,biscuits
+517,foreign bodies,other food product / mixed,metal fragment,minced beef meat
+518,biological,"meat, egg and dairy products",salmonella,minced beef meat
+519,fraud,prepared dishes and snacks,incorrect use by dates,biscuits
+520,biological,other food product / mixed,listeria monocytogenes,biscuits
+521,biological,"meat, egg and dairy products",listeria monocytogenes,biscuits
+522,other hazard,pet feed,too high content of fluorinated organic chemicals,biscuits
+523,biological,seafood,listeria monocytogenes,biscuits
+524,fraud,fruits and vegetables,sulphur dioxide,biscuits
+525,packaging defect,"dietetic foods, food supplements, fortified foods",bulging packaging,biscuits
+526,biological,fruits and vegetables,listeria monocytogenes,biscuits
+527,allergens,confectionery,milk and products thereof,biscuits
+528,biological,fruits and vegetables,listeria monocytogenes,biscuits
+529,allergens,"cocoa and cocoa preparations, coffee and tea",hazelnut,biscuits
+530,allergens,herbs and spices,mustard and products thereof,biscuits
+531,biological,herbs and spices,salmonella,biscuits
+532,biological,"nuts, nut products and seeds",other not classified chemical hazards,biscuits
+533,allergens,other food product / mixed,milk and products thereof,biscuits
+534,biological,prepared dishes and snacks,salmonella,biscuits
+535,allergens,seafood,milk and products thereof,biscuits
+536,other hazard,"soups, broths, sauces and condiments",unauthorised operator,biscuits
+537,biological,fruits and vegetables,listeria monocytogenes,biscuits
+538,foreign bodies,fruits and vegetables,plastic fragment,biscuits
+539,biological,"dietetic foods, food supplements, fortified foods",salmonella,biscuits
+540,chemical,other food product / mixed,too high content of tetrahydrocannabinol (THC),biscuits
+541,chemical,fruits and vegetables,heavy metals,biscuits
+542,chemical,fruits and vegetables,chemical compound (unauthorised),biscuits
+543,allergens,"cocoa and cocoa preparations, coffee and tea",peanuts and products thereof,biscuits
+544,biological,pet feed,salmonella,biscuits
+545,foreign bodies,seafood,glass fragment,biscuits
+546,other hazard,alcoholic beverages,alcohol content,biscuits
+547,biological,cereals and bakery products,salmonella,biscuits
+548,allergens,fruits and vegetables,sulphur dioxide and sulphites,biscuits
+549,allergens,"meat, egg and dairy products",mustard and products thereof,biscuits
+550,allergens,"meat, egg and dairy products",fish and products thereof,biscuits
+551,biological,"cocoa and cocoa preparations, coffee and tea",salmonella,biscuits
+552,biological,"cocoa and cocoa preparations, coffee and tea",salmonella,biscuits
+553,biological,"nuts, nut products and seeds",salmonella,biscuits
+554,allergens,ices and desserts,peanuts and products thereof,biscuits
+555,allergens,cereals and bakery products,cereals containing gluten and products thereof,biscuits
+556,biological,"nuts, nut products and seeds",salmonella,biscuits
+557,chemical,"dietetic foods, food supplements, fortified foods","antibiotics, vet drugs",biscuits
+558,biological,"dietetic foods, food supplements, fortified foods",escherichia coli,biscuits
+559,chemical,ices and desserts,unauthorised substance ethylene oxide,biscuits
+560,allergens,fruits and vegetables,cashew,biscuits
+561,allergens,"dietetic foods, food supplements, fortified foods",milk and products thereof,biscuits
+562,foreign bodies,cereals and bakery products,plastic fragment,biscuits
+563,allergens,cereals and bakery products,peanuts and products thereof,biscuits
+564,allergens,confectionery,almond,biscuits

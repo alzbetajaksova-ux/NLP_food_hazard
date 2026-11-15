@@ -10,6 +10,11 @@ E1 = bez váh tried, E2 = s váhami tried (--vahy). Každý variant spúšťame 
 Príklad (GPU):  python src/e12_transformer.py --model roberta-base --seed 42
                 python src/e12_transformer.py --model roberta-base --seed 42 --vahy
 Rýchla skúška na CPU: --vzorka 200 --epochy 1 (výsledky sa vtedy neukladajú do results/).
+
+Len vybrané štítky (napr. dlhší tréning pre hazard a product s vyšším lr klasifikačnej hlavy):
+  python src/e12_transformer.py --stitky hazard product --epochy 10 --lr-hlava 1e-3 \
+      --doplnit-z E0_svmvyber --system E2b_robertabase_s42 --vahy --seed 42
+Chýbajúce štítky sa vtedy doplnia (predikcie aj kandidáti) zo systému --doplnit-z.
 """
 import argparse
 import copy
@@ -83,7 +88,10 @@ def dolad_stitok(lab, a, data, zariadenie, tokenizer):
 
     tren = davky(kod["train"], y_tr, a.batch, True, a.seed, tokenizer)
     ostatne = {s: davky(kod[s], None, a.batch * 2, False, a.seed, tokenizer) for s in ["valid", "test"]}
-    opt = torch.optim.AdamW(model.parameters(), lr=a.lr, weight_decay=0.01)
+    hlava = [p for n, p in model.named_parameters() if n.startswith("classifier")]
+    telo = [p for n, p in model.named_parameters() if not n.startswith("classifier")]
+    opt = torch.optim.AdamW([{"params": telo, "lr": a.lr},
+                             {"params": hlava, "lr": a.lr_hlava or a.lr}], weight_decay=0.01)
     krokov = len(tren) * a.epochy
     plan = get_linear_schedule_with_warmup(opt, int(0.06 * krokov), krokov)
     scaler = torch.amp.GradScaler(enabled=zariadenie.type == "cuda")
@@ -128,7 +136,14 @@ def main():
     ap.add_argument("--max-dlzka", type=int, default=256, help="max. tokenov (titulok je na začiatku)")
     ap.add_argument("--vzorka", type=int, default=0, help="len prvých N správ z každého splitu (skúška)")
     ap.add_argument("--system", help="názov systému (predvolene E1/E2_<model>_s<seed>)")
+    ap.add_argument("--stitky", nargs="+", default=LABELY, choices=LABELY, help="ktoré štítky doladiť")
+    ap.add_argument("--lr-hlava", type=float, default=None, help="iný lr pre klasifikačnú hlavu (predvolene = --lr)")
+    ap.add_argument("--doplnit-z", help="systém, z ktorého sa doplnia štítky, ktoré sa nedolaďujú")
     a = ap.parse_args()
+    if set(a.stitky) != set(LABELY) and not (a.doplnit_z or a.vzorka):
+        sys.exit("Pri --stitky treba --doplnit-z <systém>, aby výstup obsahoval všetky štyri štítky.")
+    if set(a.stitky) != set(LABELY) and not a.system:
+        sys.exit("Pri --stitky zadaj vlastný --system, aby sa neprepísal úplný beh.")
 
     nastav_semienko(a.seed)
     zariadenie = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -145,7 +160,7 @@ def main():
     kand = {s: [] for s in ["valid", "test"]}
     log = {"system": system, "nastavenia": vars(a), "zariadenie": str(zariadenie), "stitky": {}}
     t0 = time.time()
-    for lab in LABELY:
+    for lab in a.stitky:
         t = time.time()
         triedy, pravd, info = dolad_stitok(lab, a, data, zariadenie, tokenizer)
         log["stitky"][lab] = {**info, "sekundy": round(time.time() - t)}
@@ -164,8 +179,18 @@ def main():
         print("skúška na vzorke hotová, výsledky sa neukladajú:", json.dumps(log["stitky"], ensure_ascii=False))
         return
     for s in ["valid", "test"]:
+        k = pd.concat(kand[s])
+        if a.doplnit_z and set(a.stitky) != set(LABELY):
+            from spolocne import nacitaj_kandidatov, nacitaj_predikcie
+            zaklad = nacitaj_predikcie(a.doplnit_z, s).sort_values("id").reset_index(drop=True)
+            for lab in LABELY:
+                if lab not in a.stitky:
+                    pred[s][lab] = zaklad[lab].values
+            kz = nacitaj_kandidatov(a.doplnit_z, s)
+            k = pd.concat([k, kz[~kz["stitok"].isin(a.stitky)]])
+            log["doplnene_z"] = a.doplnit_z
         uloz_predikcie(pred[s], system, s)
-        uloz_kandidatov(pd.concat(kand[s]), system, s)
+        uloz_kandidatov(k, system, s)
     os.makedirs(os.path.join(VYSLEDKY, "logy"), exist_ok=True)
     with open(os.path.join(VYSLEDKY, "logy", f"{system}.json"), "w", encoding="utf-8") as f:
         json.dump(log, f, ensure_ascii=False, indent=2)

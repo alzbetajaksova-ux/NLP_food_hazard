@@ -1,0 +1,38 @@
+{
+  "system": "E1_robertabase_s44",
+  "nastavenia": {
+    "model": "roberta-base",
+    "vahy": false,
+    "seed": 44,
+    "epochy": 4,
+    "lr": 2e-05,
+    "batch": 16,
+    "max_dlzka": 256,
+    "vzorka": 0,
+    "system": null
+  },
+  "zariadenie": "cuda",
+  "stitky": {
+    "hazard-category": {
+      "najlepsia_epocha": 3,
+      "f1_valid": 0.7598,
+      "sekundy": 331
+    },
+    "product-category": {
+      "najlepsia_epocha": 4,
+      "f1_valid": 0.6538,
+      "sekundy": 332
+    },
+    "hazard": {
+      "najlepsia_epocha": 4,
+      "f1_valid": 0.4323,
+      "sekundy": 332
+    },
+    "product": {
+      "najlepsia_epocha": 4,
+      "f1_valid": 0.0683,
+      "sekundy": 334
+    }
+  },
+  "sekundy_spolu": 1329
+}

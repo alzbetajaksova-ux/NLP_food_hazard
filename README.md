@@ -87,6 +87,7 @@ src/
 ├── e4_llm.py          E4: LLM vyberie hazard a produkt z top-k kandidátov (osoba 3)
 ├── vyber_po_stitkoch.py  pre každý štítok vyberie na valid lepší systém (napr. E0_svmvyber)
 ├── chyby_vzorka.py    vzorka chýb na valid pre dvoch anotátorov (bonus: analýza chýb)
+├── kombinacia.py      pevná kombinácia dvoch systémov po štítkoch (napr. E2k: hazard-category z transformera)
 └── zhoda.py           Cohenova kappa, matica zhody a zoznam nezhôd dvoch anotátorov
 docs/etapa2/
 ├── zapisnik_experimentov.md          všetky doterajšie experimenty, výsledky na valid a rozhodnutia
@@ -127,3 +128,5 @@ Baseline E0 na valid (kontrola): ST1 0,736, ST2 0,416. Správna trieda medzi top
 **Analýza chýb (bonus):** taxonómia je v `docs/etapa2/taxonomia_chyb.md`. Keď bude najlepší systém zmrazený, osoba 1 spustí `python src/chyby_vzorka.py --system <systém>` (200 chýb na valid, súbory pre dvoch anotátorov), osoby 2 a 3 ich vyplnia samostatne a `python src/zhoda.py` spočíta Cohenovu kappu a vypíše nezhody. Skripty boli overené na simulovaných anotáciách.
 
 **Zatiaľ najlepší systém bez GPU a LLM:** `E0_svmvyber` (SVM, pri kategóriách a produkte navyše znakové n-gramy titulku, výber po štítkoch na valid): na valid ST1 0,777 a ST2 0,447, oproti E0 +0,041 a +0,031, oba intervaly nad nulou. Postup: `python src/e0_svm_export.py --titulok`, potom `python src/vyber_po_stitkoch.py --systemy E0_svm E0_svmtit --nazov E0_svmvyber`. Pre LLM (osoba 3) sú zatiaľ najlepší kandidáti `E3_svmvyber` (správny produkt v top-10 v 72,6 % správ). Podrobnosti v `docs/etapa2/zapisnik_experimentov.md`.
+
+**Transformer (15. 11., Colab T4):** 6 behov E1/E2 je v `results/etapa2/`. Na valid je transformer lepší len pri hazard-category (E2 0,824 ± 0,044 oproti 0,808 pri SVM) a pri hazarde a produkte zaostáva (produkt 0,08 a 0,00). Podrobnosti a ďalší krok (E1b, bunka 9 v notebooku) v `docs/etapa2/zapisnik_experimentov.md`.
