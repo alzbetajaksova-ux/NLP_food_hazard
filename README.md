@@ -90,6 +90,7 @@ src/
 └── zhoda.py           Cohenova kappa, matica zhody a zoznam nezhôd dvoch anotátorov
 docs/etapa2/
 ├── zapisnik_experimentov.md          všetky doterajšie experimenty, výsledky na valid a rozhodnutia
+├── navod_gpu.md                      návod na Colab a Kaggle pre transformer (osoba 2)
 ├── datasheet_sablona.md               šablóna datasheetu pre vlastný dataset
 ├── protokol_reprodukovatelnosti.md   šablóna protokolu nezávislej reprodukovateľnosti (tolerancie vopred)
 ├── taxonomia_chyb.md                 kategórie chýb a postup anotácie (zapísané pred anotáciou)
