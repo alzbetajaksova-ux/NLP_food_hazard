@@ -81,7 +81,10 @@ src/
 ├── spolocne.py        načítanie dát, tokenizér, oficiálne skóre, ukladanie a načítanie formátov
 ├── vyhodnot.py        skóre, bootstrap intervaly, párové porovnanie, recall@k kandidátov
 ├── e0_svm_export.py   E0: predikcie a top-10 kandidátov baseline SVM (valid aj test)
-└── e3_hierarchia.py   E3: hierarchia hazard → kategória a produkt z titulku nad ľubovoľným systémom
+├── e3_hierarchia.py   E3: hierarchia hazard → kategória a produkt z titulku nad ľubovoľným systémom
+├── e12_transformer.py E1/E2: doladenie transformera pre všetky štyri štítky (osoba 2, GPU)
+└── e4_llm.py          E4: LLM vyberie hazard a produkt z top-k kandidátov (osoba 3)
+notebooks/etapa2_transformer_colab.ipynb   spustenie E1/E2 na Google Colab s GPU
 results/etapa2/
 ├── predikcie/<systém>_<split>.csv
 └── kandidati/<systém>_<split>.csv
@@ -105,3 +108,7 @@ Pravidlá: nastavenia sa vyberajú len na `valid`. Test sa vyhodnotí jediný ra
 Baseline E0 na valid (kontrola): ST1 0,736, ST2 0,416. Správna trieda medzi top-10 kandidátmi: hazard 96,6 %, produkt 67,6 % (na 1. mieste 82,7 % a 40,9 %).
 
 **E3 nad SVM (valid, k = 5)**: hierarchia zvýši ST1 z 0,736 na 0,747, produkt z titulku zvýši ST2 z 0,416 na 0,426 (párový bootstrap: +0,011 [+0,000; +0,020], lepší v 98 % výberov). Kandidáti E3 majú správny produkt v top-10 v 71,0 % správ (E0: 67,6 %). Hodnota k bola vybraná na valid z možností 3, 5 a 10, preto je výsledok na valid mierne optimistický; potvrdí ho až test na konci. Pri kandidátoch E3 je na 1. mieste produkt z titulku, preto sa top-1 kandidát nemusí zhodovať s predikciou.
+
+**Osoba 2 (transformer):** otvor `notebooks/etapa2_transformer_colab.ipynb` v Google Colab s GPU a spusti bunky postupne. Najprv beží skúška na 200 správach, potom mriežka E1/E2 × semienka 42, 43, 44. Notebook ukladá výstupy v dohodnutom formáte a zabalí ich na stiahnutie. Lokálne: `pip install -r requirements_etapa2.txt`, potom `python src/e12_transformer.py --model roberta-base --seed 42 [--vahy]`. Skript bol overený na malom náhodnom modeli na CPU (beh, ukladanie, vyhodnotenie), nie na skutočnom roberta-base.
+
+**Osoba 3 (LLM):** `python src/e4_llm.py --kandidati E3_svm --backend skuska` overí celú cestu bez LLM (vyberie vždy kandidáta č. 1). So skutočným modelom: nastav `LLM_BASE_URL` a `LLM_API_KEY` (ľubovoľné API kompatibilné s OpenAI, aj lokálna Ollama) a spusti najprv `--backend openai --model <model> --limit 50`, aby si videla cenu a správanie promptu, potom bez `--limit`. Odpovede sa ukladajú do `results/etapa2/llm_cache/` a opakovaný beh ich len načíta. Prompt ladíme len na valid.

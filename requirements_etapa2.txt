@@ -1,0 +1,4 @@
+# 2. etapa: navyše k requirements.txt (transformer a LLM)
+# Overené: torch 2.15.0, transformers 5.23.0. Na Colabe stačí doinštalovať transformers (torch tam už je).
+torch==2.15.0
+transformers==5.23.0
