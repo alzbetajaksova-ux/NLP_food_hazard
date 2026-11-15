@@ -23,6 +23,7 @@ NLP_food_hazard/
 ├── README.md
 ├── requirements.txt
 ├── dokumentacia_1etapa.docx          správa k 1. etape
+├── dokumentacia_2etapa_kostra.docx   kostra správy k 2. etape (kto píše ktorú sekciu)
 ├── priloha_pouzitie_LLM.docx         príloha o použití LLM a AI agentov
 ├── data/
 │   ├── incidents_train.csv, incidents_valid.csv, incidents_test.csv
@@ -89,6 +90,8 @@ src/
 └── zhoda.py           Cohenova kappa, matica zhody a zoznam nezhôd dvoch anotátorov
 docs/etapa2/
 ├── zapisnik_experimentov.md          všetky doterajšie experimenty, výsledky na valid a rozhodnutia
+├── datasheet_sablona.md               šablóna datasheetu pre vlastný dataset
+├── protokol_reprodukovatelnosti.md   šablóna protokolu nezávislej reprodukovateľnosti (tolerancie vopred)
 ├── taxonomia_chyb.md                 kategórie chýb a postup anotácie (zapísané pred anotáciou)
 └── anotacne_pravidla_novych_dat.md   pravidlá pre vlastný dataset novších správ
 notebooks/etapa2_transformer_colab.ipynb   spustenie E1/E2 na Google Colab s GPU
