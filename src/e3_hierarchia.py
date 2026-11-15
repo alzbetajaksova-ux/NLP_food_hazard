@@ -77,7 +77,7 @@ def main():
 
     train = nacitaj("train")
     mapa, titulky = mapa_hazard_kategoria(train), ProduktZTitulku(train)
-    system = "E3_" + a.zaklad.removeprefix("E0_").removeprefix("E1_").removeprefix("E2_")
+    system = "E3_" + a.zaklad.split("_", 1)[1]
 
     # ablácia na valid
     valid = nacitaj("valid")

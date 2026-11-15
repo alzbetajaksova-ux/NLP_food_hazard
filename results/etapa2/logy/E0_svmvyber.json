@@ -1,0 +1,35 @@
+{
+  "system": "E0_svmvyber",
+  "volba_podla_valid": {
+    "hazard-category": "E0_svmtit",
+    "product-category": "E0_svmtit",
+    "hazard": "E0_svm",
+    "product": "E0_svmtit"
+  },
+  "f1_valid": [
+    {
+      "štítok": "hazard-category",
+      "E0_svm": 0.7865,
+      "E0_svmtit": 0.8075,
+      "vybraný": "E0_svmtit"
+    },
+    {
+      "štítok": "product-category",
+      "E0_svm": 0.7137,
+      "E0_svmtit": 0.7546,
+      "vybraný": "E0_svmtit"
+    },
+    {
+      "štítok": "hazard",
+      "E0_svm": 0.5975,
+      "E0_svmtit": 0.5614,
+      "vybraný": "E0_svm"
+    },
+    {
+      "štítok": "product",
+      "E0_svm": 0.215,
+      "E0_svmtit": 0.2691,
+      "vybraný": "E0_svmtit"
+    }
+  ]
+}

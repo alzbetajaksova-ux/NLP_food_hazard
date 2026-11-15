@@ -84,9 +84,11 @@ src/
 ├── e3_hierarchia.py   E3: hierarchia hazard → kategória a produkt z titulku nad ľubovoľným systémom
 ├── e12_transformer.py E1/E2: doladenie transformera pre všetky štyri štítky (osoba 2, GPU)
 ├── e4_llm.py          E4: LLM vyberie hazard a produkt z top-k kandidátov (osoba 3)
+├── vyber_po_stitkoch.py  pre každý štítok vyberie na valid lepší systém (napr. E0_svmvyber)
 ├── chyby_vzorka.py    vzorka chýb na valid pre dvoch anotátorov (bonus: analýza chýb)
 └── zhoda.py           Cohenova kappa, matica zhody a zoznam nezhôd dvoch anotátorov
 docs/etapa2/
+├── zapisnik_experimentov.md          všetky doterajšie experimenty, výsledky na valid a rozhodnutia
 ├── taxonomia_chyb.md                 kategórie chýb a postup anotácie (zapísané pred anotáciou)
 └── anotacne_pravidla_novych_dat.md   pravidlá pre vlastný dataset novších správ
 notebooks/etapa2_transformer_colab.ipynb   spustenie E1/E2 na Google Colab s GPU
@@ -119,3 +121,5 @@ Baseline E0 na valid (kontrola): ST1 0,736, ST2 0,416. Správna trieda medzi top
 **Osoba 3 (LLM):** `python src/e4_llm.py --kandidati E3_svm --backend skuska` overí celú cestu bez LLM (vyberie vždy kandidáta č. 1). So skutočným modelom: nastav `LLM_BASE_URL` a `LLM_API_KEY` (ľubovoľné API kompatibilné s OpenAI, aj lokálna Ollama) a spusti najprv `--backend openai --model <model> --limit 50`, aby si videla cenu a správanie promptu, potom bez `--limit`. Odpovede sa ukladajú do `results/etapa2/llm_cache/` a opakovaný beh ich len načíta. Prompt ladíme len na valid.
 
 **Analýza chýb (bonus):** taxonómia je v `docs/etapa2/taxonomia_chyb.md`. Keď bude najlepší systém zmrazený, osoba 1 spustí `python src/chyby_vzorka.py --system <systém>` (200 chýb na valid, súbory pre dvoch anotátorov), osoby 2 a 3 ich vyplnia samostatne a `python src/zhoda.py` spočíta Cohenovu kappu a vypíše nezhody. Skripty boli overené na simulovaných anotáciách.
+
+**Zatiaľ najlepší systém bez GPU a LLM:** `E0_svmvyber` (SVM, pri kategóriách a produkte navyše znakové n-gramy titulku, výber po štítkoch na valid): na valid ST1 0,777 a ST2 0,447, oproti E0 +0,041 a +0,031, oba intervaly nad nulou. Postup: `python src/e0_svm_export.py --titulok`, potom `python src/vyber_po_stitkoch.py --systemy E0_svm E0_svmtit --nazov E0_svmvyber`. Pre LLM (osoba 3) sú zatiaľ najlepší kandidáti `E3_svmvyber` (správny produkt v top-10 v 72,6 % správ). Podrobnosti v `docs/etapa2/zapisnik_experimentov.md`.
