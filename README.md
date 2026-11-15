@@ -83,7 +83,12 @@ src/
 ├── e0_svm_export.py   E0: predikcie a top-10 kandidátov baseline SVM (valid aj test)
 ├── e3_hierarchia.py   E3: hierarchia hazard → kategória a produkt z titulku nad ľubovoľným systémom
 ├── e12_transformer.py E1/E2: doladenie transformera pre všetky štyri štítky (osoba 2, GPU)
-└── e4_llm.py          E4: LLM vyberie hazard a produkt z top-k kandidátov (osoba 3)
+├── e4_llm.py          E4: LLM vyberie hazard a produkt z top-k kandidátov (osoba 3)
+├── chyby_vzorka.py    vzorka chýb na valid pre dvoch anotátorov (bonus: analýza chýb)
+└── zhoda.py           Cohenova kappa, matica zhody a zoznam nezhôd dvoch anotátorov
+docs/etapa2/
+├── taxonomia_chyb.md                 kategórie chýb a postup anotácie (zapísané pred anotáciou)
+└── anotacne_pravidla_novych_dat.md   pravidlá pre vlastný dataset novších správ
 notebooks/etapa2_transformer_colab.ipynb   spustenie E1/E2 na Google Colab s GPU
 results/etapa2/
 ├── predikcie/<systém>_<split>.csv
@@ -112,3 +117,5 @@ Baseline E0 na valid (kontrola): ST1 0,736, ST2 0,416. Správna trieda medzi top
 **Osoba 2 (transformer):** otvor `notebooks/etapa2_transformer_colab.ipynb` v Google Colab s GPU a spusti bunky postupne. Najprv beží skúška na 200 správach, potom mriežka E1/E2 × semienka 42, 43, 44. Notebook ukladá výstupy v dohodnutom formáte a zabalí ich na stiahnutie. Lokálne: `pip install -r requirements_etapa2.txt`, potom `python src/e12_transformer.py --model roberta-base --seed 42 [--vahy]`. Skript bol overený na malom náhodnom modeli na CPU (beh, ukladanie, vyhodnotenie), nie na skutočnom roberta-base.
 
 **Osoba 3 (LLM):** `python src/e4_llm.py --kandidati E3_svm --backend skuska` overí celú cestu bez LLM (vyberie vždy kandidáta č. 1). So skutočným modelom: nastav `LLM_BASE_URL` a `LLM_API_KEY` (ľubovoľné API kompatibilné s OpenAI, aj lokálna Ollama) a spusti najprv `--backend openai --model <model> --limit 50`, aby si videla cenu a správanie promptu, potom bez `--limit`. Odpovede sa ukladajú do `results/etapa2/llm_cache/` a opakovaný beh ich len načíta. Prompt ladíme len na valid.
+
+**Analýza chýb (bonus):** taxonómia je v `docs/etapa2/taxonomia_chyb.md`. Keď bude najlepší systém zmrazený, osoba 1 spustí `python src/chyby_vzorka.py --system <systém>` (200 chýb na valid, súbory pre dvoch anotátorov), osoby 2 a 3 ich vyplnia samostatne a `python src/zhoda.py` spočíta Cohenovu kappu a vypíše nezhody. Skripty boli overené na simulovaných anotáciách.
