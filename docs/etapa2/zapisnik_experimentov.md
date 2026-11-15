@@ -34,3 +34,15 @@ Zistenia:
 Kombinácia s pevným pravidlom určeným podľa priemeru (hazard-category z E2, ostatné z E0_svmvyber), systémy `E2k_s42/43/44`: ST1 0,794 / 0,763 / 0,802, priemer 0,786 ± 0,021, ST2 nezmenené 0,447. Oproti E0_svmvyber: +0,017 [−0,008; +0,047], −0,014 [−0,050; +0,048], +0,025 [+0,001; +0,057]. Prínos je malý a závisí od semienka, preto ho zatiaľ nepovažujeme za preukázaný.
 
 Ďalší krok: E1b (notebook, bunka 9), dlhší tréning len pre hazard a product (10 epoch, vyšší lr hlavy, bez váh). Ak ani ten neprekoná SVM, záver je, že pri tomto množstve dát a počte tried je pri jemných štítkoch lepší lineárny model a transformer sa použije len pre hazard-category.
+
+## Ensemble semienok (bez GPU), 15. 11. 2026
+
+Pravdepodobnosti troch behov sa sčítajú (`src/ensemble.py`); pri hazard-category (10 tried) ide o presný priemer celých rozdelení.
+
+| Systém (valid) | hazard-category | ST1 | ST2 |
+| --- | --- | --- | --- |
+| E2ens (3 semienka E2) | 0,853 (jednotlivé behy 0,775 až 0,860, priemer 0,824) | 0,796 | 0,247 |
+| E1ens (3 semienka E1) | 0,778 | 0,744 | 0,256 |
+| **E2kens**: hazard-category z E2ens, ostatné z E0_svmvyber | 0,853 | **0,802** | **0,447** |
+
+E2kens oproti E0_svmvyber: ST1 +0,025 [+0,001; +0,056], lepší v 98 % výberov; oproti E0: ST1 +0,066 [+0,034; +0,104], ST2 +0,031 [+0,020; +0,040]. Ensemble odstraňuje závislosť od jedného semienka. Voľba E2 (nie E1 ani E1+E2) bola urobená na valid, preto je výsledok mierne optimistický. Zatiaľ najlepší systém: **E2kens**.

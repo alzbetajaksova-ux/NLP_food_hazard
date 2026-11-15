@@ -1,0 +1,566 @@
+id,hazard-category,product-category,hazard,product
+0,biological,"meat, egg and dairy products",listeria monocytogenes,ground beef
+1,biological,"meat, egg and dairy products",listeria monocytogenes,ground beef
+2,biological,"meat, egg and dairy products",listeria monocytogenes,ground beef
+3,allergens,ices and desserts,pecan nut,ice cream
+4,biological,"meat, egg and dairy products",escherichia coli,ground beef
+5,foreign bodies,cereals and bakery products,plastic fragment,bread
+6,biological,"meat, egg and dairy products",listeria monocytogenes,milk
+7,packaging defect,alcoholic beverages,bulging packaging,beer
+8,foreign bodies,"meat, egg and dairy products",plastic fragment,cheese
+9,biological,seafood,listeria monocytogenes,salmon
+10,foreign bodies,"meat, egg and dairy products",plastic fragment,ground beef
+11,packaging defect,alcoholic beverages,metal fragment,beer
+12,chemical,seafood,other,sauce
+13,chemical,"soups, broths, sauces and condiments",other not classified chemical hazards,sauce
+14,foreign bodies,cereals and bakery products,metal fragment,bread
+15,chemical,fats and oils,other,palm oil
+16,allergens,prepared dishes and snacks,soybeans and products thereof,ready to eat - cook meals
+17,biological,"meat, egg and dairy products",escherichia coli,cheese
+18,biological,cereals and bakery products,moulds,bread
+19,biological,non-alcoholic beverages,other,bottled water
+20,biological,"meat, egg and dairy products",listeria monocytogenes,cheese
+21,allergens,cereals and bakery products,eggs and products thereof,cakes
+22,foreign bodies,prepared dishes and snacks,metal fragment,chicken based products
+23,allergens,confectionery,eggs and products thereof,jellies
+24,allergens,prepared dishes and snacks,fish and products thereof,ready to eat - cook meals
+25,foreign bodies,"soups, broths, sauces and condiments",metal fragment,sauce
+26,allergens,cereals and bakery products,eggs and products thereof,cakes
+27,biological,"meat, egg and dairy products",listeria monocytogenes,turkey and turkey preparations
+28,allergens,prepared dishes and snacks,soybeans and products thereof,chicken based products
+29,allergens,cereals and bakery products,peanuts and products thereof,cookies
+30,biological,ices and desserts,escherichia coli,ice cream
+31,biological,"meat, egg and dairy products",listeria monocytogenes,chicken based products
+32,allergens,cereals and bakery products,milk and products thereof,cakes
+33,chemical,non-alcoholic beverages,other,bottled water
+34,biological,"meat, egg and dairy products",listeria monocytogenes,ground beef
+35,biological,"meat, egg and dairy products",listeria monocytogenes,chicken based products
+36,foreign bodies,cereals and bakery products,insects,ready to eat - cook meals
+37,foreign bodies,"meat, egg and dairy products",metal fragment,ground beef
+38,biological,seafood,other,salmon
+39,allergens,"meat, egg and dairy products",cereals containing gluten and products thereof,sausage
+40,allergens,cereals and bakery products,cereals containing gluten and products thereof,corn
+41,other hazard,non-alcoholic beverages,other,beer
+42,biological,seafood,other not classified biological hazards,shrimps
+43,biological,"meat, egg and dairy products",listeria monocytogenes,chicken based products
+44,foreign bodies,prepared dishes and snacks,plastic fragment,ready to eat - cook meals
+45,allergens,prepared dishes and snacks,eggs and products thereof,chicken based products
+46,biological,"meat, egg and dairy products",listeria monocytogenes,cheese
+47,allergens,cereals and bakery products,cereals containing gluten and products thereof,cakes
+48,allergens,ices and desserts,eggs and products thereof,ice cream
+49,foreign bodies,fruits and vegetables,metal fragment,dried apricots
+50,biological,fruits and vegetables,glass fragment,sunflower seed
+51,foreign bodies,confectionery,glass fragment,biscuits
+52,fraud,"meat, egg and dairy products",other,yoghurt
+53,foreign bodies,cereals and bakery products,metal fragment,cakes
+54,foreign bodies,prepared dishes and snacks,plastic fragment,potato chips
+55,allergens,"soups, broths, sauces and condiments",cereals containing gluten and products thereof,sauce
+56,allergens,cereals and bakery products,peanuts and products thereof,cookies
+57,biological,"meat, egg and dairy products",escherichia coli,cheese
+58,chemical,prepared dishes and snacks,high content of cyanide,cakes
+59,foreign bodies,cereals and bakery products,glass fragment,cakes
+60,foreign bodies,cereals and bakery products,metal fragment,biscuits
+61,biological,"meat, egg and dairy products",listeria monocytogenes,chicken based products
+62,fraud,herbs and spices,soybeans and products thereof,cakes
+63,biological,ices and desserts,salmonella,ice cream
+64,biological,ices and desserts,salmonella,ice cream
+65,biological,ices and desserts,salmonella,ice cream
+66,biological,ices and desserts,salmonella,ice cream
+67,biological,"nuts, nut products and seeds",salmonella,peanuts
+68,biological,cereals and bakery products,microbiological contamination,cakes
+69,foreign bodies,"soups, broths, sauces and condiments",rubber fragments,soup
+70,fraud,herbs and spices,peanuts and products thereof,sauce
+71,other hazard,"meat, egg and dairy products",other,ground beef
+72,fraud,ices and desserts,peanuts and products thereof,ice cream
+73,biological,"meat, egg and dairy products",escherichia coli,ground beef
+74,biological,"meat, egg and dairy products",salmonella,eggs
+75,biological,fruits and vegetables,salmonella,alfalfa sprouts
+76,allergens,cereals and bakery products,cereals containing gluten and products thereof,cookies
+77,allergens,fruits and vegetables,cereals containing gluten and products thereof,salmon
+78,biological,fruits and vegetables,salmonella,salads
+79,other hazard,confectionery,other not classified,jellies
+80,foreign bodies,cereals and bakery products,metal fragment,cakes
+81,biological,fruits and vegetables,listeria monocytogenes,salads
+82,allergens,cereals and bakery products,soybeans and products thereof,milk
+83,chemical,"meat, egg and dairy products",metal fragment,milk
+84,biological,fruits and vegetables,listeria monocytogenes,salads
+85,biological,prepared dishes and snacks,listeria monocytogenes,sandwiches
+86,allergens,"soups, broths, sauces and condiments",milk and products thereof,basil pesto sauce
+87,allergens,cereals and bakery products,eggs and products thereof,cookies
+88,biological,"meat, egg and dairy products",escherichia coli,ground beef
+89,biological,prepared dishes and snacks,listeria monocytogenes,ready to eat - cook meals
+90,biological,herbs and spices,salmonella,sunflower seed
+91,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,dark chocolates
+92,allergens,"meat, egg and dairy products",soybeans and products thereof,chicken based products
+93,foreign bodies,alcoholic beverages,glass fragment,beer
+94,allergens,"meat, egg and dairy products",milk and products thereof,ground beef
+95,allergens,cereals and bakery products,sulphur dioxide and sulphites,ready to eat - cook meals
+96,foreign bodies,ices and desserts,metal fragment,ice cream
+97,biological,"meat, egg and dairy products",salmonella,ground beef
+98,biological,"meat, egg and dairy products",listeria monocytogenes,cheese
+99,allergens,"meat, egg and dairy products",milk and products thereof,chicken based products
+100,biological,ices and desserts,salmonella,ice cream
+101,biological,"meat, egg and dairy products",listeria monocytogenes,ham
+102,biological,"meat, egg and dairy products",listeria monocytogenes,ham
+103,biological,fruits and vegetables,listeria monocytogenes,salads
+104,fraud,fruits and vegetables,undeclared additive,cakes
+105,biological,"nuts, nut products and seeds",salmonella,ice cream
+106,allergens,cereals and bakery products,peanuts and products thereof,cakes
+107,organoleptic aspects,alcoholic beverages,spoilage,beer
+108,allergens,fruits and vegetables,sulphur dioxide and sulphites,dried apricots
+109,allergens,"meat, egg and dairy products",cereals containing gluten and products thereof,chicken based products
+110,foreign bodies,prepared dishes and snacks,glass fragment,ready to eat - cook meals
+111,biological,"meat, egg and dairy products",escherichia coli,yoghurt
+112,allergens,"meat, egg and dairy products",soybeans and products thereof,chicken based products
+113,allergens,"meat, egg and dairy products",milk and products thereof,chicken based products
+114,biological,herbs and spices,salmonella,salads
+115,allergens,cereals and bakery products,walnut,cookies
+116,biological,"dietetic foods, food supplements, fortified foods",other,dietary supplement
+117,biological,"nuts, nut products and seeds",salmonella,pistachio nuts
+118,biological,"nuts, nut products and seeds",salmonella,pistachio nuts
+119,biological,"meat, egg and dairy products",listeria monocytogenes,cheese
+120,biological,"nuts, nut products and seeds",salmonella,peanuts
+121,biological,"nuts, nut products and seeds",salmonella,peanuts
+122,biological,"nuts, nut products and seeds",salmonella,peanuts
+123,biological,cereals and bakery products,salmonella,cookies
+124,biological,confectionery,salmonella,peanuts
+125,allergens,cereals and bakery products,milk and products thereof,biscuits
+126,allergens,"meat, egg and dairy products",cereals containing gluten and products thereof,thermal processed pork meat
+127,chemical,"dietetic foods, food supplements, fortified foods",other,dietary supplement
+128,fraud,prepared dishes and snacks,inspection issues,chicken based products
+129,foreign bodies,ices and desserts,metal fragment,ice cream
+130,biological,herbs and spices,bacillus spp.,sauces
+131,biological,"meat, egg and dairy products",salmonella,chicken based products
+132,chemical,"meat, egg and dairy products",staphylococcus,chicken based products
+133,allergens,"meat, egg and dairy products",soybeans and products thereof,chicken based products
+134,allergens,herbs and spices,soybeans and products thereof,beer
+135,allergens,herbs and spices,soybeans and products thereof,sauces
+136,allergens,"soups, broths, sauces and condiments",milk and products thereof,sauce
+137,biological,"meat, egg and dairy products",listeria monocytogenes,chicken based products
+138,allergens,"meat, egg and dairy products",cereals containing gluten and products thereof,chicken based products
+139,allergens,ices and desserts,nuts,ice cream
+140,chemical,seafood,toxin,Fishes not identified
+141,other hazard,"meat, egg and dairy products",processing,chicken based products
+142,biological,"meat, egg and dairy products",listeria monocytogenes,chicken based products
+143,allergens,prepared dishes and snacks,cereals containing gluten and products thereof,cakes
+144,other hazard,"meat, egg and dairy products",processing,chicken based products
+145,allergens,cereals and bakery products,sesame seeds and products thereof,ice cream
+146,other hazard,"meat, egg and dairy products",processing,ground beef
+147,foreign bodies,"meat, egg and dairy products",plastic fragment,chicken based products
+148,allergens,"nuts, nut products and seeds",peanuts and products thereof,peanuts
+149,biological,"meat, egg and dairy products",escherichia coli,ground beef
+150,biological,"soups, broths, sauces and condiments",listeria monocytogenes,ready to eat - cook meals
+151,biological,"soups, broths, sauces and condiments",listeria monocytogenes,sauces
+152,allergens,"meat, egg and dairy products",peanuts and products thereof,ground beef
+153,allergens,"meat, egg and dairy products",peanuts and products thereof,thermal processed pork meat
+154,fraud,"meat, egg and dairy products",inspection issues,thermal processed pork meat
+155,allergens,"meat, egg and dairy products",eggs and products thereof,chicken based products
+156,allergens,cereals and bakery products,peanuts and products thereof,cakes
+157,allergens,"nuts, nut products and seeds",peanuts and products thereof,salmon
+158,allergens,herbs and spices,almond,flour
+159,allergens,fruits and vegetables,sulphur dioxide and sulphites,ice cream
+160,allergens,fruits and vegetables,sulphur dioxide and sulphites,dried apricots
+161,biological,"meat, egg and dairy products",listeria monocytogenes,ground beef
+162,allergens,ices and desserts,eggs and products thereof,ice cream
+163,biological,"soups, broths, sauces and condiments",salmonella,chicken based products
+164,biological,"meat, egg and dairy products",listeria monocytogenes,dried beef meat
+165,fraud,"meat, egg and dairy products",other,turkey and turkey preparations
+166,chemical,fats and oils,other,palm oil
+167,allergens,cereals and bakery products,milk and products thereof,ready to eat - cook meals
+168,biological,seafood,listeria monocytogenes,salmon
+169,biological,herbs and spices,salmonella,sauces
+170,foreign bodies,"soups, broths, sauces and condiments",plastic fragment,soup
+171,allergens,herbs and spices,cereals containing gluten and products thereof,coconuts
+172,biological,"meat, egg and dairy products",salmonella,thermal processed pork meat
+173,biological,"meat, egg and dairy products",escherichia coli,cheese
+174,allergens,non-alcoholic beverages,milk and products thereof,coconut juice
+175,fraud,"meat, egg and dairy products",inspection issues,turkey and turkey preparations
+176,allergens,non-alcoholic beverages,milk and products thereof,coconuts
+177,biological,prepared dishes and snacks,moulds,chicken based products
+178,allergens,non-alcoholic beverages,milk and products thereof,coconuts
+179,organoleptic aspects,"meat, egg and dairy products",other,chicken based products
+180,foreign bodies,confectionery,glass fragment,cakes
+181,biological,seafood,clostridium botulinum,salmon
+182,biological,"meat, egg and dairy products",escherichia coli,cheese
+183,biological,"meat, egg and dairy products",other not classified biological hazards,milk
+184,biological,prepared dishes and snacks,salmonella,sandwiches
+185,foreign bodies,prepared dishes and snacks,plastic fragment,potato chips
+186,fraud,prepared dishes and snacks,inspection issues,chicken based products
+187,allergens,prepared dishes and snacks,peanuts and products thereof,peanuts
+188,allergens,cereals and bakery products,milk and products thereof,potato chips
+189,biological,"nuts, nut products and seeds",salmonella,pistachio nuts
+190,biological,"meat, egg and dairy products",escherichia coli,yoghurt
+191,biological,cereals and bakery products,salmonella,ice cream
+192,biological,"nuts, nut products and seeds",salmonella,sunflower seed
+193,biological,"meat, egg and dairy products",listeria monocytogenes,chicken based products
+194,allergens,"nuts, nut products and seeds",cashew,peanuts
+195,allergens,"soups, broths, sauces and condiments",almond,chicken based products
+196,allergens,herbs and spices,sulphur dioxide and sulphites,ice cream
+197,allergens,prepared dishes and snacks,milk and products thereof,potato chips
+198,biological,fruits and vegetables,listeria monocytogenes,salads
+199,allergens,cereals and bakery products,milk and products thereof,cakes
+200,allergens,cereals and bakery products,milk and products thereof,cakes
+201,allergens,"dietetic foods, food supplements, fortified foods",milk and products thereof,dietary supplement
+202,foreign bodies,"meat, egg and dairy products",plastic fragment,chicken based products
+203,allergens,cereals and bakery products,peanuts and products thereof,cookies
+204,allergens,"meat, egg and dairy products",soybeans and products thereof,chicken based products
+205,allergens,non-alcoholic beverages,milk and products thereof,ice cream
+206,biological,"nuts, nut products and seeds",listeria monocytogenes,sunflower seed
+207,biological,"dietetic foods, food supplements, fortified foods",listeria monocytogenes,sunflower seed
+208,biological,"nuts, nut products and seeds",listeria monocytogenes,sunflower seed
+209,biological,fruits and vegetables,salmonella,alfalfa sprouts
+210,biological,"dietetic foods, food supplements, fortified foods",listeria monocytogenes,ice cream
+211,allergens,cereals and bakery products,peanuts and products thereof,cookies
+212,biological,cereals and bakery products,listeria monocytogenes,ice cream
+213,biological,fruits and vegetables,listeria monocytogenes,sunflower seed
+214,biological,"nuts, nut products and seeds",salmonella,peanuts
+215,allergens,confectionery,soybeans and products thereof,cakes
+216,biological,"meat, egg and dairy products",listeria monocytogenes,chicken based products
+217,biological,"meat, egg and dairy products",escherichia coli,chicken based products
+218,allergens,"meat, egg and dairy products",eggs and products thereof,cheese
+219,fraud,seafood,inspection issues,Fishes not identified
+220,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,ice cream
+221,biological,"meat, egg and dairy products",listeria monocytogenes,chicken based products
+222,allergens,"dietetic foods, food supplements, fortified foods",soybeans and products thereof,ice cream
+223,allergens,prepared dishes and snacks,eggs and products thereof,chicken based products
+224,foreign bodies,fruits and vegetables,plastic fragment,onions
+225,foreign bodies,"meat, egg and dairy products",metal fragment,ground beef
+226,fraud,"meat, egg and dairy products",inspection issues,chicken based products
+227,biological,"nuts, nut products and seeds",salmonella,peanuts
+228,biological,"nuts, nut products and seeds",salmonella,peanuts
+229,biological,"nuts, nut products and seeds",salmonella,sunflower seed
+230,allergens,ices and desserts,milk and products thereof,ice cream
+231,biological,seafood,listeria monocytogenes,salmon
+232,foreign bodies,"meat, egg and dairy products",plastic fragment,chicken based products
+233,allergens,"soups, broths, sauces and condiments",eggs and products thereof,soup
+234,other hazard,"meat, egg and dairy products",processing,chicken based products
+235,allergens,"nuts, nut products and seeds",peanuts and products thereof,peanuts
+236,biological,fruits and vegetables,listeria monocytogenes,salads
+237,fraud,fruits and vegetables,incorrect use by dates,alfalfa sprouts
+238,allergens,cereals and bakery products,milk and products thereof,cookies
+239,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,ice cream
+240,biological,cereals and bakery products,salmonella,bread
+241,biological,prepared dishes and snacks,salmonella,potato chips
+242,organoleptic aspects,"soups, broths, sauces and condiments",spoilage,sauce
+243,biological,cereals and bakery products,salmonella,cakes
+244,biological,"cocoa and cocoa preparations, coffee and tea",salmonella,cakes
+245,allergens,"soups, broths, sauces and condiments",eggs and products thereof,soup
+246,allergens,"nuts, nut products and seeds",cashew,peanuts
+247,allergens,fruits and vegetables,nuts,salads
+248,biological,"meat, egg and dairy products",listeria monocytogenes,cheese
+249,biological,"meat, egg and dairy products",escherichia coli,cheese
+250,foreign bodies,"meat, egg and dairy products",metal fragment,ready to eat - cook meals
+251,biological,"meat, egg and dairy products",listeria monocytogenes,cheese
+252,allergens,"meat, egg and dairy products",milk and products thereof,chicken based products
+253,biological,fruits and vegetables,listeria monocytogenes,salads
+254,biological,cereals and bakery products,listeria monocytogenes,cheese
+255,foreign bodies,"meat, egg and dairy products",metal fragment,ground beef
+256,chemical,"soups, broths, sauces and condiments",other not classified chemical hazards,soup
+257,chemical,seafood,other,Fishes not identified
+258,allergens,"soups, broths, sauces and condiments",peanuts and products thereof,sauce
+259,biological,ices and desserts,listeria monocytogenes,ice cream
+260,biological,fruits and vegetables,escherichia coli,sunflower seed
+261,biological,"meat, egg and dairy products",escherichia coli,ground beef
+262,biological,"meat, egg and dairy products",listeria monocytogenes,ham
+263,biological,herbs and spices,salmonella,ice cream
+264,biological,"meat, egg and dairy products",escherichia coli,ground beef
+265,biological,"meat, egg and dairy products",escherichia coli,ground beef
+266,biological,"meat, egg and dairy products",listeria monocytogenes,sandwiches
+267,biological,cereals and bakery products,escherichia coli,flour
+268,allergens,prepared dishes and snacks,soybeans and products thereof,sandwiches
+269,foreign bodies,"meat, egg and dairy products",plastic fragment,ready to eat - cook meals
+270,allergens,cereals and bakery products,cereals containing gluten and products thereof,cookies
+271,allergens,prepared dishes and snacks,soybeans and products thereof,sandwiches
+272,allergens,herbs and spices,cereals containing gluten and products thereof,sauces
+273,foreign bodies,prepared dishes and snacks,rubber fragments,salads
+274,other hazard,"meat, egg and dairy products",other not classified,ice cream
+275,biological,cereals and bakery products,norovirus,cakes
+276,fraud,"meat, egg and dairy products",inspection issues,thermal processed pork meat
+277,allergens,"soups, broths, sauces and condiments",peanuts and products thereof,sauce
+278,allergens,"meat, egg and dairy products",milk and products thereof,chicken based products
+279,foreign bodies,cereals and bakery products,glass fragment,ready to eat - cook meals
+280,allergens,confectionery,peanuts and products thereof,dark chocolates
+281,allergens,cereals and bakery products,cereals containing gluten and products thereof,cakes
+282,allergens,alcoholic beverages,milk and products thereof,beer
+283,allergens,"soups, broths, sauces and condiments",mustard and products thereof,soup
+284,fraud,"nuts, nut products and seeds",other,peanuts
+285,biological,"soups, broths, sauces and condiments",clostridium botulinum,soup
+286,allergens,fruits and vegetables,peanuts and products thereof,tahini
+287,allergens,"meat, egg and dairy products",fish and products thereof,chicken based products
+288,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,dark chocolates
+289,biological,fruits and vegetables,escherichia coli,salads
+290,biological,seafood,clostridium botulinum,salmon
+291,allergens,cereals and bakery products,almond,cookies
+292,allergens,"meat, egg and dairy products",eggs and products thereof,thermal processed pork meat
+293,fraud,"meat, egg and dairy products",inspection issues,chicken based products
+294,allergens,prepared dishes and snacks,soybeans and products thereof,chicken based products
+295,foreign bodies,"meat, egg and dairy products",glass fragment,chicken based products
+296,allergens,non-alcoholic beverages,milk and products thereof,coconut juice
+297,allergens,fruits and vegetables,milk and products thereof,peanuts
+298,allergens,"nuts, nut products and seeds",sesame seeds and products thereof,pistachio nuts
+299,fraud,"meat, egg and dairy products",inspection issues,chicken based products
+300,allergens,prepared dishes and snacks,cereals containing gluten and products thereof,salads
+301,biological,confectionery,salmonella,ice cream
+302,allergens,"dietetic foods, food supplements, fortified foods",fish and products thereof,dietary supplement
+303,biological,fruits and vegetables,listeria monocytogenes,onions
+304,foreign bodies,cereals and bakery products,insects,corn
+305,allergens,herbs and spices,mustard and products thereof,seasoning
+306,organoleptic aspects,"meat, egg and dairy products",salmonella,cheese
+307,foreign bodies,confectionery,other not classified,cakes
+308,biological,herbs and spices,salmonella,dried apricots
+309,chemical,fruits and vegetables,heavy metals,salads
+310,biological,fruits and vegetables,salmonella,onions
+311,allergens,"cocoa and cocoa preparations, coffee and tea",almond,cakes
+312,biological,herbs and spices,salmonella,sunflower seed
+313,allergens,ices and desserts,peanuts and products thereof,ice cream
+314,other hazard,cereals and bakery products,other,cakes
+315,biological,"meat, egg and dairy products",escherichia coli,thermal processed pork meat
+316,biological,fruits and vegetables,listeria monocytogenes,salads
+317,allergens,cereals and bakery products,milk and products thereof,cakes
+318,biological,"cocoa and cocoa preparations, coffee and tea",salmonella,mitragyna speciosa (kratom)
+319,foreign bodies,"soups, broths, sauces and condiments",plastic fragment,ice cream
+320,allergens,prepared dishes and snacks,milk and products thereof,potato chips
+321,packaging defect,non-alcoholic beverages,bulging packaging,beer
+322,foreign bodies,"meat, egg and dairy products",metal fragment,chicken based products
+323,foreign bodies,"cocoa and cocoa preparations, coffee and tea",plastic fragment,ice cream
+324,fraud,prepared dishes and snacks,inspection issues,chicken based products
+325,chemical,herbs and spices,other,dietary supplement
+326,biological,fruits and vegetables,salmonella,sunflower seed
+327,fraud,"meat, egg and dairy products",inspection issues,ham
+328,organoleptic aspects,non-alcoholic beverages,other,ice cream
+329,allergens,"meat, egg and dairy products",fish and products thereof,thermal processed pork meat
+330,fraud,"meat, egg and dairy products",inspection issues,chicken based products
+331,allergens,alcoholic beverages,sulphur dioxide and sulphites,beer
+332,allergens,"meat, egg and dairy products",peanuts and products thereof,chicken based products
+333,biological,fruits and vegetables,listeria monocytogenes,salads
+334,biological,"meat, egg and dairy products",salmonella,chicken based products
+335,biological,"meat, egg and dairy products",salmonella,milk
+336,fraud,confectionery,cereals containing gluten and products thereof,peanuts
+337,biological,"meat, egg and dairy products",listeria monocytogenes,chicken based products
+338,allergens,cereals and bakery products,cereals containing gluten and products thereof,ready to eat - cook meals
+339,foreign bodies,seafood,metal fragment,Fishes not identified
+340,allergens,seafood,cereals containing gluten and products thereof,Fishes not identified
+341,fraud,cereals and bakery products,inspection issues,ground beef
+342,chemical,"cocoa and cocoa preparations, coffee and tea",other not classified chemical hazards,ice cream
+343,fraud,non-alcoholic beverages,milk and products thereof,ice cream
+344,allergens,"soups, broths, sauces and condiments",milk and products thereof,coconuts
+345,organoleptic aspects,"soups, broths, sauces and condiments",spoilage,sauces
+346,allergens,"cocoa and cocoa preparations, coffee and tea",nuts,pistachio nuts
+347,allergens,fruits and vegetables,sulphur dioxide and sulphites,beer
+348,biological,"meat, egg and dairy products",salmonella,chicken based products
+349,allergens,prepared dishes and snacks,eggs and products thereof,chicken based products
+350,allergens,"soups, broths, sauces and condiments",walnut,basil pesto sauce
+351,allergens,confectionery,soybeans and products thereof,ice cream
+352,foreign bodies,cereals and bakery products,plastic fragment,cakes
+353,biological,"meat, egg and dairy products",salmonella,ground beef
+354,allergens,prepared dishes and snacks,eggs and products thereof,chicken based products
+355,allergens,confectionery,walnut,peanuts
+356,foreign bodies,"meat, egg and dairy products",metal fragment,chicken based products
+357,allergens,"nuts, nut products and seeds",almond,milk
+358,organoleptic aspects,"soups, broths, sauces and condiments",spoilage,cheese
+359,foreign bodies,cereals and bakery products,glass fragment,ready to eat - cook meals
+360,foreign bodies,fruits and vegetables,insects,salads
+361,allergens,"meat, egg and dairy products",milk and products thereof,chicken based products
+362,allergens,"meat, egg and dairy products",milk and products thereof,chicken based products
+363,biological,"meat, egg and dairy products",listeria monocytogenes,cheese
+364,allergens,herbs and spices,milk and products thereof,sauce
+365,allergens,cereals and bakery products,milk and products thereof,cakes
+366,fraud,seafood,inspection issues,Fishes not identified
+367,allergens,"meat, egg and dairy products",peanuts and products thereof,chicken based products
+368,allergens,cereals and bakery products,cereals containing gluten and products thereof,flour
+369,biological,"meat, egg and dairy products",salmonella,turkey and turkey preparations
+370,allergens,cereals and bakery products,milk and products thereof,cakes
+371,foreign bodies,non-alcoholic beverages,glass fragment,ice cream
+372,biological,fruits and vegetables,listeria monocytogenes,sunflower seed
+373,allergens,cereals and bakery products,eggs and products thereof,bread
+374,biological,"nuts, nut products and seeds",listeria monocytogenes,peanuts
+375,biological,prepared dishes and snacks,listeria monocytogenes,chicken based products
+376,fraud,"nuts, nut products and seeds",milk and products thereof,peanuts
+377,biological,fruits and vegetables,escherichia coli,alfalfa sprouts
+378,allergens,"meat, egg and dairy products",soybeans and products thereof,chicken based products
+379,allergens,seafood,eggs and products thereof,Fishes not identified
+380,biological,seafood,listeria monocytogenes,salmon
+381,foreign bodies,"soups, broths, sauces and condiments",plastic fragment,soup
+382,allergens,"nuts, nut products and seeds",milk and products thereof,milk
+383,fraud,"meat, egg and dairy products",incorrect use by dates,thermal processed pork meat
+384,allergens,prepared dishes and snacks,cereals containing gluten and products thereof,ready to eat - cook meals
+385,allergens,cereals and bakery products,eggs and products thereof,ready to eat - cook meals
+386,foreign bodies,"meat, egg and dairy products",plastic fragment,chicken based products
+387,biological,"meat, egg and dairy products",escherichia coli,milk
+388,chemical,non-alcoholic beverages,heavy metals,bottled water
+389,allergens,prepared dishes and snacks,sesame seeds and products thereof,onions
+390,packaging defect,alcoholic beverages,bulging packaging,beer
+391,allergens,cereals and bakery products,milk and products thereof,ice cream
+392,allergens,cereals and bakery products,milk and products thereof,cakes
+393,allergens,fruits and vegetables,sulphur dioxide and sulphites,dietary supplement
+394,foreign bodies,"meat, egg and dairy products",metal fragment,chicken based products
+395,allergens,fruits and vegetables,sulphur dioxide and sulphites,biscuits
+396,allergens,non-alcoholic beverages,milk and products thereof,beer
+397,allergens,cereals and bakery products,cereals containing gluten and products thereof,cakes
+398,foreign bodies,"meat, egg and dairy products",bone fragment,chicken based products
+399,biological,herbs and spices,salmonella,salads
+400,allergens,"meat, egg and dairy products",milk and products thereof,ground beef
+401,allergens,cereals and bakery products,milk and products thereof,corn
+402,biological,cereals and bakery products,escherichia coli,flour
+403,allergens,"meat, egg and dairy products",soybeans and products thereof,chicken based products
+404,fraud,"meat, egg and dairy products",milk and products thereof,chicken based products
+405,biological,"meat, egg and dairy products",listeria monocytogenes,chicken based products
+406,biological,"meat, egg and dairy products",listeria monocytogenes,chicken based products
+407,other hazard,"soups, broths, sauces and condiments",clostridium botulinum,sauce
+408,biological,"meat, egg and dairy products",listeria monocytogenes,ground beef
+409,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,dark chocolates
+410,biological,non-alcoholic beverages,escherichia coli,bottled water
+411,allergens,prepared dishes and snacks,milk and products thereof,ready to eat - cook meals
+412,biological,"meat, egg and dairy products",listeria monocytogenes,chicken based products
+413,biological,"meat, egg and dairy products",listeria monocytogenes,cheese
+414,biological,"meat, egg and dairy products",listeria monocytogenes,cheese
+415,allergens,"meat, egg and dairy products",mustard and products thereof,ground beef
+416,allergens,"nuts, nut products and seeds",soybeans and products thereof,peanuts
+417,biological,fruits and vegetables,salmonella,cakes
+418,allergens,"meat, egg and dairy products",fish and products thereof,milk
+419,biological,"nuts, nut products and seeds",salmonella,tahini
+420,biological,prepared dishes and snacks,listeria monocytogenes,sandwiches
+421,allergens,"meat, egg and dairy products",eggs and products thereof,chicken based products
+422,biological,"meat, egg and dairy products",escherichia coli,ready to eat - cook meals
+423,biological,cereals and bakery products,listeria monocytogenes,cakes
+424,foreign bodies,cereals and bakery products,plastic fragment,cakes
+425,foreign bodies,"meat, egg and dairy products",plastic fragment,ham
+426,allergens,prepared dishes and snacks,milk and products thereof,ready to eat - cook meals
+427,allergens,cereals and bakery products,sesame seeds and products thereof,cookies
+428,biological,seafood,norovirus,oysters
+429,allergens,non-alcoholic beverages,mustard and products thereof,ice cream
+430,allergens,prepared dishes and snacks,milk and products thereof,ready to eat - cook meals
+431,fraud,"meat, egg and dairy products",incorrect use by dates,chicken based products
+432,allergens,seafood,milk and products thereof,Fishes not identified
+433,allergens,prepared dishes and snacks,milk and products thereof,ready to eat - cook meals
+434,allergens,prepared dishes and snacks,milk and products thereof,ready to eat - cook meals
+435,allergens,"nuts, nut products and seeds",nuts,peanuts
+436,allergens,"meat, egg and dairy products",milk and products thereof,yoghurt
+437,biological,cereals and bakery products,salmonella,cakes
+438,biological,seafood,listeria monocytogenes,salmon
+439,allergens,fruits and vegetables,sulphur dioxide and sulphites,fresh mushrooms
+440,allergens,cereals and bakery products,eggs and products thereof,cakes
+441,biological,fruits and vegetables,listeria monocytogenes,fresh mushrooms
+442,chemical,non-alcoholic beverages,patulin,apple juice
+443,fraud,cereals and bakery products,incorrect use by dates,sausage
+444,packaging defect,seafood,other,Fishes not identified
+445,biological,"soups, broths, sauces and condiments",moulds,ready to eat - cook meals
+446,chemical,cereals and bakery products,other,cakes
+447,fraud,cereals and bakery products,inspection issues,chicken based products
+448,allergens,seafood,milk and products thereof,Fishes not identified
+449,allergens,ices and desserts,milk and products thereof,ice cream
+450,biological,herbs and spices,salmonella,curry
+451,biological,fruits and vegetables,cyclospora,salads
+452,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,ice cream
+453,allergens,seafood,eggs and products thereof,salmon
+454,biological,prepared dishes and snacks,listeria monocytogenes,sandwiches
+455,biological,fruits and vegetables,salmonella,onions
+456,biological,fruits and vegetables,salmonella,cakes
+457,allergens,prepared dishes and snacks,fish and products thereof,Fishes not identified
+458,biological,"meat, egg and dairy products",listeria monocytogenes,chicken based products
+459,allergens,confectionery,milk and products thereof,milk
+460,allergens,confectionery,peanuts and products thereof,cakes
+461,biological,"meat, egg and dairy products",escherichia coli,ground beef
+462,foreign bodies,"meat, egg and dairy products",plastic fragment,cheese
+463,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,dark chocolates
+464,allergens,prepared dishes and snacks,eggs and products thereof,ready to eat - cook meals
+465,biological,"meat, egg and dairy products",listeria monocytogenes,cheese
+466,chemical,non-alcoholic beverages,other not classified chemical hazards,ice cream
+467,chemical,prepared dishes and snacks,unauthorised substance ethylene oxide,peanuts
+468,foreign bodies,cereals and bakery products,plastic fragment,cakes
+469,biological,alcoholic beverages,moulds,beer
+470,biological,"nuts, nut products and seeds",salmonella,salads
+471,chemical,cereals and bakery products,unauthorised substance ethylene oxide,cookies
+472,biological,fruits and vegetables,escherichia coli,salads
+473,allergens,cereals and bakery products,pecan nut,cookies
+474,allergens,"soups, broths, sauces and condiments",milk and products thereof,chicken based products
+475,allergens,cereals and bakery products,cereals containing gluten and products thereof,salads
+476,biological,"meat, egg and dairy products",salmonella,chicken based products
+477,chemical,"nuts, nut products and seeds",unauthorised substance ethylene oxide,tahini
+478,foreign bodies,"meat, egg and dairy products",plastic fragment,chicken based products
+479,allergens,herbs and spices,soybeans and products thereof,onions
+480,allergens,fruits and vegetables,eggs and products thereof,salads
+481,allergens,"meat, egg and dairy products",fish and products thereof,chicken based products
+482,foreign bodies,"meat, egg and dairy products",metal fragment,pistachio nuts
+483,biological,fruits and vegetables,clostridium botulinum,fresh mushrooms
+484,allergens,prepared dishes and snacks,soybeans and products thereof,ready to eat - cook meals
+485,allergens,cereals and bakery products,milk and products thereof,corn
+486,allergens,cereals and bakery products,eggs and products thereof,cakes
+487,foreign bodies,"nuts, nut products and seeds",glass fragment,peanuts
+488,allergens,cereals and bakery products,milk and products thereof,cookies
+489,chemical,"dietetic foods, food supplements, fortified foods",unauthorised substance ethylene oxide,dietary supplement
+490,biological,pet feed,listeria monocytogenes,ground beef
+491,allergens,"cocoa and cocoa preparations, coffee and tea",almond,cakes
+492,biological,herbs and spices,salmonella,peanuts
+493,biological,"meat, egg and dairy products",bacillus spp.,salads
+494,allergens,"meat, egg and dairy products",sesame seeds and products thereof,chicken based products
+495,allergens,"nuts, nut products and seeds",cashew,peanuts
+496,allergens,prepared dishes and snacks,milk and products thereof,potato chips
+497,allergens,"soups, broths, sauces and condiments",fish and products thereof,sauce
+498,allergens,fruits and vegetables,cereals containing gluten and products thereof,palm oil
+499,allergens,"meat, egg and dairy products",milk and products thereof,milk
+500,allergens,cereals and bakery products,sesame seeds and products thereof,bread
+501,biological,"meat, egg and dairy products",listeria monocytogenes,cheese
+502,foreign bodies,cereals and bakery products,glass fragment,cakes
+503,other hazard,fruits and vegetables,spoilage,sunflower seed
+504,allergens,fruits and vegetables,soybeans and products thereof,sunflower seed
+505,biological,cereals and bakery products,microbiological contamination,cakes
+506,biological,seafood,escherichia coli,oysters
+507,allergens,"dietetic foods, food supplements, fortified foods",milk and products thereof,ice cream
+508,allergens,ices and desserts,milk and products thereof,cakes
+509,biological,fruits and vegetables,listeria monocytogenes,salads
+510,allergens,fruits and vegetables,sulphur dioxide and sulphites,dried apricots
+511,chemical,"dietetic foods, food supplements, fortified foods",other,dietary supplement
+512,biological,herbs and spices,salmonella,ice cream
+513,allergens,"cocoa and cocoa preparations, coffee and tea",peanuts and products thereof,cookies
+514,chemical,ices and desserts,unauthorised substance ethylene oxide,ice cream
+515,allergens,prepared dishes and snacks,milk and products thereof,potato chips
+516,fraud,prepared dishes and snacks,sulphur dioxide and sulphites,salmon
+517,foreign bodies,"meat, egg and dairy products",plastic fragment,chicken based products
+518,biological,"meat, egg and dairy products",salmonella,ground beef
+519,other hazard,prepared dishes and snacks,incorrect use by dates,ready to eat - cook meals
+520,biological,fruits and vegetables,listeria monocytogenes,ice cream
+521,biological,"meat, egg and dairy products",listeria monocytogenes,thermal processed pork meat
+522,other hazard,"dietetic foods, food supplements, fortified foods",other,pet feed
+523,biological,seafood,listeria monocytogenes,salmon
+524,fraud,fruits and vegetables,sulphur dioxide and sulphites,onions
+525,packaging defect,"dietetic foods, food supplements, fortified foods",bulging packaging,dietary supplement
+526,biological,fruits and vegetables,listeria monocytogenes,chicken based products
+527,allergens,"cocoa and cocoa preparations, coffee and tea",milk and products thereof,milk
+528,biological,fruits and vegetables,listeria monocytogenes,salads
+529,allergens,"cocoa and cocoa preparations, coffee and tea",hazelnut,dark chocolates
+530,allergens,herbs and spices,mustard and products thereof,cheese
+531,biological,fruits and vegetables,salmonella,tahini
+532,biological,"meat, egg and dairy products",escherichia coli,peanuts
+533,allergens,cereals and bakery products,milk and products thereof,milk
+534,biological,"meat, egg and dairy products",salmonella,chicken based products
+535,allergens,seafood,milk and products thereof,Fishes not identified
+536,other hazard,herbs and spices,other,peanuts
+537,biological,fruits and vegetables,listeria monocytogenes,fresh mushrooms
+538,foreign bodies,fruits and vegetables,plastic fragment,salads
+539,biological,"meat, egg and dairy products",salmonella,ice cream
+540,chemical,"cocoa and cocoa preparations, coffee and tea",too high content of tetrahydrocannabinol (THC),dietary supplement
+541,chemical,fruits and vegetables,heavy metals,ice cream
+542,chemical,fruits and vegetables,other,onions
+543,allergens,"cocoa and cocoa preparations, coffee and tea",peanuts and products thereof,dark chocolates
+544,biological,pet feed,salmonella,ready to eat - cook meals
+545,foreign bodies,seafood,glass fragment,salmon
+546,other hazard,alcoholic beverages,other,beer
+547,biological,cereals and bakery products,salmonella,cakes
+548,allergens,fruits and vegetables,sulphur dioxide and sulphites,ice cream
+549,allergens,"meat, egg and dairy products",soybeans and products thereof,sausage
+550,allergens,"meat, egg and dairy products",fish and products thereof,ground beef
+551,biological,"cocoa and cocoa preparations, coffee and tea",salmonella,dark chocolates
+552,biological,"cocoa and cocoa preparations, coffee and tea",salmonella,dark chocolates
+553,biological,"nuts, nut products and seeds",salmonella,sunflower seed
+554,allergens,ices and desserts,peanuts and products thereof,cookies
+555,allergens,cereals and bakery products,cereals containing gluten and products thereof,cakes
+556,biological,"nuts, nut products and seeds",salmonella,peanuts
+557,chemical,"dietetic foods, food supplements, fortified foods",other,dietary supplement
+558,biological,"dietetic foods, food supplements, fortified foods",escherichia coli,ice cream
+559,chemical,ices and desserts,unauthorised substance ethylene oxide,ice cream
+560,allergens,fruits and vegetables,cashew,salads
+561,allergens,"dietetic foods, food supplements, fortified foods",milk and products thereof,cakes
+562,foreign bodies,cereals and bakery products,plastic fragment,cookies
+563,allergens,cereals and bakery products,peanuts and products thereof,biscuits
+564,allergens,confectionery,almond,ice cream
