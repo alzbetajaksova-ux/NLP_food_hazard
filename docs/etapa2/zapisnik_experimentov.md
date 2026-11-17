@@ -46,3 +46,20 @@ Pravdepodobnosti troch behov sa sčítajú (`src/ensemble.py`); pri hazard-categ
 | **E2kens**: hazard-category z E2ens, ostatné z E0_svmvyber | 0,853 | **0,802** | **0,447** |
 
 E2kens oproti E0_svmvyber: ST1 +0,025 [+0,001; +0,056], lepší v 98 % výberov; oproti E0: ST1 +0,066 [+0,034; +0,104], ST2 +0,031 [+0,020; +0,040]. Ensemble odstraňuje závislosť od jedného semienka. Voľba E2 (nie E1 ani E1+E2) bola urobená na valid, preto je výsledok mierne optimistický. Zatiaľ najlepší systém: **E2kens**.
+
+## E1b: dlhší tréning pre hazard a product (Colab T4), 16. 11. 2026
+
+RoBERTa-base, len štítky hazard a product, 10 epoch, lr 3e-5, lr klasifikačnej hlavy 1e-3, bez váh tried; ostatné štítky doplnené z E0_svmvyber. Jeden beh asi 25 minút (2 štítky × asi 12,5 minúty).
+
+| Systém (valid) | hazard | product | ST2 | najlepšia epocha (hazard / product) |
+| --- | --- | --- | --- | --- |
+| E0_svmvyber (SVM) | 0,598 | 0,269 | 0,447 | – |
+| E1 (4 epochy, lr 2e-5) priemer | 0,422 | 0,076 | 0,253 | 3 až 4 / 4 |
+| E1b s42 / s43 / s44 | 0,657 / 0,645 / 0,644 | 0,307 / 0,325 / 0,328 | 0,484 / 0,484 / 0,493 | 8 / 9, 9 / 8, 10 / 7 |
+| E1bens (ensemble 3 semienok) | 0,655 | 0,334 | 0,495 | – |
+
+Dlhší tréning a vyšší lr hlavy vyriešili problém z E1/E2: transformer je teraz lepší než SVM aj pri hazarde (+0,057) a produkte (+0,065). Rozptyl medzi semienkami je malý (ST2 0,484 až 0,493). Správny produkt v top-10 kandidátoch: 76,1 % (SVM 71,9 %), hazard na 1. mieste 87,6 % (SVM 82,7 %).
+
+**E12kens** (hazard-category z E2ens, product-category z E0_svmvyber, hazard a product z E1bens): na valid ST1 0,802 a ST2 0,495. Oproti E0: ST1 +0,066 [+0,034; +0,104], ST2 +0,079 [+0,047; +0,112]; oproti E2kens: ST2 +0,048 [+0,020; +0,083], lepší v 100 % výberov. **Zatiaľ najlepší systém.** Pravidlá kombinácie boli určené na valid, preto je výsledok mierne optimistický; potvrdí ho test.
+
+E3 nad E12kens: hierarchia zhorší ST1 (0,802 → 0,788, lebo hazard-category z transformera je lepšia než odvodená z hazardu) a produkt z titulku zhorší produkt (0,334 → 0,321). Kandidáti E3 majú správny produkt v top-10 v 77,0 % (E12kens 76,1 %). Záver: pri silnom modeli pomocné pravidlá nepomáhajú; E3 sa nepoužije.
