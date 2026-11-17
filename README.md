@@ -21,17 +21,21 @@ Podrobná tabuľka vrátane modelov len na titulku je v `results/summary.csv`.
 ```
 NLP_food_hazard/
 ├── README.md
-├── requirements.txt
+├── requirements.txt                  závislosti 1. etapy (a CPU časti 2. etapy)
+├── requirements_etapa2.txt           navyše pre transformer (torch, transformers)
 ├── dokumentacia_1etapa.docx          správa k 1. etape
-├── dokumentacia_2etapa_kostra.docx   kostra správy k 2. etape (kto píše ktorú sekciu)
-├── priloha_pouzitie_LLM.docx         príloha o použití LLM a AI agentov
+├── dokumentacia_2etapa_kostra.docx   rozpracovaná správa k 2. etape (kto píše ktorú sekciu)
+├── priloha_pouzitie_LLM.docx         príloha o použití LLM a AI agentov (1. etapa)
 ├── data/
 │   ├── incidents_train.csv, incidents_valid.csv, incidents_test.csv
 │   └── statistics_train.ipynb        starší pomocný prehľad trénovacích dát (spúšťa sa z data/)
 ├── notebooks/
 │   ├── baseline_food_hazard.ipynb    trénovanie, výber nastavení na validácii, test, uloženie výsledkov a predikcií
-│   └── eda_chybova_analyza.ipynb     analýza dát, chybová analýza, bootstrap intervaly spoľahlivosti
-└── results/                          všetko vytvoria notebooky
+│   ├── eda_chybova_analyza.ipynb     analýza dát, chybová analýza, bootstrap intervaly spoľahlivosti
+│   └── etapa2_transformer_colab.ipynb  2. etapa: doladenie transformera na Google Colab s GPU
+├── src/                              2. etapa: skripty (pozri nižšie)
+├── docs/etapa2/                      2. etapa: zápisník experimentov, návody, taxonómia, pravidlá, šablóny
+└── results/                          1. etapa: všetko vytvoria notebooky; 2. etapa: results/etapa2/
     ├── summary.csv                   skóre na teste (baseline)
     ├── predikcie_test.csv            predikcie SVM a LR na teste (baseline, číta ich EDA notebook)
     ├── bootstrap.csv                 95 % intervaly a rozdiel SVM − LR (EDA)
@@ -73,65 +77,73 @@ Dáta sú z [repozitára úlohy](https://github.com/food-hazard-detection-semeva
 
 Citácia úlohy a datasetu: Randl, K. et al. (2025). *SemEval-2025 Task 9: The Food Hazard Detection Challenge.* arXiv:2503.19800.
 
-## 2. etapa: spoločné formáty a skripty (rozpracované)
+## 2. etapa (rozpracované)
 
-Všetky systémy 2. etapy ukladajú výstupy v rovnakom formáte a vyhodnocujú sa jedným skriptom, aby sa dali férovo porovnať s baseline (E0).
+Vlastné riešenie: **pre každý štítok použiť model, ktorý je preň najlepší (doladený transformer alebo lineárny model s dôrazom na titulok), behy rovnakého modelu spojiť do ensemble a pre jemné štítky nechať LLM vybrať odpoveď z 10 kandidátov.** Všetky experimenty, výsledky na valid a rozhodnutia sú v `docs/etapa2/zapisnik_experimentov.md`.
+
+### Výsledky na valid (17. 11. 2026)
+
+| Systém | Čo to je | ST1 | ST2 |
+| --- | --- | --- | --- |
+| `E0_svm` | baseline SVM z 1. etapy | 0,736 | 0,416 |
+| `E0_svmvyber` | SVM so znakovými n-gramami titulku, výber po štítkoch | 0,777 | 0,447 |
+| `E2kens` | + hazard-category z RoBERTa (ensemble 3 semienok) | 0,802 | 0,447 |
+| `E12kens` | + hazard a product z RoBERTa s dlhším tréningom (ensemble 3 semienok) | **0,802** | **0,495** |
+
+`E12kens` je oproti `E0_svm` lepší o +0,066 v ST1 ([+0,034; +0,104]) a +0,079 v ST2 ([+0,047; +0,112]). Pravidlá kombinácie boli zvolené na valid, výsledok preto potvrdí až jediný beh na teste. Výber pomocou LLM (E4) a test zatiaľ chýbajú.
+
+### Štruktúra
 
 ```
 src/
-├── spolocne.py        načítanie dát, tokenizér, oficiálne skóre, ukladanie a načítanie formátov
-├── vyhodnot.py        skóre, bootstrap intervaly, párové porovnanie, recall@k kandidátov
-├── e0_svm_export.py   E0: predikcie a top-10 kandidátov baseline SVM (valid aj test)
-├── e3_hierarchia.py   E3: hierarchia hazard → kategória a produkt z titulku nad ľubovoľným systémom
-├── e12_transformer.py E1/E2: doladenie transformera pre všetky štyri štítky (osoba 2, GPU)
-├── e4_llm.py          E4: LLM vyberie hazard a produkt z top-k kandidátov (osoba 3)
-├── vyber_po_stitkoch.py  pre každý štítok vyberie na valid lepší systém (napr. E0_svmvyber)
-├── chyby_vzorka.py    vzorka chýb na valid pre dvoch anotátorov (bonus: analýza chýb)
-├── ensemble.py        ensemble viacerých behov (súčet pravdepodobností z kandidátov), napr. E2ens
-├── kombinacia.py      pevná kombinácia dvoch systémov po štítkoch (napr. E2k: hazard-category z transformera)
-└── zhoda.py           Cohenova kappa, matica zhody a zoznam nezhôd dvoch anotátorov
+├── spolocne.py           načítanie dát, tokenizér, oficiálne skóre, ukladanie a kontrola formátov
+├── vyhodnot.py           skóre, bootstrap, párové porovnanie, recall@k kandidátov; test len s --povolit-test
+├── e0_svm_export.py      E0_svm (baseline) a s --titulok E0_svmtit (znakové n-gramy titulku)
+├── vyber_po_stitkoch.py  pre každý štítok lepší systém podľa valid (E0_svmvyber)
+├── e12_transformer.py    doladenie RoBERTa pre zvolené štítky (E1, E2, E1b; GPU)
+├── ensemble.py           ensemble behov s rôznymi semienkami (súčet pravdepodobností)
+├── kombinacia.py         pevná kombinácia dvoch systémov po štítkoch (E2kens, E12kens)
+├── zostav_systemy.py     zostaví všetky CPU systémy z uložených výstupov v správnom poradí
+├── e3_hierarchia.py      ablácia: hierarchia hazard → kategória a produkt z titulku
+├── e4_llm.py             E4: LLM vyberie hazard a produkt z top-10 kandidátov (osoba 2)
+├── chyby_vzorka.py       vzorka chýb na valid pre dve anotátorky
+└── zhoda.py              Cohenova kappa, matica zhody a zoznam nezhôd
 docs/etapa2/
-├── zapisnik_experimentov.md          všetky doterajšie experimenty, výsledky na valid a rozhodnutia
-├── navod_gpu.md                      návod na Colab a Kaggle pre transformer (osoba 2)
-├── datasheet_sablona.md               šablóna datasheetu pre vlastný dataset
-├── protokol_reprodukovatelnosti.md   šablóna protokolu nezávislej reprodukovateľnosti (tolerancie vopred)
+├── zapisnik_experimentov.md          experimenty, výsledky na valid a rozhodnutia
+├── navod_gpu.md                      Google Colab a Kaggle pre transformer
 ├── taxonomia_chyb.md                 kategórie chýb a postup anotácie (zapísané pred anotáciou)
-└── anotacne_pravidla_novych_dat.md   pravidlá pre vlastný dataset novších správ
-notebooks/etapa2_transformer_colab.ipynb   spustenie E1/E2 na Google Colab s GPU
+├── anotacne_pravidla_novych_dat.md   pravidlá pre vlastný dataset novších správ (osoba 3)
+├── datasheet_sablona.md              šablóna datasheetu pre vlastný dataset
+└── protokol_reprodukovatelnosti.md   šablóna protokolu nezávislej reprodukovateľnosti
 results/etapa2/
-├── predikcie/<systém>_<split>.csv
-└── kandidati/<systém>_<split>.csv
+├── predikcie/<systém>_<split>.csv    predikcie (valid aj test)
+├── kandidati/<systém>_<split>.csv    top-10 tried so skóre
+├── logy/<systém>.json                nastavenia a časy behov transformera, voľba pri výbere po štítkoch
+└── chyby/                            vzorka 200 chýb E12kens na anotáciu (anotacia_A.csv, anotacia_B.csv, kluc.csv)
 ```
 
-**Predikcie** (`results/etapa2/predikcie/<systém>_<split>.csv`): jeden riadok na správu, stĺpce `id, hazard-category, product-category, hazard, product`. `id` je poradie správy v splite (0 až n − 1).
+V gite sú výstupy transformera (behy `E1_`, `E2_`, `E1b_robertabase_s42/43/44`), ktoré sa nedajú rýchlo zopakovať, a výsledné systémy `E0_svm`, `E0_svmvyber`, `E2kens` a `E12kens`. Medzikroky (`E0_svmtit`, ensemble, ablácie E3) vytvorí `src/zostav_systemy.py` a sú v `.gitignore`.
 
-**Kandidáti** (`results/etapa2/kandidati/<systém>_<split>.csv`): pre každú správu a každý štítok 10 riadkov, stĺpce `id, stitok, poradie, trieda, skore`. `poradie` 1 je najpravdepodobnejšia trieda; `skore` je skóre modelu (pri SVM `decision_function`, pri transformeri pravdepodobnosť), väčšie = lepšie.
+### Formáty
 
-Názov systému = číslo experimentu a model, napríklad `E0_svm`, `E2_roberta_s42`, `E3_svm`, `E4_llm_svm`. Pri ukladaní z Pythonu použite `uloz_predikcie` a `uloz_kandidatov` zo `src/spolocne.py`, ktoré formát skontrolujú.
+- **Predikcie:** jeden riadok na správu, stĺpce `id, hazard-category, product-category, hazard, product`; `id` je poradie správy v splite (0 až n − 1).
+- **Kandidáti:** pre každú správu a štítok 10 riadkov, stĺpce `id, stitok, poradie, trieda, skore`; `poradie` 1 je najlepšia trieda, `skore` je pri SVM `decision_function`, pri transformeri pravdepodobnosť (väčšie = lepšie).
+- Na ukladanie slúžia `uloz_predikcie` a `uloz_kandidatov` zo `src/spolocne.py`, ktoré formát skontrolujú.
+
+### Spustenie
 
 ```bash
-python src/e0_svm_export.py                                   # E0, asi pol minúty
-python src/vyhodnot.py --split valid E0_svm --kandidati E0_svm  # skóre a recall@k na valid
-python src/e3_hierarchia.py --zaklad E0_svm                   # E3 nad SVM, vypíše abláciu na valid
-python src/vyhodnot.py --split valid E3_svm --porovnaj E0_svm --bootstrap 1000
+pip install -r requirements.txt
+python src/zostav_systemy.py                    # všetky CPU systémy, asi 1 minúta
+python src/vyhodnot.py --split valid E0_svm E0_svmvyber E2kens E12kens --porovnaj E0_svm --bootstrap 1000
 ```
 
-Pravidlá: nastavenia sa vyberajú len na `valid`. Test sa vyhodnotí jediný raz na konci pre všetky zmrazené systémy (`--split test --povolit-test`); bez prepínača skript test odmietne.
+Transformer (GPU): `notebooks/etapa2_transformer_colab.ipynb` na Google Colab, návod v `docs/etapa2/navod_gpu.md`. Lokálne `pip install -r requirements_etapa2.txt` a `python src/e12_transformer.py --help`.
 
-Baseline E0 na valid (kontrola): ST1 0,736, ST2 0,416. Správna trieda medzi top-10 kandidátmi: hazard 96,6 %, produkt 67,6 % (na 1. mieste 82,7 % a 40,9 %).
+Výber pomocou LLM (osoba 2): `python src/e4_llm.py --backend skuska` overí celú cestu bez LLM; so skutočným modelom nastav `LLM_BASE_URL` a `LLM_API_KEY` (API kompatibilné s OpenAI, aj lokálna Ollama) a spusti najprv s `--limit 50`. Odpovede sa ukladajú do `results/etapa2/llm_cache/`, takže opakovaný beh dá rovnaký výsledok bez volaní.
 
-**E3 nad SVM (valid, k = 5)**: hierarchia zvýši ST1 z 0,736 na 0,747, produkt z titulku zvýši ST2 z 0,416 na 0,426 (párový bootstrap: +0,011 [+0,000; +0,020], lepší v 98 % výberov). Kandidáti E3 majú správny produkt v top-10 v 71,0 % správ (E0: 67,6 %). Hodnota k bola vybraná na valid z možností 3, 5 a 10, preto je výsledok na valid mierne optimistický; potvrdí ho až test na konci. Pri kandidátoch E3 je na 1. mieste produkt z titulku, preto sa top-1 kandidát nemusí zhodovať s predikciou.
+### Pravidlá
 
-**Osoba 2 (transformer):** otvor `notebooks/etapa2_transformer_colab.ipynb` v Google Colab s GPU a spusti bunky postupne. Najprv beží skúška na 200 správach, potom mriežka E1/E2 × semienka 42, 43, 44. Notebook ukladá výstupy v dohodnutom formáte a zabalí ich na stiahnutie. Lokálne: `pip install -r requirements_etapa2.txt`, potom `python src/e12_transformer.py --model roberta-base --seed 42 [--vahy]`. Skript bol overený na malom náhodnom modeli na CPU (beh, ukladanie, vyhodnotenie), nie na skutočnom roberta-base.
-
-**Osoba 3 (LLM):** `python src/e4_llm.py --kandidati E3_svm --backend skuska` overí celú cestu bez LLM (vyberie vždy kandidáta č. 1). So skutočným modelom: nastav `LLM_BASE_URL` a `LLM_API_KEY` (ľubovoľné API kompatibilné s OpenAI, aj lokálna Ollama) a spusti najprv `--backend openai --model <model> --limit 50`, aby si videla cenu a správanie promptu, potom bez `--limit`. Odpovede sa ukladajú do `results/etapa2/llm_cache/` a opakovaný beh ich len načíta. Prompt ladíme len na valid.
-
-**Analýza chýb (bonus):** taxonómia je v `docs/etapa2/taxonomia_chyb.md`. Keď bude najlepší systém zmrazený, osoba 1 spustí `python src/chyby_vzorka.py --system <systém>` (200 chýb na valid, súbory pre dvoch anotátorov), osoby 2 a 3 ich vyplnia samostatne a `python src/zhoda.py` spočíta Cohenovu kappu a vypíše nezhody. Skripty boli overené na simulovaných anotáciách.
-
-**Zatiaľ najlepší systém bez GPU a LLM:** `E0_svmvyber` (SVM, pri kategóriách a produkte navyše znakové n-gramy titulku, výber po štítkoch na valid): na valid ST1 0,777 a ST2 0,447, oproti E0 +0,041 a +0,031, oba intervaly nad nulou. Postup: `python src/e0_svm_export.py --titulok`, potom `python src/vyber_po_stitkoch.py --systemy E0_svm E0_svmtit --nazov E0_svmvyber`. Pre LLM (osoba 3) sú zatiaľ najlepší kandidáti `E3_svmvyber` (správny produkt v top-10 v 72,6 % správ). Podrobnosti v `docs/etapa2/zapisnik_experimentov.md`.
-
-**Transformer (15. 11., Colab T4):** 6 behov E1/E2 je v `results/etapa2/`. Na valid je transformer lepší len pri hazard-category (E2 0,824 ± 0,044 oproti 0,808 pri SVM) a pri hazarde a produkte zaostáva (produkt 0,08 a 0,00). Podrobnosti a ďalší krok (E1b, bunka 9 v notebooku) v `docs/etapa2/zapisnik_experimentov.md`.
-
-**Zatiaľ najlepší systém: `E2kens`** (hazard-category z ensemble troch semienok E2, ostatné štítky z E0_svmvyber): na valid ST1 0,802 a ST2 0,447, oproti E0 +0,066 a +0,031. Postup: `python src/ensemble.py --systemy E2_robertabase_s42 E2_robertabase_s43 E2_robertabase_s44 --nazov E2ens`, potom `python src/kombinacia.py --zaklad E0_svmvyber --z E2ens --stitky hazard-category --nazov E2kens`.
-
-**Zatiaľ najlepší systém (16. 11.): `E12kens`** = hazard-category z ensemble E2, product-category z SVM, hazard a product z ensemble E1b (dlhší tréning transformera). Na valid ST1 0,802 a ST2 0,495, oproti E0 +0,066 a +0,079. Pre LLM (osoba 2) sú teraz najlepší kandidáti `E12kens` (správny produkt v top-10 v 76,1 % správ). Postup: `python src/ensemble.py --systemy E1b_robertabase_s42 E1b_robertabase_s43 E1b_robertabase_s44 --nazov E1bens`, potom `python src/kombinacia.py --zaklad E2kens --z E1bens --stitky hazard product --nazov E12kens`.
+- Nastavenia, varianty a pravidlá kombinácie sa vyberajú len na `valid`.
+- Test sa vyhodnotí jediný raz na konci pre všetky zmrazené systémy (`--split test --povolit-test`); bez prepínača ho skript odmietne.
+- Transformer: semienka 42, 43, 44; vo výsledných systémoch ensemble semienok.

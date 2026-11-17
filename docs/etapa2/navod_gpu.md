@@ -1,6 +1,6 @@
-# Návod: GPU pre transformer (osoba 2)
+# Návod: GPU pre transformer
 
-GPU treba len na E1 a E2 (doladenie transformera). Vlastný výkonný počítač netreba: Google Colab aj Kaggle bežia v prehliadači. Ostatné časti projektu bežia na bežnom notebooku.
+GPU treba len na doladenie transformera (E1, E2, E1b). Vlastný výkonný počítač netreba: Google Colab aj Kaggle bežia v prehliadači. Ostatné časti projektu bežia na bežnom notebooku.
 
 Overené k 15. 11. 2026 zo stránok uvedených na konci. Limity sa menia, preto pred začatím pozri aktuálny stav vo svojom účte.
 
@@ -16,8 +16,8 @@ Postup:
 2. *Runtime → Change runtime type → T4 GPU* (alebo iné ponúkané GPU) → *Save*.
 3. Spusti bunky 1 a 2. Bunka 2 musí vypísať `GPU: True` a názov karty.
 4. Spusti bunku 3b a povoľ prístup k Google Drive. Výsledky sa po každom behu kopírujú do `MyDrive/nlp_food_hazard_etapa2`.
-5. Spusti bunku 4 (skúška na 200 správach). Zapíš si, ako dlho trvala; podľa toho odhadneš celú mriežku (24 tréningov: 4 štítky × 2 varianty × 3 semienka).
-6. Spusti bunku 5. Nechaj kartu otvorenú. Keď sa Colab odpojí, otvor notebook znova a spusti bunky 1, 2, 3, 3b a 5: hotové behy sa preskočia a pokračuje sa ďalším.
+5. Spusti bunku 4 (skúška na 200 správach): overí, že všetko beží; skóre budú pri takej malej vzorke takmer nulové.
+6. Spusti bunku 5 (E1 a E2) a potom bunku 9 (E1b). Nechaj kartu otvorenú. Keď sa Colab odpojí, otvor notebook znova a spusti bunky 1, 2, 3, 3b a tú, ktorá bežala: hotové behy sa preskočia a pokračuje sa ďalším. Nameraný čas na Tesla T4 (15. a 16. 11.): jeden beh E1 alebo E2 (4 štítky, 4 epochy) asi 22 minút, jeden beh E1b (2 štítky, 10 epoch) asi 25 minút.
 7. Bunky 6 a 7 porovnajú výsledky na valid, bunka 8 ich zabalí na stiahnutie.
 
 ## Možnosť 2: Kaggle (záloha, keď Colab nedá GPU)

@@ -3,3 +3,11 @@ venv/
 __pycache__/
 .ipynb_checkpoints/
 .DS_Store
+
+# 2. etapa: medzikroky a ablácie, ktoré vytvorí src/zostav_systemy.py
+results/etapa2/*/E0_svmtit_*
+results/etapa2/*/E2ens_*
+results/etapa2/*/E1ens_*
+results/etapa2/*/E1bens_*
+results/etapa2/*/E2k_s*
+results/etapa2/*/E3_*

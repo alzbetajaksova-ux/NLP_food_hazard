@@ -1,6 +1,8 @@
 # Zápisník experimentov (2. etapa)
 
-Všetky čísla sú na **valid** (565 správ), ak nie je uvedené inak. Test sa spúšťa jediný raz na konci. Pri každom zázname je, čo sa vyberalo na valid, lebo taký výsledok je mierne optimistický.
+Všetky čísla sú na **valid** (565 správ), ak nie je uvedené inak. Test sa spúšťa jediný raz na konci. Pri každom zázname je, čo sa vyberalo na valid, lebo taký výsledok je mierne optimistický. Záznamy sú chronologické; staršie závery sú prekonané novšími.
+
+**Aktuálny stav (17. 11. 2026):** najlepší systém je `E12kens` (ST1 0,802, ST2 0,495). Kandidáti pre LLM sú `E12kens`. Pomocné pravidlá (E3) sa nepoužívajú. Medzikroky (`E0_svmtit`, ensemble, `E2k_s*`, E3) nie sú v gite; vytvorí ich `python src/zostav_systemy.py --ablacie` (E1ens: `python src/ensemble.py --systemy E1_robertabase_s42 E1_robertabase_s43 E1_robertabase_s44 --nazov E1ens`; `E2k_s*`: `python src/kombinacia.py --zaklad E0_svmvyber --z E2_robertabase_s42 --stitky hazard-category --nazov E2k_s42`).
 
 | Dátum | Experiment | Výsledok na valid | Rozhodnutie |
 | --- | --- | --- | --- |

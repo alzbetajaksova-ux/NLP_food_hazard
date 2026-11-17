@@ -11,14 +11,15 @@ Beh: python src/e0_svm_export.py   (asi pol minúty na CPU)
 Variant --titulok (systém E0_svmtit): k príznakom title + text sa pridajú znakové n-gramy (3 až 5)
 samotného titulku, takže model kladie väčší dôraz na titulok, kde je zvyčajne názov produktu.
 """
+import argparse
 import os
 import sys
 import time
 
 import numpy as np
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
 from scipy.sparse import hstack
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import LinearSVC
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +27,6 @@ from spolocne import (KOREN, LABELY, SEED, TOP_K, nacitaj, skore, tokenizuj,  # 
                       uloz_kandidatov, uloz_predikcie, vstup)
 
 def main():
-    import argparse
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--titulok", action="store_true", help="pridať znakové n-gramy titulku (E0_svmtit)")
     a = ap.parse_args()

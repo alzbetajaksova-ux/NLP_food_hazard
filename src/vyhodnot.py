@@ -1,8 +1,8 @@
 """Spoločné vyhodnotenie 2. etapy.
 
 Príklady (z koreňa repozitára):
-  python src/vyhodnot.py --split valid E0_svm E3_svm
-  python src/vyhodnot.py --split valid E3_svm --porovnaj E0_svm --bootstrap 1000
+  python src/vyhodnot.py --split valid E0_svm E12kens
+  python src/vyhodnot.py --split valid E12kens --porovnaj E0_svm --bootstrap 1000
   python src/vyhodnot.py --split valid --kandidati E0_svm
 
 Systém sa zadáva menom (results/etapa2/predikcie/<meno>_<split>.csv) alebo cestou k CSV.

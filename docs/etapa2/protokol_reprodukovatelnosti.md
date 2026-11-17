@@ -6,8 +6,8 @@ Zadanie (bonus): osoba mimo tímu spustí projekt v čistom prostredí iba podľ
 
 | Výsledok | Ako sa reprodukuje | Tolerancia |
 | --- | --- | --- |
-| E0, E0_svmvyber, E3 (SVM) | spustenie skriptov | presná zhoda skóre (rozdiel < 0,0005) |
-| E1 / E2 (transformer) | nový tréning so semienkom 42 | v rámci priemer ± 2 smerodajné odchýlky z našich 3 semienok |
+| E0_svm, E0_svmvyber, E2kens, E12kens | `python src/zostav_systemy.py` (z uložených behov transformera) | presná zhoda skóre (rozdiel < 0,0005) |
+| E1, E2, E1b (transformer) | nový tréning so semienkom 42 na GPU (notebook) | v rámci priemer ± 2 smerodajné odchýlky z našich 3 semienok |
 | E4 (LLM) | z uložených odpovedí v `results/etapa2/llm_cache/` | presná zhoda skóre |
 | Tabuľka výsledkov na teste | `src/vyhodnot.py --split test --povolit-test` nad uloženými predikciami | presná zhoda |
 

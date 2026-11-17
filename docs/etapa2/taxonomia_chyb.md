@@ -28,7 +28,7 @@ Skript pre každú položku pridá pomocné stĺpce (počet príkladov pravdivej
 
 ## Postup
 
-1. Osoba 1 spustí `python src/chyby_vzorka.py --system <najlepší systém>`; vzniknú `results/etapa2/chyby/anotacia_A.csv`, `anotacia_B.csv` a `kluc.csv`.
+1. Osoba 1 spustí `python src/chyby_vzorka.py --system <najlepší systém>`; vzniknú `results/etapa2/chyby/anotacia_A.csv`, `anotacia_B.csv` a `kluc.csv`. Vzorka bola vytvorená 17. 11. 2026 zo systému `E12kens` (60 chýb hazardu a 140 chýb produktu z 70 a 258 chýb na valid).
 2. Osoba 2 vyplní `anotacia_A.csv`, osoba 3 `anotacia_B.csv` (stĺpce `kategoria` = kód z tabuľky, `poznamka`). Navzájom si súbory neukazujú, kým nie sú obe hotové.
 3. Osoba 1 spustí `python src/zhoda.py`: Cohenova kappa, zhoda po kategóriách, zoznam nezhôd.
 4. Nezhody osoba 1 rozhodne a zapíše do `results/etapa2/chyby/rozhodnute.csv` s krátkym zdôvodnením.

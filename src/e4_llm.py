@@ -1,4 +1,4 @@
-"""E4: LLM vyberie hazard a produkt z top-k kandidátov iného systému (predvolene E3_svm).
+"""E4: LLM vyberie hazard a produkt z top-k kandidátov iného systému (predvolene E12kens).
 
 Postup pre každú správu a štítok (hazard, product):
   1. prompt = titulok + začiatok textu + očíslovaný zoznam k kandidátov,
@@ -15,9 +15,9 @@ Backendy:
                     nastav premenné LLM_BASE_URL (napr. http://localhost:11434/v1) a LLM_API_KEY
 
 Príklady:
-  python src/e4_llm.py --kandidati E3_svm --backend skuska
-  python src/e4_llm.py --kandidati E3_svm --backend openai --model <model> --limit 50   # skúška ceny a promptu
-  python src/e4_llm.py --kandidati E3_svm --backend openai --model <model>             # celý valid
+  python src/e4_llm.py --kandidati E12kens --backend skuska
+  python src/e4_llm.py --kandidati E12kens --backend openai --model <model> --limit 50   # skúška ceny a promptu
+  python src/e4_llm.py --kandidati E12kens --backend openai --model <model>             # celý valid
 """
 import argparse
 import hashlib
@@ -108,7 +108,7 @@ def zavolaj_openai(model, text, pokusy=3):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--kandidati", default="E3_svm", help="systém, ktorého kandidátov a predikcie použijeme")
+    ap.add_argument("--kandidati", default="E12kens", help="systém, ktorého kandidátov a predikcie použijeme")
     ap.add_argument("--split", choices=["valid", "test"], default="valid")
     ap.add_argument("--backend", choices=["skuska", "openai"], default="skuska")
     ap.add_argument("--model", default="skuska", help="názov modelu LLM (pri backende openai povinný)")

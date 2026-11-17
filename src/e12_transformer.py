@@ -33,8 +33,8 @@ from torch.utils.data import DataLoader
 from transformers import AutoModelForSequenceClassification, AutoTokenizer, get_linear_schedule_with_warmup
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from spolocne import (KOREN, LABELY, TOP_K, VYSLEDKY, nacitaj, uloz_kandidatov,  # noqa: E402
-                      uloz_predikcie, vstup)
+from spolocne import (LABELY, TOP_K, VYSLEDKY, nacitaj, nacitaj_kandidatov,  # noqa: E402
+                      nacitaj_predikcie, uloz_kandidatov, uloz_predikcie, vstup)
 
 
 def nastav_semienko(seed):
@@ -181,7 +181,6 @@ def main():
     for s in ["valid", "test"]:
         k = pd.concat(kand[s])
         if a.doplnit_z and set(a.stitky) != set(LABELY):
-            from spolocne import nacitaj_kandidatov, nacitaj_predikcie
             zaklad = nacitaj_predikcie(a.doplnit_z, s).sort_values("id").reset_index(drop=True)
             for lab in LABELY:
                 if lab not in a.stitky:

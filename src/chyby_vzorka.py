@@ -5,7 +5,7 @@ Vyberie náhodne (SEED) chybné predikcie štítkov hazard a product na valid a 
   results/etapa2/chyby/anotacia_B.csv   pre osobu 3 (tie isté položky v inom poradí)
   results/etapa2/chyby/kluc.csv         id položiek, systém a pomocné stĺpce
 
-Beh: python src/chyby_vzorka.py --system E3_svm --pocet 200
+Beh: python src/chyby_vzorka.py --system E12kens --pocet 200
 Existujúce anotačné súbory sa neprepíšu (ochrana proti strate ručnej práce), iba s --prepis.
 """
 import argparse
