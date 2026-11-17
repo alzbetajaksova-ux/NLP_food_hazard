@@ -1,0 +1,201 @@
+polozka,id_spravy,stitok,pravda,predikcia,pocet_pravdy_v_train,podretazec,system
+0,38,hazard,toxin,other not classified,21,0,E12kens
+1,4,hazard,metal fragment,escherichia coli,155,0,E12kens
+2,394,hazard,foreign bodies,plastic fragment,28,0,E12kens
+3,148,hazard,almond,peanuts and products thereof,66,0,E12kens
+4,432,hazard,eggs and products thereof,milk and products thereof,208,0,E12kens
+5,495,hazard,hazelnut,cashew,16,0,E12kens
+6,162,hazard,incorrect labeling,eggs and products thereof,38,0,E12kens
+7,93,hazard,packaging defect,glass fragment,22,0,E12kens
+8,328,hazard,taste disturbance,bad smell / off odor,6,0,E12kens
+9,96,hazard,pieces of wood,foreign bodies,4,0,E12kens
+10,444,hazard,damaged packaging,packaging defect,7,0,E12kens
+11,376,hazard,milk and products thereof,insufficient labelling/documentation,588,0,E12kens
+12,7,hazard,packaging defect,bulging packaging,22,0,E12kens
+13,307,hazard,other,other not classified,102,1,E12kens
+14,141,hazard,processing,other,39,0,E12kens
+15,106,hazard,cereals containing gluten and products thereof,peanuts and products thereof,207,0,E12kens
+16,1,hazard,escherichia coli,listeria spp,237,0,E12kens
+17,443,hazard,insufficient labelling/documentation,incorrect use by dates,19,0,E12kens
+18,336,hazard,peanuts and products thereof,incorrect labeling,211,0,E12kens
+19,202,hazard,foreign bodies,plastic fragment,28,0,E12kens
+20,35,hazard,metal fragment,processing,155,0,E12kens
+21,546,hazard,bulging packaging,other not classified,21,0,E12kens
+22,139,hazard,nuts,pistachio nut,29,0,E12kens
+23,52,hazard,unauthorised placing on the market,unauthorised operator,6,0,E12kens
+24,50,hazard,metal fragment,other,155,0,E12kens
+25,407,hazard,poor or insufficient controls,clostridium botulinum,12,0,E12kens
+26,332,hazard,misdescription,peanuts and products thereof,22,0,E12kens
+27,327,hazard,incorrect labeling,misbranding,38,0,E12kens
+28,415,hazard,mustard and products thereof,celery and products thereof,48,0,E12kens
+29,116,hazard,other,salmonella,102,0,E12kens
+30,155,hazard,peanuts and products thereof,eggs and products thereof,211,0,E12kens
+31,340,hazard,eggs and products thereof,cereals containing gluten and products thereof,208,0,E12kens
+32,43,hazard,listeria monocytogenes,eggs and products thereof,665,0,E12kens
+33,510,hazard,sulphates/sulphites,sulphur dioxide and sulphites,9,0,E12kens
+34,304,hazard,other not classified,insects,34,0,E12kens
+35,472,hazard,pathogenic bacteria,escherichia coli,7,0,E12kens
+36,329,hazard,crustaceans and products thereof,molluscs and products thereof,17,0,E12kens
+37,165,hazard,misbranding,undeclared additive,13,0,E12kens
+38,525,hazard,bulging packaging,packaging defect,21,0,E12kens
+39,389,hazard,mislabelled,sesame seeds and products thereof,5,0,E12kens
+40,317,hazard,cereals containing gluten and products thereof,milk and products thereof,207,0,E12kens
+41,505,hazard,other,microbiological contamination,102,0,E12kens
+42,519,hazard,improper conditions,processing,13,0,E12kens
+43,112,hazard,milk and products thereof,soybeans and products thereof,588,0,E12kens
+44,41,hazard,other not classified,bulging packaging,34,0,E12kens
+45,331,hazard,sulphur dioxide and sulphites,eggs and products thereof,93,0,E12kens
+46,2,hazard,enteroviruses,listeria spp,10,0,E12kens
+47,284,hazard,other not classified,other,34,1,E12kens
+48,138,hazard,cereals,cereals containing gluten and products thereof,7,1,E12kens
+49,404,hazard,incorrect labeling,insufficient labelling/documentation,38,0,E12kens
+50,536,hazard,misdescription,unauthorised operator,22,0,E12kens
+51,19,hazard,other,other not classified biological hazards,102,1,E12kens
+52,226,hazard,misdescription,inspection issues,22,0,E12kens
+53,481,hazard,allergens,fish and products thereof,13,0,E12kens
+54,222,hazard,cereals containing gluten and products thereof,soybeans and products thereof,207,0,E12kens
+55,302,hazard,fish and products thereof,sesame seeds and products thereof,39,0,E12kens
+56,549,hazard,mustard and products thereof,soybeans and products thereof,48,0,E12kens
+57,271,hazard,improper packaging,soybeans and products thereof,4,0,E12kens
+58,436,hazard,insufficient labelling/documentation,incorrect labeling,19,0,E12kens
+59,532,hazard,microbiological contamination,salmonella,17,0,E12kens
+60,543,product,dark chocolates,chocolate and chocolate products,30,0,E12kens
+61,57,product,semi-hard cheeses,cheese,1,1,E12kens
+62,393,product,dried apples,apple juice,2,0,E12kens
+63,122,product,candies,peanuts,32,0,E12kens
+64,416,product,nut mix,snack mix,1,0,E12kens
+65,268,product,baguettes,sandwiches,2,0,E12kens
+66,346,product,chocolates,pistachio nuts,9,0,E12kens
+67,297,product,jam,fruit mix,12,0,E12kens
+68,351,product,bars,chocolate bars,11,1,E12kens
+69,302,product,crustaceans and products thereof,food supplement,2,0,E12kens
+70,221,product,hot dogs,thermal processed pork meat,6,0,E12kens
+71,398,product,chicken breast,chicken based products,27,0,E12kens
+72,308,product,green cardamon,cardamon seeds,0,0,E12kens
+73,136,product,sauce,sauces,25,1,E12kens
+74,10,product,other not classified meat products,minced beef,35,0,E12kens
+75,292,product,pig meat - pork,Not classified pork meat,14,0,E12kens
+76,99,product,frozen chicken wings,chicken preparations,3,0,E12kens
+77,311,product,biscuits,iced tea,49,0,E12kens
+78,23,product,lollipops,jellies,3,0,E12kens
+79,252,product,pig meat - pork,salami,14,0,E12kens
+80,553,product,poppy,blue poppy seeds,4,1,E12kens
+81,228,product,omega seed mix,sesame,0,0,E12kens
+82,421,product,burrito (ready to eat),chicken based products,5,0,E12kens
+83,466,product,milk,ice cream,36,0,E12kens
+84,86,product,basil pesto sauce,pesto,12,1,E12kens
+85,241,product,potato chips,prepared dishes and snacks,24,0,E12kens
+86,298,product,halva,sesame paste,5,0,E12kens
+87,499,product,sweets,milk,3,0,E12kens
+88,453,product,Fishes not identified,ready-to-eat seafood sticks,34,0,E12kens
+89,557,product,dietary supplement,food supplement,23,0,E12kens
+90,465,product,goat cheese,raw goat milk cheese,3,0,E12kens
+91,404,product,chicken,chicken based products,24,1,E12kens
+92,306,product,cheese sauce,cheese,0,1,E12kens
+93,279,product,risotto rice,rice snack,0,0,E12kens
+94,147,product,frozen burgers,Veggie Burger,2,0,E12kens
+95,399,product,massala spice mixture,masala spice mix,1,0,E12kens
+96,223,product,shrimps,lasagne,18,0,E12kens
+97,314,product,sweets,cakes,3,0,E12kens
+98,508,product,ice cream cones,desserts,0,0,E12kens
+99,494,product,prepared dish,chicken based products,13,0,E12kens
+100,198,product,potato salad,salads,9,0,E12kens
+101,80,product,breakfast cereals,cereal,15,1,E12kens
+102,183,product,milk,raw milk,36,1,E12kens
+103,474,product,ready to eat - cook meals,curry,79,0,E12kens
+104,352,product,other not classified meat products,fruit pies,35,0,E12kens
+105,205,product,energy drink,food supplement,3,0,E12kens
+106,191,product,nut and fruit mixture,granola,2,0,E12kens
+107,406,product,various chicken meat products,cooked chicken,1,0,E12kens
+108,284,product,betel nuts,walnuts,0,0,E12kens
+109,209,product,mung bean sprouts,bean sprouts,1,1,E12kens
+110,447,product,frozen pizza,pizza,12,1,E12kens
+111,78,product,spreads,coriander,3,0,E12kens
+112,490,product,ground beef,pet feed,52,0,E12kens
+113,362,product,chicken preparations,chicken based products,23,0,E12kens
+114,146,product,fermented beef meat,hot dogs,4,0,E12kens
+115,448,product,structured/textured fish meat products or fish paste,frozen fish fillets,1,0,E12kens
+116,484,product,pasta products,pasta,9,1,E12kens
+117,106,product,chocolate dessert,confectionery,1,0,E12kens
+118,184,product,various snacks,sandwiches,1,0,E12kens
+119,124,product,candies,peanuts,32,0,E12kens
+120,185,product,potato chips,flavoured potato chips,24,1,E12kens
+121,530,product,pickled vegetables,flour,0,0,E12kens
+122,564,product,chocolate confectionery,dried fruits with chocolate,2,0,E12kens
+123,234,product,chicken breast,chicken based products,27,0,E12kens
+124,281,product,infant food,breakfast cereals,0,0,E12kens
+125,343,product,carbonated beverage,lemonade (lemon soda),5,0,E12kens
+126,431,product,frozen doner kebabs,chicken based products,0,0,E12kens
+127,370,product,pastry products,other not classified meat products,21,0,E12kens
+128,51,product,sesame paste,flour,6,0,E12kens
+129,534,product,frozen breaded chicken goujons,chicken based products,0,0,E12kens
+130,94,product,kefta (frozen meatballs),moussaka,0,0,E12kens
+131,468,product,cereal-based baby food,breakfast cereals,0,0,E12kens
+132,179,product,"fully cooked, frozen chicken wings",frozen chicken wings,0,1,E12kens
+133,309,product,seaweeds salads,algae,0,0,E12kens
+134,269,product,other types of meat,other not classified meat products,19,0,E12kens
+135,403,product,cooked chicken,chicken products - frozen,16,0,E12kens
+136,140,product,Fishes not identified,herring,34,0,E12kens
+137,237,product,mung bean sprouts,bean sprouts,1,1,E12kens
+138,318,product,dietary supplement,mitragyna speciosa (kratom),23,0,E12kens
+139,367,product,cooked chicken,chicken preparations,16,0,E12kens
+140,414,product,mozzarella,mozzarella cheese,2,1,E12kens
+141,501,product,cream cheese,ice cream,6,0,E12kens
+142,77,product,quail,chicken based products,0,0,E12kens
+143,378,product,cooked chicken,other not classified meat products,16,0,E12kens
+144,154,product,Dried pork meat,pig meat - pork,1,0,E12kens
+145,150,product,artichoke,sauce,0,0,E12kens
+146,204,product,frozen ready to cook chicken,chicken breast,4,0,E12kens
+147,301,product,sweets,dietary supplement,3,0,E12kens
+148,62,product,spice mix,massala spice mixture,3,1,E12kens
+149,509,product,korean kimchi,cabbage,0,0,E12kens
+150,330,product,chicken,fresh poultry and poultry prepations,24,0,E12kens
+151,389,product,bean curd,bean sauce,0,0,E12kens
+152,472,product,lettuce,organic chilled hummus,6,0,E12kens
+153,28,product,pork and beef sausages,pork sausage,2,0,E12kens
+154,47,product,buckwheat,sliced bread,0,0,E12kens
+155,141,product,chicken preparations,chicken based products,23,0,E12kens
+156,33,product,mineral waters,carbonated beverage,1,0,E12kens
+157,27,product,turkey and turkey preparations,turkey,23,1,E12kens
+158,244,product,candies,chocolate products,32,0,E12kens
+159,532,product,milk and milk products,butter,2,0,E12kens
+160,487,product,spreads,hazelnuts,3,0,E12kens
+161,353,product,fresh processed beef meat products,raw beef meat,5,0,E12kens
+162,439,product,dried mushrooms,mushrooms,7,1,E12kens
+163,375,product,chicken based products,wraps,138,0,E12kens
+164,507,product,cereal bars,high protein bars,12,0,E12kens
+165,169,product,seasonings,all purpose seasoning,1,0,E12kens
+166,475,product,various food products,sesame confection,0,0,E12kens
+167,95,product,cooking sauce,pasta sauce,3,0,E12kens
+168,423,product,dressing,salad dressing,7,1,E12kens
+169,524,product,fruits and vegetables,dates,6,0,E12kens
+170,220,product,dark chocolate coated almonds,chocolate bars,6,0,E12kens
+171,295,product,chicken,chicken based products,24,1,E12kens
+172,8,product,snacks (various),cheese,16,0,E12kens
+173,486,product,rice cakes,pancakes,4,0,E12kens
+174,6,product,milk,other dairy products,36,0,E12kens
+175,386,product,cooked chicken,chicken based products,16,0,E12kens
+176,68,product,cream chocolate pie,fruit pies,2,0,E12kens
+177,315,product,sausage,fresh pork leg,38,0,E12kens
+178,112,product,frozen pork preparations,chicken preparations,6,0,E12kens
+179,190,product,yoghurt,nuts and nuts products,29,0,E12kens
+180,26,product,oats,cereal,6,0,E12kens
+181,459,product,candies,fruit juice,32,0,E12kens
+182,294,product,chicken preparations,wraps,23,0,E12kens
+183,545,product,canned mussels,mussels,1,1,E12kens
+184,37,product,minced pork,minced beef,7,0,E12kens
+185,328,product,flavoured drinks,soft drinks,1,0,E12kens
+186,131,product,chicken and chicken preparations,chicken,3,1,E12kens
+187,202,product,chicken based products,cooked chicken,138,0,E12kens
+188,215,product,desserts,pudding,23,0,E12kens
+189,45,product,pasta products,other not classified meat products,9,0,E12kens
+190,408,product,precooked cooked beef meat products,beef,20,1,E12kens
+191,177,product,chicken preparations,chicken based products,23,0,E12kens
+192,390,product,sport drink,blackcurrant drink concentrate,6,0,E12kens
+193,171,product,gluten-free barleygrass powder,protein powder,0,0,E12kens
+194,546,product,beer,lime,25,0,E12kens
+195,339,product,frozen pre-fried breaded fish portions,Fishes not identified,0,0,E12kens
+196,350,product,pesto sauce (pesto verde),mashed chickpeas (hummus),1,0,E12kens
+197,104,product,other types of meat,cream chocolate pie,19,0,E12kens
+198,105,product,bars,cereal bars,11,1,E12kens
+199,395,product,dried apples,apple juice,2,0,E12kens
