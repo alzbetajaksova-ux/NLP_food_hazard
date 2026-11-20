@@ -93,7 +93,7 @@ Za API sme neplatili nič; náklad je čas školskej GPU. Model 3B má na disku 
 ### Reprodukovateľnosť
 
 - Kód: `src/e4_llm.py` (beh na GPU), `src/e4_vaha_cv.py` (výber váhy), `src/e4_analyza.py` (analýza zmien); notebooky z datalabu s výpismi v `notebooks/etapa2_e4*_datalab.ipynb`. Verzie balíčkov pre E4 sú pripnuté v `requirements_e4.txt` (torch 2.15.0, transformers 5.23.0, bitsandbytes 0.50.2, accelerate 1.16.0; Python 3.12.10).
-- Model: `Qwen/Qwen2.5-3B-Instruct`, revízia [doplniť hash commitu z datalabu]; stiahnutý cez `huggingface_hub.snapshot_download`.
+- Model: `Qwen/Qwen2.5-3B-Instruct`, revízia `aa8e72537993ba99e69dfaafa59ed015b17504d1` (commit na Hugging Face); stiahnutý cez `huggingface_hub.snapshot_download`.
 - **Všetky odpovede LLM sú uložené** v `results/etapa2/llm_cache/<model>.jsonl` (pravdepodobnosti všetkých 10 možností, počet tokenov, kľúč = SHA-256 z názvu modelu a celého promptu). Opakovaný beh `e4_llm.py` ich načíta bez GPU a dá presne rovnaké predikcie; zmena promptu alebo modelu vedie k novému kľúču, takže sa staré odpovede omylom nepoužijú. Výber váhy aj analýza bežia len z tejto cache na CPU.
 - Pri každom behu sa do `results/etapa2/logy/` zapíše nastavenie, verzie, GPU, kvantizácia, pamäť a čas; po správach sa ukladá detail (kandidát 1, výber LLM, pravdepodobnosti) do `results/etapa2/llm/detail_*.csv`.
 - Nový beh na GPU môže pri niektorých otázkach dať mierne iné pravdepodobnosti (nedeterminizmus výpočtov vo float16 na GPU), preto protokol reprodukovateľnosti pri E4 vyžaduje presnú zhodu výsledku z uložených odpovedí.
