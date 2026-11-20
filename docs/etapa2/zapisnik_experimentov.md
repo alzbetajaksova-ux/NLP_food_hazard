@@ -175,3 +175,19 @@ Zistenia:
 - **Hazard.** Škody samotného LLM sú sústredené v kategórii allergens: 103 zo 144 pri 3B a 133 zo 164 pri 7B. Konkrétne alergény z datasetu („milk and products thereof“, „cereals containing gluten…“) LLM nahrádza všeobecnými „undeclared constituent“ alebo „allergens“. Pri biologických hazardoch je 7B takmer neutrálny (+3 / −3).
 - **Product.** Pri opravách klasifikátor často vybral zložku spomenutú v texte namiesto samotného produktu a LLM vybral produkt: peanuts → candies (čokoládové arašidy), ham → sandwiches, marshmalows → beer (Marshmallow Porter). Ďalší typ opravy je presnejšia trieda (bean sprouts → mung bean sprouts). Pri škodách volí LLM synonymum alebo všeobecnejšiu triedu: chilled salads → salads, milk chocolates → chocolate, seasoning → seasoning mix, biscuits → cookies. Ide teda o nejednoznačnú granularitu označení v datasete, nie o zjavné omyly.
 - **Prečo zisk v macro-F1.** Takmer všetky zmeny sú v triedach s 1 až 2 správami vo valid, kde jedna správa zmení F1 triedy o 1. Pri 358 triedach to je asi 0,003 macro-F1 na správu. Čistých +20 správ pri product teda zvýši product macro-F1 z 0,335 na 0,380 a ST2 o 0,022. Triedy s viac než 100 správami v train spojenie nemení.
+
+## Jediný beh na teste (bez GPU), 20. 11. 2026
+
+Systémy boli zmrazené po výbere na valid. Test sa vyhodnotil raz príkazmi z `docs/etapa2/e4_test_beh.md`, bootstrap 1000 (n = 997). Tabuľky sú v `results/etapa2/vyhodnotenie_test.csv` (proti E0_svm) a `results/etapa2/llm/vyhodnotenie_test.csv` (varianty E4 proti E12kens).
+
+| Systém | ST1 | ST2 | ST1 − E0_svm | ST2 − E0_svm |
+|---|---|---|---|---|
+| E0_svm | 0,723 | 0,410 | – | – |
+| E0_svmvyber | 0,725 | 0,433 | +0,003 [−0,025; +0,038] | +0,024 [+0,016; +0,032] |
+| E2kens | 0,752 | 0,433 | +0,029 [−0,002; +0,069] | +0,024 [+0,016; +0,032] |
+| E12kens | 0,752 | 0,500 | +0,029 [−0,002; +0,069] | +0,090 [+0,072; +0,122] |
+| **E4_Qwen253BInstruct_E12kens_f030_prod** | **0,752** | **0,512** | +0,029 [−0,002; +0,069] | +0,102 [+0,083; +0,136] |
+
+- **ST2:** poradie systémov je rovnaké ako na valid. E4 (spojenie s váhou 0,3 len pre product) je oproti E12kens lepší o +0,012 [+0,003; +0,021], na valid to bolo +0,022. Zisk je menší, ale interval je celý nad nulou.
+- **ST1:** všetky systémy sú na teste nižšie ako na valid (E12kens 0,752 oproti 0,802). Zlepšenie oproti E0_svm +0,029 má interval, ktorý zasahuje pod nulu, takže v ST1 zlepšenie na teste nie je preukázané (lepší v 97 % vzoriek).
+- **Ablácie E4 na teste:** samotný LLM ST2 0,383 (−0,117 oproti E12kens), spojenie pre oba štítky s váhou 0,1 ST2 0,498 (−0,002 [−0,013; +0,006]). Závery z valid platia: LLM samotné škodí, pomáha len spojenie pri product.
