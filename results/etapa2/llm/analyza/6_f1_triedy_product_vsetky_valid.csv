@@ -1,0 +1,124 @@
+trieda,správ v valid,F1 základ,F1 E4,zmena F1,príspevok k macro-F1 (≈ zmena / počet tried),len predikovaná (nie je v valid)
+chilled salads,1,1.0,0.0,-1.0,-0.0028,False
+dried beef meat,1,1.0,0.0,-1.0,-0.0028,False
+energy and protein bars,1,1.0,0.0,-1.0,-0.0028,False
+milk chocolates,1,1.0,0.0,-1.0,-0.0028,False
+mixed vegetables,1,1.0,0.0,-1.0,-0.0028,False
+pancakes,1,0.667,0.0,-0.667,-0.0019,False
+dried fruits,2,1.0,0.5,-0.5,-0.0014,False
+thermal processed pork meat,1,0.5,0.0,-0.5,-0.0014,False
+bakery products,1,0.667,0.286,-0.381,-0.0011,False
+Catfishes (freshwater),2,1.0,0.667,-0.333,-0.0009,False
+black pepper,1,1.0,0.667,-0.333,-0.0009,False
+bottled water,2,1.0,0.667,-0.333,-0.0009,False
+chocolate,1,1.0,0.667,-0.333,-0.0009,False
+lamb,1,1.0,0.667,-0.333,-0.0009,False
+prepared salads,1,1.0,0.667,-0.333,-0.0009,False
+dip-sauce,2,1.0,0.8,-0.2,-0.0006,False
+protein bar,2,0.8,0.667,-0.133,-0.0004,False
+seasoning,3,0.6,0.5,-0.1,-0.0003,False
+sauce,4,0.571,0.5,-0.071,-0.0002,False
+bread,2,0.4,0.333,-0.067,-0.0002,False
+ravioli,5,0.8,0.75,-0.05,-0.0001,False
+biscuits,7,0.769,0.727,-0.042,-0.0001,False
+corn,6,0.909,0.889,-0.02,-0.0001,False
+baby food,0,0.0,0.0,0.0,0.0,True
+bean sprouts,0,0.0,0.0,0.0,0.0,True
+beef products,0,0.0,0.0,0.0,0.0,True
+bottled mineral water,0,0.0,0.0,0.0,0.0,True
+breakfast cereals for babies,0,0.0,0.0,0.0,0.0,True
+cabbage,0,0.0,0.0,0.0,0.0,True
+coffee beans,0,0.0,0.0,0.0,0.0,True
+confectionery,0,0.0,0.0,0.0,0.0,True
+cow milk cheese,0,0.0,0.0,0.0,0.0,True
+flavoured potato chips,0,0.0,0.0,0.0,0.0,True
+food supplement,1,0.0,0.0,0.0,0.0,True
+fresh pork,0,0.0,0.0,0.0,0.0,True
+fresh pork leg,0,0.0,0.0,0.0,0.0,True
+frozen fish products,0,0.0,0.0,0.0,0.0,True
+frozen marinated chicken,0,0.0,0.0,0.0,0.0,True
+frozen pork meat,0,0.0,0.0,0.0,0.0,True
+gluten free bread,0,0.0,0.0,0.0,0.0,True
+green basil pesto,0,0.0,0.0,0.0,0.0,True
+hazelnuts,1,0.0,0.0,0.0,0.0,True
+ices and desserts,0,0.0,0.0,0.0,0.0,True
+jerky products,0,0.0,0.0,0.0,0.0,True
+marshmalows,1,0.0,0.0,0.0,0.0,True
+melons,0,0.0,0.0,0.0,0.0,True
+moussaka,0,0.0,0.0,0.0,0.0,True
+non-alcoholic beverages,0,0.0,0.0,0.0,0.0,True
+nutrition shake,0,0.0,0.0,0.0,0.0,True
+nuts and nuts products,0,0.0,0.0,0.0,0.0,True
+orange peppers,0,0.0,0.0,0.0,0.0,True
+organic chilled hummus,0,0.0,0.0,0.0,0.0,True
+organic chlorella powder,0,0.0,0.0,0.0,0.0,True
+pop corn,0,0.0,0.0,0.0,0.0,True
+poultry,0,0.0,0.0,0.0,0.0,True
+prepacked salad,0,0.0,0.0,0.0,0.0,True
+protein powder,0,0.0,0.0,0.0,0.0,True
+raw goat milk cheese,0,0.0,0.0,0.0,0.0,True
+raw milk,0,0.0,0.0,0.0,0.0,True
+rice snack,0,0.0,0.0,0.0,0.0,True
+seasoning mix,0,0.0,0.0,0.0,0.0,True
+sesame confection,0,0.0,0.0,0.0,0.0,True
+sliced bread,0,0.0,0.0,0.0,0.0,True
+sliced ham,0,0.0,0.0,0.0,0.0,True
+sorbets,0,0.0,0.0,0.0,0.0,True
+"soups, broths, sauces and condiments",0,0.0,0.0,0.0,0.0,True
+spread,0,0.0,0.0,0.0,0.0,True
+unpasteurised cheese,0,0.0,0.0,0.0,0.0,True
+various bakery products,0,0.0,0.0,0.0,0.0,True
+water for human consumption,0,0.0,0.0,0.0,0.0,True
+whey protein,0,0.0,0.0,0.0,0.0,True
+chicken based products,15,0.529,0.562,0.033,0.0001,False
+chicken breast,7,0.25,0.286,0.036,0.0001,False
+potato chips,5,0.75,0.8,0.05,0.0001,False
+salads,6,0.75,0.8,0.05,0.0001,False
+ice cream,20,0.914,0.97,0.055,0.0002,False
+wraps,1,0.333,0.4,0.067,0.0002,False
+peanuts,6,0.8,0.889,0.089,0.0002,False
+dietary supplement,6,0.571,0.667,0.095,0.0003,False
+ground beef,8,0.571,0.667,0.095,0.0003,False
+ready to eat - cook meals,5,0.444,0.545,0.101,0.0003,False
+flour,3,0.75,0.857,0.107,0.0003,False
+cakes,8,0.8,0.923,0.123,0.0003,False
+pasta,4,0.667,0.8,0.133,0.0004,False
+other not classified meat products,5,0.182,0.333,0.152,0.0004,False
+candies,6,0.5,0.667,0.167,0.0005,False
+sesame,1,0.5,0.667,0.167,0.0005,False
+curry,2,0.8,1.0,0.2,0.0006,False
+turkey and turkey preparations,4,0.8,1.0,0.2,0.0006,False
+yoghurt,4,0.8,1.0,0.2,0.0006,False
+breakfast cereals,2,0.4,0.667,0.267,0.0007,False
+spice mix,2,0.5,0.8,0.3,0.0008,False
+beef,1,0.667,1.0,0.333,0.0009,False
+chocolate bars,2,0.0,0.333,0.333,0.0009,False
+frozen beef patties,1,0.667,1.0,0.333,0.0009,False
+ginger powder,1,0.667,1.0,0.333,0.0009,False
+halva,2,0.667,1.0,0.333,0.0009,False
+jam,2,0.667,1.0,0.333,0.0009,False
+mashed chickpeas (hummus),1,0.667,1.0,0.333,0.0009,False
+milk powder,1,0.667,1.0,0.333,0.0009,False
+mushrooms,1,0.667,1.0,0.333,0.0009,False
+milk,4,0.333,0.75,0.417,0.0012,False
+ham,2,0.0,0.5,0.5,0.0014,False
+sweets,3,0.0,0.5,0.5,0.0014,False
+baking mix,1,0.0,0.667,0.667,0.0019,False
+chicken products - frozen,1,0.0,0.667,0.667,0.0019,False
+salt,2,0.0,0.667,0.667,0.0019,False
+sausage products,1,0.0,0.667,0.667,0.0019,False
+snacks (various),2,0.0,0.667,0.667,0.0019,False
+pasta products,3,0.0,0.8,0.8,0.0022,False
+beer,3,0.0,1.0,1.0,0.0028,False
+bread mix,1,0.0,1.0,1.0,0.0028,False
+brownies,1,0.0,1.0,1.0,0.0028,False
+coffee drink,1,0.0,1.0,1.0,0.0028,False
+cream cheese,1,0.0,1.0,1.0,0.0028,False
+dried mushrooms,1,0.0,1.0,1.0,0.0028,False
+ginger slices,1,0.0,1.0,1.0,0.0028,False
+goat cheese,1,0.0,1.0,1.0,0.0028,False
+ground almonds,1,0.0,1.0,1.0,0.0028,False
+mung bean sprouts,2,0.0,1.0,1.0,0.0028,False
+pork belly,1,0.0,1.0,1.0,0.0028,False
+precooked cooked beef meat products,1,0.0,1.0,1.0,0.0028,False
+rice cakes,1,0.0,1.0,1.0,0.0028,False

@@ -1,0 +1,13 @@
+štítok,LLM,id,titulok,správna,kandidát 1,E4,poradie správnej,p klasifikátora (kand. 1),p LLM (jeho výber)
+product,pomohol,102,Mikes Meats Pty Ltd—Prager Leg Ham,ham,sliced ham,ham,2,0.545,1.0
+product,pomohol,124,"2009 - zachary confections, inc. announces a nationwide voluntary recall of market pantry chocolate covered pe",candies,peanuts,candies,2,0.705,1.0
+product,pomohol,271,The Great Northern Sandwich Co is recalling its Spar Daily Deli Peppered Ham & Egg Sandwiches because they con,sandwiches,ham,sandwiches,2,0.563,1.0
+product,pomohol,282,Tiny Rebel Brewing Co. recalls bottles of Stay Puft Marshmallow Porter because lactose is not declared as bein,beer,marshmalows,beer,2,0.618,1.0
+product,pomohol,301,Bhugga sold at Rajthani Sweets & Restaurants recalled due to Salmonella,sweets,dietary supplement,sweets,2,0.317,1.0
+product,pomohol,397,Noshu Foods — Noshu Sugar Free Fudgy Brownies Mix 300g,brownies,cakes,brownies,2,0.93,1.0
+product,uškodil,84,New Jersey Firm Recalls Cobb and Spinach Salads Due to Possible Listeria Contamination,chilled salads,chilled salads,salads,1,0.691,0.681
+product,uškodil,307,IKEA recalls its GODIS PÅSKKYCKLING Marshmallow candy due to possible mice infestation,marshmalows,marshmalows,candies,1,0.508,1.0
+product,uškodil,324,"Venda Ravioli, Inc. Recalls Meat Ravioli Products Produced Without Benefit of Inspection",ravioli,ravioli,meat and meat products (other than poultry),1,0.786,1.0
+product,uškodil,364,Concord Fresh Success Recall Mild Salsa Seasoning Mix Due To Undeclared Milk Allergen,seasoning,seasoning,seasoning mix,1,0.748,1.0
+product,uškodil,400,Hy-Vee Fresh Commissary Recalls Ready-To-Eat Beef and Chicken Products Due to Misbranding and Undeclared Aller,thermal processed beef meat,thermal processed beef meat,ready to eat - cook meals,1,0.377,0.855
+product,uškodil,529,Godiva Australia — Chocolate Domes - Milk Chocolate - Coconut Crunch 124g,milk chocolates,milk chocolates,chocolate,1,0.625,0.964

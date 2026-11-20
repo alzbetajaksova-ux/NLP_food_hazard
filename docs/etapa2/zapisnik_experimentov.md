@@ -156,3 +156,22 @@ Zistenia:
 - Prompt v2 ani 7B model nevyužíva: samotný výber je horší než pri v1. Výsledok spojenia v2 pri oboch štítkoch je najvyšší, ale rozdiel oproti v1 je v rámci šumu CV.
 - 7B je asi 6-krát pomalší (1,9 s na otázku pri v1, celý valid 35 minút). Zisk v spojení je o 0,005 vyšší a nie je preukázateľný.
 - **Rozhodnutie:** hlavný variant E4 ostáva `E4_Qwen253BInstruct_E12kens_f030_prod`. 7B je ablácia veľkosti modelu: väčší model sám vyberá lepšie, ale v spojení s klasifikátorom prínos nezvýši preukázateľne.
+
+### E4: kde LLM pomáha a kde škodí, 20. 11. 2026
+
+Skript `src/e4_analyza.py` (bez GPU, z detailných výstupov behov) porovná výsledok každého systému E4 s kandidátom č. 1 základu E12kens po správach. Všetky tabuľky sú v `results/etapa2/llm/analyza/`, súhrn v `analyza_E4_valid.md`. „Pomohol“ znamená, že zlý kandidát 1 sa zmenil na správnu triedu, „uškodil“ opak.
+
+| Systém (valid) | hazard: pomohol / uškodil | product: pomohol / uškodil | product: zlé → iné zlé |
+| --- | --- | --- | --- |
+| 3B spojenie, len product (hlavný) | — | 38 / 18 | 70 |
+| 3B spojenie, oba | 7 / 6 | 19 / 7 | 21 |
+| 3B sám | 11 / 144 | 47 / 113 | 142 |
+| 7B spojenie, len product | — | 32 / 13 | 50 |
+| 7B sám | 16 / 164 | 49 / 84 | 108 |
+
+Zistenia:
+- **Poradie správnej triedy.** LLM môže pomôcť len vtedy, keď je správna trieda medzi kandidátmi 2 až 10. To platí pre 53 hazardov a 123 produktov z 565 správ; pri 135 produktoch správna trieda v top-10 nie je vôbec. Pri hlavnom systéme je 29 z 38 opráv na kandidátovi 2. Všetky škody vznikajú pri správnom kandidátovi 1.
+- **Istota klasifikátora.** Spojenie pomáha tam, kde si klasifikátor nie je istý: pri p kandidáta 1 medzi 0,3 a 0,7 je pri product +30 / −11. Pri 0,7 až 0,9 je bilancia +5 / −7 a pri p ≥ 0,9 sa takmer nič nemení (+1 / −0). Samotný LLM naopak kazí aj veľmi isté odpovede: pri p ≥ 0,9 je pri hazarde +3 / −121 (3B) a pri product +4 / −62. Spojenie teda funguje hlavne preto, že pri istom klasifikátore LLM neprebije. Prah na istotu klasifikátora (LLM len pri p < 0,7) by mohol pomôcť ešte viac, ale na valid ho už neladíme, aby výber nebol optimistický. Je to návrh do budúcej práce.
+- **Hazard.** Škody samotného LLM sú sústredené v kategórii allergens: 103 zo 144 pri 3B a 133 zo 164 pri 7B. Konkrétne alergény z datasetu („milk and products thereof“, „cereals containing gluten…“) LLM nahrádza všeobecnými „undeclared constituent“ alebo „allergens“. Pri biologických hazardoch je 7B takmer neutrálny (+3 / −3).
+- **Product.** Pri opravách klasifikátor často vybral zložku spomenutú v texte namiesto samotného produktu a LLM vybral produkt: peanuts → candies (čokoládové arašidy), ham → sandwiches, marshmalows → beer (Marshmallow Porter). Ďalší typ opravy je presnejšia trieda (bean sprouts → mung bean sprouts). Pri škodách volí LLM synonymum alebo všeobecnejšiu triedu: chilled salads → salads, milk chocolates → chocolate, seasoning → seasoning mix, biscuits → cookies. Ide teda o nejednoznačnú granularitu označení v datasete, nie o zjavné omyly.
+- **Prečo zisk v macro-F1.** Takmer všetky zmeny sú v triedach s 1 až 2 správami vo valid, kde jedna správa zmení F1 triedy o 1. Pri 358 triedach to je asi 0,003 macro-F1 na správu. Čistých +20 správ pri product teda zvýši product macro-F1 z 0,335 na 0,380 a ST2 o 0,022. Triedy s viac než 100 správami v train spojenie nemení.

@@ -1,0 +1,11 @@
+systém,štítok,zmenené,pomohol,uškodil,zlé → zlé,čistý zisk,presnosť základ %,presnosť E4 %
+"3B spojenie, product (hlavný)",hazard,0,0,0,0,0,87.6,87.6
+"3B spojenie, product (hlavný)",product,126,38,18,70,20,54.3,57.9
+"3B spojenie, oba",hazard,14,7,6,1,1,87.6,87.8
+"3B spojenie, oba",product,47,19,7,21,12,54.3,56.5
+3B sám,hazard,191,11,144,36,-133,87.6,64.1
+3B sám,product,302,47,113,142,-66,54.3,42.7
+"7B spojenie, product",hazard,0,0,0,0,0,87.6,87.6
+"7B spojenie, product",product,95,32,13,50,19,54.3,57.7
+7B sám,hazard,211,16,164,31,-148,87.6,61.4
+7B sám,product,241,49,84,108,-35,54.3,48.1
