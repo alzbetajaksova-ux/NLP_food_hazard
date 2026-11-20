@@ -2,6 +2,18 @@
 
 Systém E4 je **zmrazený**. Všetko nižšie bolo vybrané len na valid (zápisník, časti „E4“ z 20. 11. 2026). Na teste sa spustí raz, spolu s ostatnými zmrazenými systémami, a potom sa už nič nemení.
 
+## Kto čo robí
+
+| Krok | Kto | Kde | Potrebuje GPU |
+| --- | --- | --- | --- |
+| 0. potvrdiť, že všetky systémy sú zmrazené (nič sa už neladí) | osoba 1 | – | nie |
+| 1. beh modelu na teste (notebook nižšie) | **osoba 2** | datalab | áno |
+| 2. rozbaliť `vysledky_e4_test.zip`, commitnúť predikcie a odpovede, odovzdať cez git (vetva `etapa2-llm`) | osoba 2 | vlastný PC | nie |
+| 3. vyhodnotenie všetkých systémov na teste, tabuľka do správy | **osoba 1** | ľubovoľný počítač | nie |
+| 4. (voliteľne) kontrola, že predikcie E4 sa z uložených odpovedí vytvoria presne rovnako | osoba 1 | ľubovoľný počítač | nie |
+
+Beh na GPU robí osoba 2, lebo na datalabe má stiahnutý presne ten model (revízia nižšie) a uložené odpovede z ladenia, takže test beží na tej istej GPU a s tými istými verziami ako ladenie na valid. Osoba 1 GPU ani model nepotrebuje: vyhodnotenie aj kontrola bežia z uložených predikcií a odpovedí za pár sekúnd. Beh na inej GPU (napr. Colab) by bol možný, ale pravdepodobnosti modelu by mohli vyjsť minimálne inak a prostredie by sa líšilo od ladenia.
+
 ## Zmrazené nastavenie
 
 | Čo | Hodnota | Prečo (valid) |
@@ -18,7 +30,7 @@ Ako ablácie sa na teste spočítajú len z uložených odpovedí (bez ďalšieh
 
 ## 1. Beh na GPU (datalab), asi 20 minút
 
-Notebook `notebooks/etapa2_e4_test_datalab.ipynb`. Spúšťa ho osoba s prístupom na datalab, kde je model už stiahnutý (osoba 2), **až keď osoba 1 potvrdí, že sú zmrazené všetky systémy**. Notebook pred testom overí, že:
+Notebook `notebooks/etapa2_e4_test_datalab.ipynb`. Spúšťa ho osoba 2 **až keď osoba 1 potvrdí, že sú zmrazené všetky systémy**. V bunke 6 sa vypíše skóre na teste; po ňom sa nastavenie E4 už nemení. Notebook pred testom overí, že:
 
 - model má rovnakú revíziu, aká sa použila pri ladení;
 - hlavný systém na valid z uložených odpovedí dá presne ST2 0,5171, takže kód, dáta, kandidáti aj odpovede sú tie isté;
@@ -46,9 +58,9 @@ python src/vyhodnot.py --split test --povolit-test \
 
 Analýzu, kde LLM pomáha a kde škodí, na teste nerobíme: skript `src/e4_analyza.py` je len pre valid, aby sa z testu nič neladilo.
 
-## 3. Reprodukcia bez GPU
+## 3. Reprodukcia bez GPU (osoba 1, voliteľne)
 
-Keď sú odpovede v cache, ten istý príkaz dá presne rovnaké predikcie bez GPU (model sa načíta, len ak odpoveď v cache chýba):
+Po stiahnutí vetvy s výsledkami behu (stačia balíčky z `requirements.txt`; torch, transformers ani model netreba). Keď sú odpovede v cache, ten istý príkaz dá presne rovnaké predikcie bez GPU (model sa načíta, len ak odpoveď v cache chýba):
 
 ```bash
 python src/e4_llm.py --backend hf --model Qwen/Qwen2.5-3B-Instruct --split test \
