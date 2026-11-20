@@ -207,8 +207,8 @@ class HFVyberac:
         self.tok = AutoTokenizer.from_pretrained(cesta)
         # Quadro RTX 4000 (Turing) nemá bf16, preto float16 (aj ako výpočtový typ pri 4-bit)
         if styri_bity:
-            # 4-bit NF4 (bitsandbytes): už skvantovaný checkpoint sa načíta priamo, plný sa skvantuje pri načítaní;
-            # výpočtový typ sa nastaví na float16 aj vtedy, keď checkpoint uvádza bfloat16
+            # 4-bit NF4 (bitsandbytes): plný checkpoint sa skvantuje pri načítaní s týmto nastavením;
+            # už skvantovaný checkpoint sa načíta s vlastným nastavením (to sa zapíše do logu, pozri _kvantizacia)
             from transformers import BitsAndBytesConfig
             kvant = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_use_double_quant=True,
                                        bnb_4bit_compute_dtype=torch.float16)
@@ -223,9 +223,20 @@ class HFVyberac:
             self.id_pismen.append(ids[0])
         self.info = {"gpu": torch.cuda.get_device_name(0), "torch": torch.__version__,
                      "transformers": __import__("transformers").__version__,
-                     "kvantizacia": "4-bit NF4 (bitsandbytes), výpočty float16" if styri_bity else "žiadna, float16",
+                     "kvantizacia": self._kvantizacia(),
                      "pamat_GPU_GB": round(torch.cuda.memory_allocated() / 1024**3, 2)}
         print(f"model načítaný za {time.time() - t0:.0f} s, {self.info}", flush=True)
+
+    def _kvantizacia(self):
+        """Skutočné nastavenie načítaného modelu. Pri už skvantovanom checkpointe transformers použije jeho
+        quantization_config a odovzdané nastavenie ignoruje (napr. unsloth/…-bnb-4bit počíta v bfloat16)."""
+        qc = getattr(self.model.config, "quantization_config", None)
+        if qc is None:
+            return f"žiadna, {str(self.model.dtype).removeprefix('torch.')}"
+        qc = qc if isinstance(qc, dict) else qc.to_dict()
+        vypocty = str(qc.get("bnb_4bit_compute_dtype")).removeprefix("torch.")
+        return (f"4-bit {str(qc.get('bnb_4bit_quant_type', '')).upper()} ({qc.get('quant_method')}), "
+                f"výpočty {vypocty}, double quant {qc.get('bnb_4bit_use_double_quant')}")
 
     def pravdepodobnosti(self, text, k):
         spravy = [{"role": "system", "content": SYSTEMOVA_HF}, {"role": "user", "content": text}]
