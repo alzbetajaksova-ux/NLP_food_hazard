@@ -80,8 +80,31 @@ Qwen2.5-3B-Instruct vo float16 na Quadro RTX 4000 (8 GB, datalab; torch 2.15.0+c
 Samotný výber LLM zhoršuje ST2 vo všetkých variantoch (presnosť top-1: hazard 87,6 % → 64,1 %, product 54,3 % → 42,7 %). ST1 sa nemení (0,802).
 
 Analýza chýb (detail po správach):
-- **Hazard:** 144 zmien zo správnej odpovede na zlú, 11 opačne. Takmer všetky zlé zmeny vyberú všeobecnú triedu namiesto konkrétnej, ktorú používa dataset: konkrétny alergén (milk, gluten, soybeans, eggs … „and products thereof“) → „undeclared constituent“ (46) alebo „allergens“ (31); listeria monocytogenes → microbiological contamination. LLM nepozná konvenciu označovania datasetu.
+- **Hazard:** 144 zmien zo správnej odpovede na zlú, 11 opačne. Takmer všetky zlé zmeny vyberú všeobecnú triedu namiesto konkrétnej, ktorú používa dataset: konkrétny alergén (milk, gluten, soybeans, eggs … „and products thereof“) → „undeclared constituent“ (50) alebo „allergens“ (36); listeria monocytogenes → microbiological contamination. LLM nepozná konvenciu označovania datasetu.
 - **Product:** 113 zlých zmien, 47 dobrých; chyby sú takmer synonymá a rozdiely v úrovni podrobnosti (soup / soups, biscuits / cookies, corn / pop corn, chicken based products / chicken preparations).
 - **Kalibrácia:** pri istote LLM nad 0,99 je jeho výber správny len v 71 % (hazard) a 54 % (product), preto prah istoty nepomáha.
 
-Predbežne (váha vybraná na tých istých dátach, potrebné overiť krížovou validáciou): spojenie log p_klasifikátora + w · log p_LLM zlepší ST2 na 0,525 (w = 0,1, oba štítky) a 0,517 (w = 0,3, len product); pri produkte je zisk stabilný pre w od 0,1 do 0,5, pri hazarde len pri w = 0,1.
+Predbežne (váha vybraná na tých istých dátach, overené nižšie krížovou validáciou): spojenie log p_klasifikátora + w · log p_LLM zlepší ST2 na 0,525 (w = 0,1, oba štítky) a 0,517 (w = 0,3, len product); pri produkte je zisk stabilný pre w od 0,1 do 0,5, pri hazarde len pri w = 0,1.
+
+### E4 krok A: spojenie klasifikátora a LLM, 20. 11. 2026
+
+Bez GPU, z uložených odpovedí. Pre každého kandidáta log p_klasifikátora + w · log p_LLM, vyberie sa najväčší; p_klasifikátora sú pravdepodobnosti E1bens znormalizované na 10 kandidátov (`e4_llm.py --fuzia w`, `--stitky-llm`). Váha w z {0; 0,05; 0,1; 0,2; 0,3; 0,5; 0,75; 1} sa vyberá opakovanou dvojnásobnou krížovou validáciou na valid (`src/e4_vaha_cv.py`, 50 delení na polovice, seed 42): w sa zvolí na jednej polovici, zisk ST2 oproti E12kens sa meria na druhej.
+
+| LLM pri | ST2 zisk (CV, priemer) | rozsah 2,5–97,5 % | zisk > 0 | zvolené w |
+| --- | --- | --- | --- | --- |
+| hazard aj product | +0,018 | [−0,007; +0,041] | 95 % | 0,1 |
+| **len product** | **+0,018** | **[+0,001; +0,034]** | **98 %** | **0,3** |
+| len hazard | +0,005 | [−0,017; +0,024] | 69 % | 0,1 |
+
+Systémy s w zvoleným na celom valid (párový bootstrap 1 000 oproti E12kens; čísla sú mierne optimistické, poctivý odhad je CV vyššie):
+
+| Systém (valid) | hazard | product | ST2 | ST2 − E12kens [95 % CI] | zmeny produktu (zlé → správne / správne → zlé) |
+| --- | --- | --- | --- | --- | --- |
+| E12kens | 0,655 | 0,334 | 0,495 | – | – |
+| `E4_Qwen253BInstruct_E12kens_f030_prod` | 0,655 | 0,361 | 0,517 | +0,022 [+0,010; +0,036] | 38 / 18 |
+| `E4_Qwen253BInstruct_E12kens_f010` | 0,683 | 0,355 | 0,525 | +0,030 [+0,008; +0,045] | 19 / 7 (hazard 7 / 6) |
+
+Zistenia:
+- S malou váhou LLM pomáha: mení odpoveď len tam, kde si klasifikátor nie je istý. Pri produkte sa presnosť top-1 zvýši z 54,3 % na 57,9 %.
+- Pri hazarde je zisk neistý: macro-F1 hazardu stúpne na 0,683, hoci správnych odpovedí pribudne len o 1 (7 zlých → správne, 6 opačne); zmena je v zriedkavých triedach a v CV sa nepotvrdila.
+- **Rozhodnutie:** hlavný variant E4 je `E4_Qwen253BInstruct_E12kens_f030_prod` (LLM len pri produkte, w = 0,3): zisk je stabilný pre w od 0,1 do 0,5 a v CV kladný v 98 % delení. Variant `f010` (oba štítky) ostáva ako ablácia.

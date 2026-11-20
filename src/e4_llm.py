@@ -4,7 +4,10 @@ Postup pre každú správu a štítok (hazard, product):
   1. prompt = titulok + začiatok textu + zoznam k kandidátov v poradí systému,
   2. LLM vyberie jedného kandidáta (deterministicky, bez náhody),
   3. výsledný štítok je výber LLM; s --prah iba vtedy, keď si je LLM aspoň takto istý,
-     inak ostane kandidát č. 1 zo základného systému.
+     inak ostane kandidát č. 1 zo základného systému; s --fuzia w sa spojí istota klasifikátora
+     a LLM: argmax log p_klasifikátora + w · log p_LLM (w = 0 je základ, väčšie w = viac LLM).
+     Váha sa vyberá krížovou validáciou na valid: src/e4_vaha_cv.py.
+     --stitky-llm product použije LLM len pri produkte (hazard ostane zo základu).
 hazard-category a product-category ostávajú zo základného systému. Pri E12kens je hazard-category
 z transformera lepšia než odvodená z hazardu (zápisník, E3 nad E12kens: ST1 0,802 → 0,788);
 odvodenie z vybraného hazardu sa dá zapnúť prepínačom --hierarchia (ablácia).
@@ -29,6 +32,7 @@ Príklady:
   python src/e4_llm.py --backend hf --model Qwen/Qwen2.5-3B-Instruct --model-cesta <priečinok> --limit 50
   python src/e4_llm.py --backend hf --model Qwen/Qwen2.5-3B-Instruct --model-cesta <priečinok>
   python src/e4_llm.py --backend hf --model Qwen/Qwen2.5-3B-Instruct --prah 0.7   # z cache, bez GPU
+  python src/e4_llm.py --backend hf --model Qwen/Qwen2.5-3B-Instruct --fuzia 0.3 --stitky-llm product
 """
 import argparse
 import hashlib
@@ -40,6 +44,7 @@ import sys
 import time
 import urllib.request
 
+import numpy as np
 import pandas as pd
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -91,6 +96,25 @@ def odpoved_na_kandidata(odpoved, kandidati):
         return kandidati[int(cislo.group(1)) - 1]
     zhody = [c for c in kandidati if c.lower() in o.lower()]
     return max(zhody, key=len) if zhody else None
+
+
+def pravdepodobnosti_klasifikatora(skore):
+    """Skóre kandidátov → rozdelenie pravdepodobností. Pri transformeri (E12kens: hazard, product)
+    sú skóre pravdepodobnosti a len sa znormalizujú na k kandidátov; pri SVM (decision_function,
+    môže byť záporné) sa použije softmax, ktorý nie je kalibrovaný."""
+    s = np.asarray(skore, dtype=float)
+    if np.isnan(s).any():
+        raise ValueError("kandidáti nemajú skóre, spojenie s klasifikátorom nejde")
+    if (s >= 0).all() and s.sum() > 0:
+        return s / s.sum()
+    e = np.exp(s - s.max())
+    return e / e.sum()
+
+
+def fuzia(p_klas, p_llm, w, eps=1e-4):
+    """Index kandidáta s najväčším log p_klasifikátora + w · log p_LLM (w = 0 → kandidát č. 1)."""
+    s = np.log(np.clip(p_klas, 1e-6, None)) + w * np.log(np.asarray(p_llm) + eps)
+    return int(np.argmax(s))
 
 
 class Cache:
@@ -178,11 +202,15 @@ def zavolaj_openai(model, text, pokusy=3):
             time.sleep(5 * (pokus + 1))
 
 
-def nazov_systemu(model, kandidati, prah, hierarchia):
+def nazov_systemu(model, kandidati, prah, hierarchia, vaha=None, stitky_llm=tuple(STITKY)):
     kratky = re.sub(r"[^\w]", "", model.split("/")[-1])[:20]
     system = f"E4_{kratky}_{kandidati.removeprefix('E3_')}"
     if prah > 0:
         system += f"_p{round(prah * 100):03d}"
+    if vaha is not None:
+        system += f"_f{round(vaha * 100):03d}"
+    if tuple(stitky_llm) != tuple(STITKY):
+        system += "_" + "_".join(s[:4] for s in stitky_llm)
     if hierarchia:
         system += "_hier"
     return system
@@ -200,6 +228,10 @@ def main():
     ap.add_argument("--max-znakov", type=int, default=1500, help="koľko znakov textu správy ide do promptu")
     ap.add_argument("--prah", type=float, default=0.0,
                     help="backend hf: výber LLM sa použije len pri pravdepodobnosti aspoň prah (0 = vždy)")
+    ap.add_argument("--fuzia", type=float, default=None, metavar="W",
+                    help="backend hf: argmax log p_klasifikátora + W · log p_LLM namiesto samotného LLM")
+    ap.add_argument("--stitky-llm", nargs="+", choices=STITKY, default=STITKY,
+                    help="pri ktorých štítkoch sa výber LLM použije (ostatné ostanú zo základu)")
     ap.add_argument("--hierarchia", action="store_true",
                     help="ablácia: hazard-category odvodiť z vybraného hazardu (predvolene ostáva zo základu)")
     ap.add_argument("--limit", type=int, default=0, help="len prvých N správ (skúška), výsledok sa neuloží")
@@ -209,14 +241,18 @@ def main():
         sys.exit("Na test spúšťame až zmrazený systém na konci. Ak je to ten beh, pridaj --povolit-test.")
     if a.k > len(PISMENA):
         sys.exit(f"--k najviac {len(PISMENA)}")
-    if a.prah and a.backend != "hf":
-        sys.exit("--prah má zmysel len pri backende hf (iba ten dáva pravdepodobnosti)")
+    if (a.prah or a.fuzia is not None) and a.backend != "hf":
+        sys.exit("--prah a --fuzia majú zmysel len pri backende hf (iba ten dáva pravdepodobnosti)")
+    if a.prah and a.fuzia is not None:
+        sys.exit("--prah a --fuzia naraz nepoužívaj")
 
     data = nacitaj(a.split)
     zaklad = nacitaj_predikcie(a.kandidati, a.split).sort_values("id").reset_index(drop=True)
     kand = nacitaj_kandidatov(a.kandidati, a.split).sort_values(["stitok", "id", "poradie"])
     zoznamy = {lab: {i: g["trieda"].tolist()[:a.k] for i, g in kand[kand["stitok"] == lab].groupby("id")}
                for lab in STITKY}
+    skore_kand = {lab: {i: g["skore"].to_numpy()[:a.k] for i, g in kand[kand["stitok"] == lab].groupby("id")}
+                  for lab in STITKY}
     cache = Cache(a.model)
     n = a.limit or len(data)
     vyberac = None  # model sa načíta až pri prvej odpovedi, ktorá nie je v cache
@@ -257,14 +293,21 @@ def main():
 
             if a.backend == "hf":
                 p = zaznam["p"]
-                j = max(range(len(p)), key=p.__getitem__)
-                vyber = kandidati[j] if p[j] >= a.prah else kandidati[0]
+                j = max(range(len(p)), key=p.__getitem__)  # samotný výber LLM (do detailu)
+                if lab not in a.stitky_llm:
+                    vyber = kandidati[0]
+                elif a.fuzia is not None:
+                    vyber = kandidati[fuzia(pravdepodobnosti_klasifikatora(skore_kand[lab][i]), p, a.fuzia)]
+                else:
+                    vyber = kandidati[j] if p[j] >= a.prah else kandidati[0]
             else:
                 vyber = odpoved_na_kandidata(zaznam["odpoved"], kandidati)
                 if vyber is None:
                     statistika[lab]["nezhoda"] += 1
                     vyber = kandidati[0]
                 j = kandidati.index(vyber)
+                if lab not in a.stitky_llm:
+                    vyber = kandidati[0]
 
             if vyber != kandidati[0]:
                 statistika[lab]["zmenene"] += 1
@@ -309,13 +352,14 @@ def main():
     if a.limit:
         return
 
-    system = nazov_systemu(a.model, a.kandidati, a.prah, a.hierarchia)
+    system = nazov_systemu(a.model, a.kandidati, a.prah, a.hierarchia, a.fuzia, a.stitky_llm)
     cesta = uloz_predikcie(pred, system, a.split)
     priecinok = os.path.join(VYSLEDKY, "llm")
     os.makedirs(priecinok, exist_ok=True)
     det.to_csv(os.path.join(priecinok, f"detail_{system}_{a.split}.csv"), index=False)
     log = {"system": system, "split": a.split, "backend": a.backend, "model": a.model, "k": a.k,
-           "max_znakov": a.max_znakov, "prah": a.prah, "hierarchia": a.hierarchia, "kandidati": a.kandidati,
+           "max_znakov": a.max_znakov, "prah": a.prah, "fuzia": a.fuzia, "stitky_llm": a.stitky_llm,
+           "hierarchia": a.hierarchia, "kandidati": a.kandidati,
            "statistika": statistika, "trvanie_s": round(trvanie, 1),
            "trvanie_s_na_volanie": round(trvanie / max(1, sum(s["volania"] for s in statistika.values())), 3),
            "python": platform.python_version(), "cas": time.strftime("%Y-%m-%d %H:%M:%S"),
