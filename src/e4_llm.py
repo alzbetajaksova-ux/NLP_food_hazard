@@ -77,11 +77,61 @@ def prompt(titulok, text, stitok, kandidati, max_znakov):
             f"Options:\n{moznosti}\n\nAnswer with the option text only, copied exactly.")
 
 
-def prompt_pismena(titulok, text, stitok, kandidati, max_znakov):
-    """Prompt pre backend hf (možnosti označené písmenami, odpoveď jedným písmenom)."""
-    moznosti = "\n".join(f"{PISMENA[i]}. {c}" for i, c in enumerate(kandidati))
+def prompt_pismena(titulok, text, stitok, kandidati, max_znakov, priklady=None, poradie=False):
+    """Prompt pre backend hf (možnosti označené písmenami, odpoveď jedným písmenom).
+    priklady: trieda -> (počet správ v train, príklad titulku), pridá sa ku každej možnosti (prompt v2, v3);
+    poradie: povie modelu, že možnosti zoradil klasifikátor a A je jeho najlepší tip (prompt v3)."""
+    riadky = []
+    for i, c in enumerate(kandidati):
+        r = f"{PISMENA[i]}. {c}"
+        if priklady is not None and c in priklady:
+            pocet, titulok_pr = priklady[c]
+            r += f' ({pocet} training reports, e.g. "{titulok_pr}")'
+        riadky.append(r)
+    uvod = (UVOD_PRIKLADY + "\n" if priklady is not None else "") + (UVOD_PORADIE + "\n" if poradie else "")
     return (f"Recall report\nTitle: {titulok}\nText: {_text(text, max_znakov)}\n\n{OTAZKA[stitok]}\n"
-            f"Options:\n{moznosti}\n\nAnswer with the letter of the correct option only.")
+            f"{uvod}Options:\n" + "\n".join(riadky) + "\n\nAnswer with the letter of the correct option only.")
+
+
+UVOD_PRIKLADY = ("The options are labels from an annotated dataset of recall reports. Each option shows how many "
+                 "training reports have that label and the title of one of them. Choose the label that this "
+                 "dataset would use for the report.")
+UVOD_PORADIE = "The options are sorted by a trained classifier, most likely first; option A is its best guess."
+# v1 = pôvodný prompt; v2 = + počet a príklad z train pri každej možnosti; v3 = v2 + informácia o poradí
+PROMPTY = {"v1": {}, "v2": {"priklady": True}, "v3": {"priklady": True, "poradie": True}}
+NEINFORMATIVNY = re.compile(r"FSIS|Recall Notification", re.IGNORECASE)
+
+
+def priklady_tried(train):
+    """Pre hazard a product: trieda -> (počet správ v train, príklad titulku). Príklad je titulok strednej
+    dĺžky spomedzi správ s danou triedou; prednosť majú titulky, ktoré obsahujú celý názov triedy, potom
+    jeho prvé slovo, potom ostatné bez „Recall Notification: FSIS-…“. Skrátený na 100 znakov; výber je
+    deterministický a používa len train."""
+    vystup = {}
+    for lab in STITKY:
+        d = {}
+        for trieda, g in train.groupby(lab):
+            tit = g["title"].astype(str).str.strip()
+            slova = re.findall(r"[a-z]{3,}", trieda.lower())
+            urovne = [tit[tit.str.lower().str.contains(re.escape(trieda.lower()))]]
+            if slova:
+                urovne.append(tit[tit.str.lower().str.contains(r"\b" + re.escape(slova[0]))])
+            urovne += [tit[~tit.str.contains(NEINFORMATIVNY)], tit]
+            vyber = next(u for u in urovne if len(u)).sort_values(key=lambda s: s.str.len(), kind="stable")
+            d[trieda] = (len(g), re.sub(r"\s+", " ", vyber.iloc[len(vyber) // 2])[:100])
+        vystup[lab] = d
+    return vystup
+
+
+def prompt_fn(verzia):
+    """Funkcia (titulok, text, stitok, kandidati, max_znakov) -> prompt pre zvolenú verziu promptu."""
+    nast = PROMPTY[verzia]
+    pr = priklady_tried(nacitaj("train")) if nast.get("priklady") else None
+
+    def f(titulok, text, stitok, kandidati, max_znakov):
+        return prompt_pismena(titulok, text, stitok, kandidati, max_znakov,
+                              priklady=pr[stitok] if pr else None, poradie=nast.get("poradie", False))
+    return f
 
 
 def odpoved_na_kandidata(odpoved, kandidati):
@@ -202,9 +252,11 @@ def zavolaj_openai(model, text, pokusy=3):
             time.sleep(5 * (pokus + 1))
 
 
-def nazov_systemu(model, kandidati, prah, hierarchia, vaha=None, stitky_llm=tuple(STITKY)):
+def nazov_systemu(model, kandidati, prah, hierarchia, vaha=None, stitky_llm=tuple(STITKY), verzia="v1"):
     kratky = re.sub(r"[^\w]", "", model.split("/")[-1])[:20]
     system = f"E4_{kratky}_{kandidati.removeprefix('E3_')}"
+    if verzia != "v1":
+        system += f"_{verzia}"
     if prah > 0:
         system += f"_p{round(prah * 100):03d}"
     if vaha is not None:
@@ -232,6 +284,9 @@ def main():
                     help="backend hf: argmax log p_klasifikátora + W · log p_LLM namiesto samotného LLM")
     ap.add_argument("--stitky-llm", nargs="+", choices=STITKY, default=STITKY,
                     help="pri ktorých štítkoch sa výber LLM použije (ostatné ostanú zo základu)")
+    ap.add_argument("--prompt", choices=list(PROMPTY), default="v1",
+                    help="backend hf: verzia promptu (v2 a v3 potrebujú data/incidents_train.csv)")
+    ap.add_argument("--ukaz-prompt", action="store_true", help="vypíše prompt pre prvú správu (hazard aj product)")
     ap.add_argument("--hierarchia", action="store_true",
                     help="ablácia: hazard-category odvodiť z vybraného hazardu (predvolene ostáva zo základu)")
     ap.add_argument("--limit", type=int, default=0, help="len prvých N správ (skúška), výsledok sa neuloží")
@@ -245,6 +300,9 @@ def main():
         sys.exit("--prah a --fuzia majú zmysel len pri backende hf (iba ten dáva pravdepodobnosti)")
     if a.prah and a.fuzia is not None:
         sys.exit("--prah a --fuzia naraz nepoužívaj")
+    if a.prompt != "v1" and a.backend == "openai":
+        sys.exit("--prompt v2/v3 je len pre backendy hf a skuska")
+    vytvor_prompt = prompt_fn(a.prompt)
 
     data = nacitaj(a.split)
     zaklad = nacitaj_predikcie(a.kandidati, a.split).sort_values("id").reset_index(drop=True)
@@ -265,10 +323,12 @@ def main():
         for lab in STITKY:
             kandidati = zoznamy[lab][i]
             p = None
-            if a.backend == "hf":
-                text = prompt_pismena(data["title"][i], data["text"][i], lab, kandidati, a.max_znakov)
-            else:
+            if a.backend == "openai":
                 text = prompt(data["title"][i], data["text"][i], lab, kandidati, a.max_znakov)
+            else:
+                text = vytvor_prompt(data["title"][i], data["text"][i], lab, kandidati, a.max_znakov)
+            if a.ukaz_prompt and i == 0:
+                print(f"\n----- prompt ({a.prompt}, {lab}, správa 0) -----\n{text}\n-----\n", flush=True)
             kluc = Cache.kluc(a.model, text)
 
             if kluc in cache.data:
@@ -352,13 +412,14 @@ def main():
     if a.limit:
         return
 
-    system = nazov_systemu(a.model, a.kandidati, a.prah, a.hierarchia, a.fuzia, a.stitky_llm)
+    system = nazov_systemu(a.model, a.kandidati, a.prah, a.hierarchia, a.fuzia, a.stitky_llm, a.prompt)
     cesta = uloz_predikcie(pred, system, a.split)
     priecinok = os.path.join(VYSLEDKY, "llm")
     os.makedirs(priecinok, exist_ok=True)
     det.to_csv(os.path.join(priecinok, f"detail_{system}_{a.split}.csv"), index=False)
     log = {"system": system, "split": a.split, "backend": a.backend, "model": a.model, "k": a.k,
-           "max_znakov": a.max_znakov, "prah": a.prah, "fuzia": a.fuzia, "stitky_llm": a.stitky_llm,
+           "max_znakov": a.max_znakov, "prompt": a.prompt, "prah": a.prah, "fuzia": a.fuzia,
+           "stitky_llm": a.stitky_llm,
            "hierarchia": a.hierarchia, "kandidati": a.kandidati,
            "statistika": statistika, "trvanie_s": round(trvanie, 1),
            "trvanie_s_na_volanie": round(trvanie / max(1, sum(s["volania"] for s in statistika.values())), 3),

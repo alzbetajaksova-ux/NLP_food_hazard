@@ -10,6 +10,7 @@ Beží bez GPU, len z uložených odpovedí LLM (results/etapa2/llm_cache/<model
 
 Príklad:
   python src/e4_vaha_cv.py --model Qwen/Qwen2.5-3B-Instruct
+  python src/e4_vaha_cv.py --model Qwen/Qwen2.5-3B-Instruct --prompt v2
 """
 import argparse
 import os
@@ -26,7 +27,8 @@ VARIANTY = {"oba": ("hazard", "product"), "product": ("product",), "hazard": ("h
 
 
 def nacitaj_z_cache(model, kandidati, split, k, max_znakov, prompt_fn=e4_llm.prompt_pismena):
-    """Pre každý štítok: zoznamy kandidátov, log p_klasifikátora a log p_LLM (n × k)."""
+    """prompt_fn: funkcia z e4_llm.prompt_fn(verzia), musí dať presne ten istý prompt ako pri behu na GPU."""
+    # pre každý štítok: zoznamy kandidátov, p_klasifikátora a p_LLM (n × k)
     data = nacitaj(split)
     kand = nacitaj_kandidatov(kandidati, split).sort_values(["stitok", "id", "poradie"])
     cache = e4_llm.Cache(model)
@@ -52,12 +54,13 @@ def main():
     ap.add_argument("--kandidati", default="E12kens")
     ap.add_argument("--k", type=int, default=10)
     ap.add_argument("--max-znakov", type=int, default=1500)
+    ap.add_argument("--prompt", choices=list(e4_llm.PROMPTY), default="v1")
     ap.add_argument("--vahy", type=float, nargs="+", default=[0, 0.05, 0.1, 0.2, 0.3, 0.5, 0.75, 1.0])
     ap.add_argument("--opakovania", type=int, default=50, help="počet náhodných delení valid na polovice")
     a = ap.parse_args()
     assert a.vahy[0] == 0, "prvá váha musí byť 0 (základ)"
 
-    data, z = nacitaj_z_cache(a.model, a.kandidati, "valid", a.k, a.max_znakov)
+    data, z = nacitaj_z_cache(a.model, a.kandidati, "valid", a.k, a.max_znakov, e4_llm.prompt_fn(a.prompt))
     zaklad = nacitaj_predikcie(a.kandidati, "valid").sort_values("id").reset_index(drop=True)
     n = len(data)
     y_h, y_p = data["hazard"].to_numpy(), data["product"].to_numpy()
@@ -115,7 +118,7 @@ def main():
     print(vysl.to_string(index=False))
     priecinok = os.path.join(VYSLEDKY, "llm")
     os.makedirs(priecinok, exist_ok=True)
-    meno = e4_llm.nazov_systemu(a.model, a.kandidati, 0, False)
+    meno = e4_llm.nazov_systemu(a.model, a.kandidati, 0, False, verzia=a.prompt)
     tab.to_csv(os.path.join(priecinok, f"vaha_krivka_{meno}_valid.csv"))
     vysl.to_csv(os.path.join(priecinok, f"vaha_cv_{meno}_valid.csv"), index=False)
     print(f"\nuložené: results/etapa2/llm/vaha_krivka_{meno}_valid.csv, vaha_cv_{meno}_valid.csv")
