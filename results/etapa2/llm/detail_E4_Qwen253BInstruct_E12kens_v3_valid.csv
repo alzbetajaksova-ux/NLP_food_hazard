@@ -1,0 +1,1131 @@
+id,stitok,spravna,poradie_spravnej,kandidat_1,llm_poradie,llm_vyber,p_llm,p_kandidat_1,p_mimo_pismen,tokeny,vysledok
+0,hazard,listeria spp,1,listeria spp,1,listeria spp,0.949966,0.949966,6e-06,637,listeria spp
+0,product,ham slices,0,ground beef,8,thermal processed beef meat,0.819345,0.013243,0.000197,617,thermal processed beef meat
+1,hazard,escherichia coli,3,listeria spp,3,escherichia coli,0.999997,0.0,-0.0,654,escherichia coli
+1,product,salami,0,thermal processed pork meat,2,smoked sausage,0.886803,0.0,0.0,615,smoked sausage
+2,hazard,enteroviruses,0,listeria spp,7,salmonella,0.973772,1.4e-05,5e-06,629,salmonella
+2,product,chicken based products,1,chicken based products,10,chicken,0.998766,0.001032,4.3e-05,615,chicken
+3,hazard,pecan nut,1,pecan nut,1,pecan nut,0.46379,0.46379,1e-05,757,pecan nut
+3,product,ice cream,1,ice cream,1,ice cream,0.999972,0.999972,0.000305,746,ice cream
+4,hazard,metal fragment,6,escherichia coli,6,metal fragment,0.999729,0.0,0.0,660,metal fragment
+4,product,chicken breast,10,ground beef,3,chicken based products,1.0,0.0,0.0,609,chicken based products
+5,hazard,plastic fragment,1,plastic fragment,3,foreign bodies,0.999892,0.0,0.0,640,foreign bodies
+5,product,bread,1,bread,10,sliced bread,0.389473,0.104825,1.6e-05,647,sliced bread
+6,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999964,0.999964,1e-06,716,listeria monocytogenes
+6,product,milk,2,other dairy products,2,milk,0.999941,0.0,0.0,684,milk
+7,hazard,packaging defect,3,bulging packaging,2,spoilage,0.99985,0.0,0.0,670,spoilage
+7,product,wine,1,wine,9,beer,0.745611,0.00127,2.6e-05,627,beer
+8,hazard,plastic fragment,1,plastic fragment,3,foreign bodies,0.999998,0.0,0.0,653,foreign bodies
+8,product,snacks (various),0,cheese,1,cheese,0.987968,0.987968,0.0,612,cheese
+9,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999934,0.999934,1e-06,705,listeria monocytogenes
+9,product,salmon,1,salmon,1,salmon,0.99959,0.99959,5e-06,678,salmon
+10,hazard,plastic fragment,1,plastic fragment,2,foreign bodies,1.0,0.0,0.0,673,foreign bodies
+10,product,other not classified meat products,3,minced beef,1,minced beef,0.999883,0.999883,2e-06,661,minced beef
+11,hazard,yeasts,2,packaging defect,2,yeasts,0.999995,0.0,0.0,693,yeasts
+11,product,beer,1,beer,2,wine,0.999991,3e-06,0.0,691,wine
+12,hazard,Aflatoxin,1,Aflatoxin,1,Aflatoxin,1.0,1.0,0.0,709,Aflatoxin
+12,product,tuna,1,tuna,1,tuna,0.999594,0.999594,3.2e-05,650,tuna
+13,hazard,chemical,1,chemical,1,chemical,0.561891,0.561891,4.6e-05,641,chemical
+13,product,soy sauce,1,soy sauce,2,bean sauce,0.246991,0.04032,2.6e-05,649,bean sauce
+14,hazard,metal fragment,1,metal fragment,1,metal fragment,0.998737,0.998737,0.000184,672,metal fragment
+14,product,focaccia,0,bread,5,bread and products therefor,0.809201,0.096645,4e-06,641,bread and products therefor
+15,hazard,polycyclic aromatic hydrocarbons,1,polycyclic aromatic hydrocarbons,1,polycyclic aromatic hydrocarbons,1.0,1.0,0.0,898,polycyclic aromatic hydrocarbons
+15,product,olive oil,1,olive oil,7,fats and oils,0.966102,0.007149,1.1e-05,889,fats and oils
+16,hazard,soybeans and products thereof,1,soybeans and products thereof,2,misbranding,0.99845,0.0,0.0,868,misbranding
+16,product,ravioli,1,ravioli,1,ravioli,0.987095,0.987095,9.5e-05,862,ravioli
+17,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999732,0.999732,0.0,706,escherichia coli
+17,product,cheese,1,cheese,1,cheese,0.999626,0.999626,0.0,666,cheese
+18,hazard,incorrect use by dates,4,moulds,8,tampering,0.40397,0.014715,0.000744,651,tampering
+18,product,bread,1,bread,2,bread and products therefor,0.993,3e-06,1e-06,672,bread and products therefor
+19,hazard,other,5,other not classified biological hazards,2,microbiological contamination,0.999999,0.0,0.0,825,microbiological contamination
+19,product,bottled water,6,bottled mineral water,9,raw milk,0.285268,0.267984,6.1e-05,808,raw milk
+20,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,1.0,1.0,0.0,744,listeria monocytogenes
+20,product,feta cheese,1,feta cheese,1,feta cheese,0.992404,0.992404,1e-06,710,feta cheese
+21,hazard,eggs and products thereof,1,eggs and products thereof,7,undeclared constituent,0.936523,0.0,5e-06,702,undeclared constituent
+21,product,oats,1,oats,1,oats,0.941314,0.941314,0.00021,737,oats
+22,hazard,metal fragment,1,metal fragment,3,foreign bodies,0.999995,5e-06,-0.0,670,foreign bodies
+22,product,noodles,1,noodles,2,instant noodles,0.730829,0.268857,0.0,637,instant noodles
+23,hazard,eggs and products thereof,1,eggs and products thereof,5,undeclared constituent,0.996516,0.0,-0.0,766,undeclared constituent
+23,product,lollipops,0,jellies,10,crackers,0.904459,1e-06,9e-06,793,crackers
+24,hazard,labelling/misdescription,1,labelling/misdescription,3,fish and products thereof,0.463255,0.000256,4.6e-05,716,fish and products thereof
+24,product,pasta sauce,1,pasta sauce,10,oyster sauce,0.403484,0.173536,0.000578,709,oyster sauce
+25,hazard,other not classified hazards for foreign bodies,1,other not classified hazards for foreign bodies,2,foreign bodies,0.999997,2e-06,0.0,726,foreign bodies
+25,product,pasta sauce,1,pasta sauce,3,tomato sauce,0.960286,0.002783,1.3e-05,725,tomato sauce
+26,hazard,eggs and products thereof,1,eggs and products thereof,9,tampering,0.698713,0.0,2e-06,674,tampering
+26,product,oats,0,cereal,7,pudding,0.542965,5e-06,3.2e-05,671,pudding
+27,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,1.0,1.0,0.0,689,listeria monocytogenes
+27,product,turkey and turkey preparations,2,turkey,2,turkey and turkey preparations,0.812774,0.000464,3.4e-05,678,turkey and turkey preparations
+28,hazard,soybeans and products thereof,1,soybeans and products thereof,2,misbranding,0.999961,0.0,-0.0,768,misbranding
+28,product,pork and beef sausages,0,pork sausage,3,sausage,0.87947,0.037452,0.000259,761,sausage
+29,hazard,peanuts and products thereof,1,peanuts and products thereof,1,peanuts and products thereof,0.988501,0.988501,6e-06,733,peanuts and products thereof
+29,product,muesli,1,muesli,1,muesli,0.99994,0.99994,1e-06,711,muesli
+30,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999979,0.999979,0.0,702,escherichia coli
+30,product,ice cream,1,ice cream,1,ice cream,0.814904,0.814904,5e-05,656,ice cream
+31,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,1.0,1.0,0.0,710,listeria monocytogenes
+31,product,chicken breast,0,ready to eat - cook meals,8,chicken,0.999801,0.0,0.0,662,chicken
+32,hazard,milk and products thereof,1,milk and products thereof,8,undeclared constituent,0.630425,0.000115,1.4e-05,737,undeclared constituent
+32,product,breakfast cereals,1,breakfast cereals,1,breakfast cereals,0.999841,0.999841,0.0,727,breakfast cereals
+33,hazard,chemical compound (high content),1,chemical compound (high content),1,chemical compound (high content),0.99995,0.99995,3e-06,800,chemical compound (high content)
+33,product,mineral waters,0,carbonated beverage,4,bottled water,0.93663,0.0,2e-06,808,bottled water
+34,hazard,walnut,0,escherichia coli,7,metal fragment,0.538098,0.0,0.0,931,metal fragment
+34,product,pasta,0,ground beef,5,prepared dish,0.689981,0.0,2e-06,888,prepared dish
+35,hazard,metal fragment,9,processing,8,plastic fragment,0.991452,0.0,0.0,934,plastic fragment
+35,product,chicken breast,1,chicken breast,5,cooked chicken,0.74647,0.002957,0.000184,907,cooked chicken
+36,hazard,insects,1,insects,8,glass fragment,0.999924,6e-06,0.0,697,glass fragment
+36,product,pasta,1,pasta,1,pasta,0.748243,0.748243,3e-06,695,pasta
+37,hazard,metal fragment,1,metal fragment,1,metal fragment,0.999986,0.999986,0.0,728,metal fragment
+37,product,minced pork,2,minced beef,1,minced beef,0.988923,0.988923,1e-06,733,minced beef
+38,hazard,toxin,0,other not classified,6,bacillus spp.,0.989775,1e-06,2.8e-05,619,bacillus spp.
+38,product,mackerel,1,mackerel,3,seafood,0.908299,0.000166,0.000363,613,seafood
+39,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,2,product category/characteristics,0.600044,8e-05,1e-05,646,product category/characteristics
+39,product,sausage,1,sausage,1,sausage,0.996766,0.996766,2.2e-05,660,sausage
+40,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,0.999931,0.999931,0.0,630,cereals containing gluten and products thereof
+40,product,corn,1,corn,4,snack mix,0.995654,0.0,5e-06,603,snack mix
+41,hazard,other not classified,0,bulging packaging,2,yeasts,0.999999,0.0,0.0,798,yeasts
+41,product,flavoured soft drink,1,flavoured soft drink,5,soft drinks,0.999073,4e-05,1e-06,797,soft drinks
+42,hazard,other not classified biological hazards,1,other not classified biological hazards,3,microbiological contamination,0.996622,0.0,0.0,636,microbiological contamination
+42,product,shrimps,1,shrimps,3,cooking sauce,0.89139,0.0,-0.0,630,cooking sauce
+43,hazard,listeria monocytogenes,7,eggs and products thereof,2,salmonella,0.999088,0.0,0.0,1207,salmonella
+43,product,cooked ham,0,ready to eat - cook meals,8,turkey and turkey preparations,0.84022,0.000324,4.1e-05,1195,turkey and turkey preparations
+44,hazard,plastic fragment,1,plastic fragment,3,foreign bodies,0.99986,0.0,0.0,723,foreign bodies
+44,product,ready to eat - cook meals,1,ready to eat - cook meals,8,baby food,0.986072,0.0,0.0,737,baby food
+45,hazard,eggs and products thereof,1,eggs and products thereof,5,undeclared constituent,0.999999,0.0,0.0,933,undeclared constituent
+45,product,pasta products,2,other not classified meat products,2,pasta products,0.998414,0.000203,1e-06,931,pasta products
+46,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,1.0,1.0,-0.0,641,listeria monocytogenes
+46,product,cheese,1,cheese,1,cheese,0.515286,0.515286,5e-06,619,cheese
+47,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,2,cereals,0.767646,0.002368,3.5e-05,626,cereals
+47,product,buckwheat,0,sliced bread,2,beef,0.568958,0.0,5e-06,604,beef
+48,hazard,eggs and products thereof,1,eggs and products thereof,1,eggs and products thereof,0.876315,0.876315,1e-06,753,eggs and products thereof
+48,product,ice cream,1,ice cream,1,ice cream,1.0,1.0,0.0,747,ice cream
+49,hazard,metal fragment,1,metal fragment,1,metal fragment,0.999999,0.999999,0.0,739,metal fragment
+49,product,dried fruits,1,dried fruits,1,dried fruits,0.998373,0.998373,1e-06,714,dried fruits
+50,hazard,metal fragment,0,other,8,hazelnut,0.968878,1e-06,3e-06,1000,hazelnut
+50,product,dried fruits,1,dried fruits,8,golden raisins/sultanas,0.999489,0.0,0.0,945,golden raisins/sultanas
+51,hazard,glass fragment,1,glass fragment,1,glass fragment,0.999999,0.999999,0.0,689,glass fragment
+51,product,sesame paste,0,flour,2,margarine,0.999899,0.0,0.0,676,margarine
+52,hazard,unauthorised placing on the market,3,unauthorised operator,1,unauthorised operator,0.994752,0.994752,0.0,870,unauthorised operator
+52,product,yoghurt,1,yoghurt,2,halloumi cheese,0.999999,1e-06,0.0,830,halloumi cheese
+53,hazard,foreign bodies,1,foreign bodies,1,foreign bodies,1.0,1.0,0.0,619,foreign bodies
+53,product,cakes,1,cakes,3,rice cakes,0.63036,0.262773,1e-05,618,rice cakes
+54,hazard,rubber fragments,1,rubber fragments,2,foreign bodies,0.999992,1e-06,0.0,717,foreign bodies
+54,product,potato chips,1,potato chips,4,crisps,0.748302,1.8e-05,4e-06,753,crisps
+55,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,4,allergens,0.716534,4.2e-05,1.5e-05,611,allergens
+55,product,oyster sauce,1,oyster sauce,1,oyster sauce,0.999991,0.999991,2e-06,576,oyster sauce
+56,hazard,peanuts and products thereof,1,peanuts and products thereof,1,peanuts and products thereof,0.999948,0.999948,0.0,660,peanuts and products thereof
+56,product,biscuits,1,biscuits,2,cookies,0.999976,0.0,-0.0,630,cookies
+57,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999999,0.999999,-0.0,639,escherichia coli
+57,product,semi-hard cheeses,0,cheese,1,cheese,0.994913,0.994913,0.0,607,cheese
+58,hazard,high content of cyanide,1,high content of cyanide,1,high content of cyanide,0.99998,0.99998,0.0,851,high content of cyanide
+58,product,crackers,1,crackers,6,snack crackers,0.927572,0.000546,9e-05,819,snack crackers
+59,hazard,glass fragment,1,glass fragment,7,foreign bodies,0.971563,0.028436,0.0,836,foreign bodies
+59,product,toffee,9,chocolates,6,cookies,0.544121,1.5e-05,2.1e-05,835,cookies
+60,hazard,metal fragment,1,metal fragment,1,metal fragment,0.999999,0.999999,0.0,677,metal fragment
+60,product,biscuits,1,biscuits,1,biscuits,0.979542,0.979542,0.0,675,biscuits
+61,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,1.0,1.0,0.0,695,listeria monocytogenes
+61,product,chicken breast,1,chicken breast,1,chicken breast,0.991448,0.991448,1e-06,656,chicken breast
+62,hazard,labelling/misdescription,1,labelling/misdescription,2,incorrect labeling,0.99934,2e-06,0.0,684,incorrect labeling
+62,product,spice mix,9,massala spice mixture,9,spice mix,0.99616,0.0,0.0,664,spice mix
+63,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,846,salmonella
+63,product,ice cream,1,ice cream,2,peanuts,0.985912,0.014063,1e-05,818,peanuts
+64,hazard,salmonella,1,salmonella,1,salmonella,0.999997,0.999997,-0.0,850,salmonella
+64,product,ice cream,1,ice cream,9,pretzel stick,0.653802,0.328752,5e-06,829,pretzel stick
+65,hazard,salmonella,1,salmonella,1,salmonella,0.999997,0.999997,0.0,931,salmonella
+65,product,ice cream,1,ice cream,1,ice cream,0.999331,0.999331,0.00506,895,ice cream
+66,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,-0.0,827,salmonella
+66,product,ice cream,1,ice cream,1,ice cream,0.999999,0.999999,0.0,791,ice cream
+67,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,825,salmonella
+67,product,peanuts,1,peanuts,1,peanuts,0.790529,0.790529,7.8e-05,789,peanuts
+68,hazard,microbiological contamination,1,microbiological contamination,1,microbiological contamination,0.999997,0.999997,1e-06,863,microbiological contamination
+68,product,cream chocolate pie,3,fruit pies,10,prepared dish,0.699404,0.000254,0.000158,849,prepared dish
+69,hazard,rubber fragments,1,rubber fragments,2,foreign bodies,0.999999,0.0,0.0,800,foreign bodies
+69,product,soup,1,soup,1,soup,0.715744,0.715744,0.00055,793,soup
+70,hazard,labelling/misdescription,1,labelling/misdescription,2,peanuts and products thereof,0.999927,0.0,0.0,726,peanuts and products thereof
+70,product,sesame,1,sesame,3,soy sauce,0.701276,0.039563,6e-06,702,soy sauce
+71,hazard,specified risk material (srm),1,specified risk material (srm),1,specified risk material (srm),0.999993,0.999993,0.0,873,specified risk material (srm)
+71,product,beef,1,beef,7,boneless beef,0.834934,0.030412,3.4e-05,829,boneless beef
+72,hazard,labelling/misdescription,1,labelling/misdescription,2,peanuts and products thereof,0.999814,1e-06,0.0,850,peanuts and products thereof
+72,product,ice cream,1,ice cream,10,other dairy products,0.561622,1.1e-05,1e-06,828,other dairy products
+73,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999997,0.999997,-0.0,869,escherichia coli
+73,product,frozen beef patties,1,frozen beef patties,2,ground beef,0.950986,1e-06,2e-06,852,ground beef
+74,hazard,salmonella,1,salmonella,8,eggs and products thereof,0.662781,0.065624,3e-06,830,eggs and products thereof
+74,product,eggs,1,eggs,1,eggs,0.999926,0.999926,1e-06,807,eggs
+75,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,841,salmonella
+75,product,sprouts,2,alfalfa sprouts,1,alfalfa sprouts,0.999991,0.999991,-0.0,795,alfalfa sprouts
+76,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,4,incorrect labeling,0.999244,0.0,5e-06,721,incorrect labeling
+76,product,biscuits,2,cookies,1,cookies,0.839447,0.839447,5e-06,704,cookies
+77,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,9,pathogenic bacteria,0.613558,9e-06,2.5e-05,785,pathogenic bacteria
+77,product,quail,0,chicken based products,4,poultry,0.917639,0.0,4e-05,768,poultry
+78,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,0.0,593,salmonella
+78,product,spreads,0,coriander,1,coriander,0.999984,0.999984,0.0,568,coriander
+79,hazard,e 425 - konjac unauthorised,1,e 425 - konjac unauthorised,1,e 425 - konjac unauthorised,0.999157,0.999157,0.0,730,e 425 - konjac unauthorised
+79,product,jellies,1,jellies,10,coconut juice,0.710564,0.230686,4e-06,705,coconut juice
+80,hazard,metal fragment,1,metal fragment,2,foreign bodies,0.999953,4.7e-05,0.0,628,foreign bodies
+80,product,breakfast cereals,2,cereal,1,cereal,0.999963,0.999963,0.0,625,cereal
+81,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999997,0.999997,0.0,758,listeria monocytogenes
+81,product,salads,1,salads,9,fruits and vegetables,0.918156,0.004818,4e-05,739,fruits and vegetables
+82,hazard,soybeans and products thereof,1,soybeans and products thereof,5,allergens,0.999848,0.000109,-0.0,829,allergens
+82,product,other dairy products,0,cereal drink,3,soy milk product,0.999722,0.0,0.0,757,soy milk product
+83,hazard,other,1,other,2,chemical compound (high content),0.592665,0.0,1e-06,829,chemical compound (high content)
+83,product,milk powder,1,milk powder,1,milk powder,0.999999,0.999999,0.0,814,milk powder
+84,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999997,0.999997,0.0,836,listeria monocytogenes
+84,product,chilled salads,1,chilled salads,2,salads,0.858851,0.000887,0.000553,855,salads
+85,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999995,0.999995,0.0,808,listeria monocytogenes
+85,product,sandwiches,1,sandwiches,1,sandwiches,0.999959,0.999959,2e-06,783,sandwiches
+86,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.43225,0.43225,0.035785,859,milk and products thereof
+86,product,basil pesto sauce,2,pesto,1,pesto,0.84723,0.84723,2e-06,861,pesto
+87,hazard,eggs and products thereof,1,eggs and products thereof,9,plastic fragment,0.373969,0.265184,0.000135,723,plastic fragment
+87,product,donuts,1,donuts,1,donuts,0.999773,0.999773,0.0,746,donuts
+88,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999997,0.999997,0.0,867,escherichia coli
+88,product,ground beef,5,frozen beef patties,4,beef products,0.998959,0.0,0.0,845,beef products
+89,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,0.0,838,listeria monocytogenes
+89,product,pizza,1,pizza,10,prepared dish,0.764192,0.097156,0.000118,804,prepared dish
+90,hazard,salmonella,1,salmonella,1,salmonella,0.999988,0.999988,0.0,921,salmonella
+90,product,fruits and vegetables,0,spice mix,9,coriander,0.999416,0.0,2e-06,860,coriander
+91,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.678917,0.678917,7e-06,850,milk and products thereof
+91,product,chocolate,1,chocolate,2,dark chocolates,0.29527,0.003179,0.000197,838,dark chocolates
+92,hazard,soybeans and products thereof,1,soybeans and products thereof,2,misbranding,0.999999,0.0,0.0,896,misbranding
+92,product,chorizo,1,chorizo,1,chorizo,0.989838,0.989838,0.004449,874,chorizo
+93,hazard,packaging defect,3,glass fragment,1,glass fragment,0.999362,0.999362,0.0,881,glass fragment
+93,product,wine,1,wine,1,wine,0.999752,0.999752,8e-05,858,wine
+94,hazard,milk and products thereof,1,milk and products thereof,4,undeclared constituent,0.90169,0.0,0.0,878,undeclared constituent
+94,product,kefta (frozen meatballs),0,moussaka,2,lamb,0.990429,0.0,8e-06,887,lamb
+95,hazard,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,0.999361,0.999361,0.0,809,sulphur dioxide and sulphites
+95,product,cooking sauce,0,pasta sauce,2,tomato sauce,0.999929,1.3e-05,0.0,759,tomato sauce
+96,hazard,pieces of wood,0,foreign bodies,1,foreign bodies,1.0,1.0,0.0,838,foreign bodies
+96,product,ice cream,1,ice cream,1,ice cream,0.999484,0.999484,0.000317,868,ice cream
+97,hazard,salmonella,1,salmonella,1,salmonella,0.999998,0.999998,0.0,853,salmonella
+97,product,ground beef meat,4,ground beef,1,ground beef,0.999876,0.999876,5e-06,829,ground beef
+98,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999998,0.999998,0.0,843,listeria monocytogenes
+98,product,cheese,1,cheese,1,cheese,0.858146,0.858146,0.000268,797,cheese
+99,hazard,milk and products thereof,1,milk and products thereof,3,undeclared constituent,0.999981,0.0,-0.0,994,undeclared constituent
+99,product,frozen chicken wings,2,chicken preparations,3,chicken based products,0.999665,0.0,1e-06,953,chicken based products
+100,hazard,salmonella,1,salmonella,1,salmonella,0.999993,0.999993,0.0,870,salmonella
+100,product,ice cream,1,ice cream,1,ice cream,0.999764,0.999764,1e-05,843,ice cream
+101,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999998,0.999998,0.0,598,listeria monocytogenes
+101,product,chilled ham,0,ham,1,ham,0.999969,0.999969,-0.0,592,ham
+102,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,0.0,774,listeria monocytogenes
+102,product,ham,2,sliced ham,2,ham,0.999806,0.0,3e-06,733,ham
+103,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999989,0.999989,0.0,867,listeria monocytogenes
+103,product,salads,1,salads,1,salads,0.916786,0.916786,1e-05,885,salads
+104,hazard,undeclared additive,1,undeclared additive,4,misbranding,0.999004,2e-06,0.0,1002,misbranding
+104,product,other types of meat,0,cream chocolate pie,2,apple cake,0.975213,1e-06,4e-06,959,apple cake
+105,hazard,salmonella,1,salmonella,1,salmonella,0.999998,0.999998,0.0,863,salmonella
+105,product,bars,3,cereal bars,2,chocolate bars,0.997973,1.6e-05,2e-06,829,chocolate bars
+106,hazard,cereals containing gluten and products thereof,2,peanuts and products thereof,1,peanuts and products thereof,0.999782,0.999782,3e-06,826,peanuts and products thereof
+106,product,chocolate dessert,0,confectionery,1,confectionery,0.728447,0.728447,4e-05,788,confectionery
+107,hazard,spoilage,1,spoilage,1,spoilage,0.999998,0.999998,1e-06,785,spoilage
+107,product,cider,1,cider,1,cider,0.999998,0.999998,0.0,789,cider
+108,hazard,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,9,insufficient labelling/documentation,0.98785,0.006656,0.0,892,insufficient labelling/documentation
+108,product,dried apricots,1,dried apricots,1,dried apricots,0.999983,0.999983,4e-06,851,dried apricots
+109,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,3,allergens,0.766205,1e-06,6e-06,864,allergens
+109,product,chicken based products,1,chicken based products,8,chicken products - frozen,0.969911,1e-06,7e-06,832,chicken products - frozen
+110,hazard,glass fragment,1,glass fragment,7,foreign bodies,0.847967,0.152032,0.0,881,foreign bodies
+110,product,ravioli,1,ravioli,1,ravioli,0.747588,0.747588,0.005765,892,ravioli
+111,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.99999,0.99999,0.0,775,escherichia coli
+111,product,yoghurt,1,yoghurt,1,yoghurt,0.999956,0.999956,3e-05,750,yoghurt
+112,hazard,milk and products thereof,5,soybeans and products thereof,2,incorrect labeling,0.999808,0.0,0.0,897,incorrect labeling
+112,product,frozen pork preparations,0,chicken preparations,8,other types of meat,0.316739,1.2e-05,0.000252,912,other types of meat
+113,hazard,milk and products thereof,1,milk and products thereof,5,undeclared constituent,0.6809,0.0,2e-06,829,undeclared constituent
+113,product,other not classified meat products,1,other not classified meat products,2,"meat, egg and dairy products",0.523419,0.0,1e-06,813,"meat, egg and dairy products"
+114,hazard,salmonella,1,salmonella,1,salmonella,0.999255,0.999255,-0.0,1045,salmonella
+114,product,seasoning blends,0,seasoning,3,seasoning mix,0.999484,0.0,0.0,977,seasoning mix
+115,hazard,walnut,1,walnut,1,walnut,0.99917,0.99917,1.2e-05,787,walnut
+115,product,cookies,1,cookies,1,cookies,0.998944,0.998944,1e-06,798,cookies
+116,hazard,other,2,salmonella,2,other,0.999951,0.0,1e-06,1030,other
+116,product,dietary supplement,1,dietary supplement,7,protein powder,0.788207,0.001223,9e-05,1023,protein powder
+117,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,727,salmonella
+117,product,pistachio nuts,1,pistachio nuts,1,pistachio nuts,0.999997,0.999997,-0.0,701,pistachio nuts
+118,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,868,salmonella
+118,product,pistachio nuts,1,pistachio nuts,1,pistachio nuts,0.999995,0.999995,-0.0,852,pistachio nuts
+119,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999997,0.999997,0.0,831,listeria monocytogenes
+119,product,cheese,1,cheese,2,cheese products,0.45298,0.161515,0.000167,800,cheese products
+120,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,-0.0,838,salmonella
+120,product,peanuts,1,peanuts,1,peanuts,0.99959,0.99959,2e-06,795,peanuts
+121,hazard,salmonella,1,salmonella,1,salmonella,0.999997,0.999997,0.0,823,salmonella
+121,product,peanuts,1,peanuts,5,unsalted organic crunchy peanut butter,0.985813,0.000412,0.0,800,unsalted organic crunchy peanut butter
+122,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,852,salmonella
+122,product,candies,2,peanuts,1,peanuts,0.6899,0.6899,5.8e-05,834,peanuts
+123,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,0.0,831,salmonella
+123,product,cookies,1,cookies,1,cookies,0.988541,0.988541,1e-06,815,cookies
+124,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,-0.0,842,salmonella
+124,product,candies,2,peanuts,2,candies,0.951174,5.9e-05,1e-06,811,candies
+125,hazard,milk and products thereof,1,milk and products thereof,9,dairy products,0.768665,0.013021,7e-06,772,dairy products
+125,product,biscuits,1,biscuits,1,biscuits,0.993759,0.993759,0.0,765,biscuits
+126,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,3,allergens,0.999971,0.0,0.0,880,allergens
+126,product,cured pork meat,1,cured pork meat,4,pork sausage,0.699973,3.7e-05,0.000144,871,pork sausage
+127,hazard,other,1,other,2,undeclared additive,0.999613,0.0,0.0,876,undeclared additive
+127,product,dietary supplement,1,dietary supplement,1,dietary supplement,0.990639,0.990639,9e-06,871,dietary supplement
+128,hazard,inspection issues,1,inspection issues,1,inspection issues,0.999997,0.999997,-0.0,876,inspection issues
+128,product,pasta products,0,ravioli,3,various pasta products,0.993859,1.6e-05,7e-06,843,various pasta products
+129,hazard,metal fragment,1,metal fragment,1,metal fragment,1.0,1.0,0.0,931,metal fragment
+129,product,ice cream,1,ice cream,1,ice cream,0.889451,0.889451,0.054869,916,ice cream
+130,hazard,bacillus spp.,1,bacillus spp.,7,damaged packaging,0.841584,0.040611,2.8e-05,769,damaged packaging
+130,product,garlic powder,1,garlic powder,1,garlic powder,0.999999,0.999999,0.0,725,garlic powder
+131,hazard,salmonella,1,salmonella,1,salmonella,0.999991,0.999991,0.0,855,salmonella
+131,product,chicken and chicken preparations,0,chicken,3,chicken preparations,0.888535,4.4e-05,1.7e-05,834,chicken preparations
+132,hazard,staphylococcus,1,staphylococcus,2,staphylococcal enterotoxin,0.999995,5e-06,0.0,865,staphylococcal enterotoxin
+132,product,sausage products,3,sausage,3,sausage products,0.87279,0.10424,3.5e-05,857,sausage products
+133,hazard,soybeans and products thereof,1,soybeans and products thereof,2,incorrect labeling,0.999962,0.0,0.0,859,incorrect labeling
+133,product,seasoned chicken,0,chicken breast,8,chicken based products,0.45853,0.185263,0.001016,807,chicken based products
+134,hazard,soybeans and products thereof,1,soybeans and products thereof,9,undeclared constituent,0.81396,1.5e-05,1e-06,788,undeclared constituent
+134,product,salt,4,seasoning,1,seasoning,0.99512,0.99512,1e-06,733,seasoning
+135,hazard,soybeans and products thereof,1,soybeans and products thereof,2,labelling/misdescription,0.997681,0.001064,0.0,817,labelling/misdescription
+135,product,salt,2,seasoning,1,seasoning,0.513204,0.513204,8.3e-05,733,seasoning
+136,hazard,milk and products thereof,1,milk and products thereof,9,undeclared constituent,0.745656,0.009992,1.5e-05,849,undeclared constituent
+136,product,sauce,2,sauces,9,barbecue sauce,0.521423,3e-06,1.3e-05,833,barbecue sauce
+137,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,1.0,1.0,0.0,794,listeria monocytogenes
+137,product,pâté,1,pâté,2,chicken based products,0.809747,0.002498,5e-06,787,chicken based products
+138,hazard,cereals,2,cereals containing gluten and products thereof,4,incorrect labeling,0.999671,0.0,1e-06,843,incorrect labeling
+138,product,chicken breast,1,chicken breast,1,chicken breast,0.968936,0.968936,9.1e-05,814,chicken breast
+139,hazard,nuts,2,pistachio nut,2,nuts,0.932232,0.067531,0.000181,628,nuts
+139,product,ice cream,1,ice cream,1,ice cream,0.999997,0.999997,9.6e-05,596,ice cream
+140,hazard,toxin,1,toxin,1,toxin,1.0,1.0,0.0,663,toxin
+140,product,Fishes not identified,2,herring,1,herring,0.99992,0.99992,0.0,686,herring
+141,hazard,processing,0,other,2,packaging defect,0.982132,0.002716,2e-05,832,packaging defect
+141,product,chicken preparations,4,chicken based products,4,chicken preparations,0.83435,0.013071,0.000107,825,chicken preparations
+142,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999997,0.999997,0.0,863,listeria monocytogenes
+142,product,chicken based products,1,chicken based products,9,chicken breast,0.420564,0.113193,0.000503,838,chicken breast
+143,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,8,incorrect labeling,0.973389,0.001463,1e-06,842,incorrect labeling
+143,product,snack mix,1,snack mix,1,snack mix,0.586738,0.586738,4.6e-05,816,snack mix
+144,hazard,processing,1,processing,1,processing,0.999997,0.999997,0.0,827,processing
+144,product,fresh whole chicken,0,frozen marinated chicken,10,fresh beef,0.931931,1e-06,2.9e-05,778,fresh beef
+145,hazard,sesame seeds and products thereof,1,sesame seeds and products thereof,1,sesame seeds and products thereof,1.0,1.0,0.0,829,sesame seeds and products thereof
+145,product,crackers,1,crackers,1,crackers,0.370881,0.370881,0.001253,807,crackers
+146,hazard,improper conditions,1,improper conditions,8,spoilage,0.985772,3.7e-05,0.0,831,spoilage
+146,product,fermented beef meat,9,hot dogs,1,hot dogs,0.896644,0.896644,8.2e-05,832,hot dogs
+147,hazard,plastic fragment,1,plastic fragment,2,foreign bodies,1.0,0.0,0.0,780,foreign bodies
+147,product,frozen burgers,5,Veggie Burger,4,bread,0.603839,0.07677,0.000121,791,bread
+148,hazard,almond,0,peanuts and products thereof,1,peanuts and products thereof,0.995662,0.995662,1.2e-05,894,peanuts and products thereof
+148,product,nuts mix,1,nuts mix,3,spreads,0.992675,1e-06,1e-06,874,spreads
+149,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999978,0.999978,-0.0,888,escherichia coli
+149,product,ground beef,1,ground beef,1,ground beef,0.536496,0.536496,0.000482,864,ground beef
+150,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,-0.0,685,listeria monocytogenes
+150,product,artichoke,0,sauce,3,dip-sauce,0.999998,0.0,0.0,685,dip-sauce
+151,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,1.0,1.0,0.0,716,listeria monocytogenes
+151,product,dip-sauce,1,dip-sauce,3,sauces,0.94292,0.034346,8e-06,702,sauces
+152,hazard,peanuts and products thereof,1,peanuts and products thereof,3,undeclared constituent,0.805612,0.174226,6e-06,866,undeclared constituent
+152,product,pig meat - pork,3,pork preparation,10,pork meat,0.373813,0.286613,0.001209,863,pork meat
+153,hazard,peanuts and products thereof,1,peanuts and products thereof,6,undeclared constituent,0.979295,0.010879,2e-06,856,undeclared constituent
+153,product,pork sausage,1,pork sausage,1,pork sausage,0.998008,0.998008,2.6e-05,825,pork sausage
+154,hazard,inspection issues,1,inspection issues,1,inspection issues,0.998955,0.998955,1e-06,947,inspection issues
+154,product,Dried pork meat,0,pig meat - pork,1,pig meat - pork,0.530651,0.530651,0.00176,928,pig meat - pork
+155,hazard,peanuts and products thereof,0,eggs and products thereof,2,undeclared constituent,0.999987,0.0,1e-06,855,undeclared constituent
+155,product,chicken based products,1,chicken based products,2,chicken breast,0.538081,9.8e-05,2e-06,811,chicken breast
+156,hazard,peanuts and products thereof,1,peanuts and products thereof,1,peanuts and products thereof,0.804662,0.804662,3e-06,834,peanuts and products thereof
+156,product,cakes,1,cakes,1,cakes,0.999934,0.999934,8e-06,797,cakes
+157,hazard,peanuts and products thereof,1,peanuts and products thereof,9,undeclared constituent,0.999003,6e-06,0.0,825,undeclared constituent
+157,product,ground almonds,2,dried almonds,2,ground almonds,0.999994,0.0,0.0,799,ground almonds
+158,hazard,nuts,1,nuts,1,nuts,1.0,1.0,1e-06,839,nuts
+158,product,chocolate pralines,0,melons,3,chocolate truffles,0.745735,1e-06,4.7e-05,830,chocolate truffles
+159,hazard,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,0.999931,0.999931,-0.0,830,sulphur dioxide and sulphites
+159,product,dried plums,1,dried plums,8,dried fruits,0.717912,0.281139,1e-06,844,dried fruits
+160,hazard,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,0.999969,0.999969,0.0,801,sulphur dioxide and sulphites
+160,product,dried plums,0,plums,4,dried fruits,0.880154,0.0,8e-06,771,dried fruits
+161,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,0.0,910,listeria monocytogenes
+161,product,thermal processed beef meat,2,precooked cooked beef meat products,9,Not classified pork meat,0.971194,0.000375,4e-06,907,Not classified pork meat
+162,hazard,incorrect labeling,0,eggs and products thereof,5,undeclared constituent,0.99457,0.0,1e-06,753,undeclared constituent
+162,product,ice cream,1,ice cream,1,ice cream,0.999997,0.999997,1.3e-05,764,ice cream
+163,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,819,salmonella
+163,product,chicken broth,9,meat broth,9,chicken broth,0.996929,0.0,1e-06,741,chicken broth
+164,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999996,0.999996,0.0,842,listeria monocytogenes
+164,product,dried beef meat,1,dried beef meat,2,jerky products,0.999989,0.0,-0.0,840,jerky products
+165,hazard,misbranding,4,undeclared additive,3,incorrect labeling,0.971789,0.0,0.0,875,incorrect labeling
+165,product,turkey and turkey preparations,1,turkey and turkey preparations,2,chilled beef preparations,0.716881,0.000416,1e-06,839,chilled beef preparations
+166,hazard,unauthorised colour sudan 4,1,unauthorised colour sudan 4,1,unauthorised colour sudan 4,0.999999,0.999999,0.0,821,unauthorised colour sudan 4
+166,product,palm oil,1,palm oil,1,palm oil,0.999995,0.999995,9.8e-05,811,palm oil
+167,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.89671,0.89671,0.000364,829,milk and products thereof
+167,product,pasta,1,pasta,1,pasta,0.942018,0.942018,0.000167,810,pasta
+168,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,0.0,584,listeria monocytogenes
+168,product,salmon,1,salmon,1,salmon,0.999995,0.999995,1e-06,542,salmon
+169,hazard,salmonella,1,salmonella,1,salmonella,0.999998,0.999998,0.0,947,salmonella
+169,product,seasonings,0,all purpose seasoning,10,ginger powder,0.764921,1e-06,1.3e-05,864,ginger powder
+170,hazard,plastic fragment,1,plastic fragment,1,plastic fragment,0.999992,0.999992,-0.0,859,plastic fragment
+170,product,soup,1,soup,1,soup,0.513175,0.513175,0.000478,844,soup
+171,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,0.999997,0.999997,-0.0,824,cereals containing gluten and products thereof
+171,product,gluten-free barleygrass powder,0,protein powder,3,hemp protein powder,0.99509,1.1e-05,1.6e-05,820,hemp protein powder
+172,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,-0.0,875,salmonella
+172,product,pork carcass(es),1,pork carcass(es),1,pork carcass(es),0.999996,0.999996,0.0,886,pork carcass(es)
+173,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999964,0.999964,0.0,781,escherichia coli
+173,product,feta cheese,1,feta cheese,1,feta cheese,0.961111,0.961111,5e-06,746,feta cheese
+174,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.984229,0.984229,0.000236,753,milk and products thereof
+174,product,coconut juice,1,coconut juice,1,coconut juice,0.999422,0.999422,3e-06,744,coconut juice
+175,hazard,inspection issues,1,inspection issues,1,inspection issues,0.999982,0.999982,3e-06,846,inspection issues
+175,product,turkey and turkey preparations,1,turkey and turkey preparations,3,turkey based products,0.679113,6.7e-05,-0.0,853,turkey based products
+176,hazard,milk and products thereof,1,milk and products thereof,2,dairy products,0.969574,0.0,0.0,706,dairy products
+176,product,coconut juice,1,coconut juice,1,coconut juice,0.996127,0.996127,6.6e-05,687,coconut juice
+177,hazard,moulds,1,moulds,1,moulds,1.0,1.0,0.0,807,moulds
+177,product,chicken preparations,4,chicken based products,3,prepared dishes and snacks,0.978045,0.0,1e-06,814,prepared dishes and snacks
+178,hazard,milk and products thereof,1,milk and products thereof,2,dairy products,0.999969,1e-05,0.0,704,dairy products
+178,product,coconut milk,1,coconut milk,1,coconut milk,0.999885,0.999885,1e-05,667,coconut milk
+179,hazard,bad smell / off odor,1,bad smell / off odor,1,bad smell / off odor,0.999999,0.999999,-0.0,902,bad smell / off odor
+179,product,"fully cooked, frozen chicken wings",0,frozen chicken wings,10,chicken based products,0.662445,4e-06,0.000122,863,chicken based products
+180,hazard,glass fragment,1,glass fragment,1,glass fragment,0.998289,0.998289,0.0,700,glass fragment
+180,product,jam,1,jam,1,jam,0.986611,0.986611,2.2e-05,668,jam
+181,hazard,clostridium botulinum,1,clostridium botulinum,1,clostridium botulinum,0.999986,0.999986,0.0,877,clostridium botulinum
+181,product,salmon,1,salmon,1,salmon,0.8956,0.8956,0.000256,862,salmon
+182,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999997,0.999997,0.0,888,escherichia coli
+182,product,cheese,1,cheese,9,lobster,0.635528,0.340174,1.5e-05,874,lobster
+183,hazard,coliforms,1,coliforms,1,coliforms,0.999998,0.999998,0.0,909,coliforms
+183,product,milk,2,raw milk,2,milk,0.407639,4.5e-05,8.1e-05,825,milk
+184,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,-0.0,910,salmonella
+184,product,various snacks,0,sandwiches,4,chicken based products,0.994778,0.0,0.0,860,chicken based products
+185,hazard,plastic fragment,1,plastic fragment,2,foreign bodies,0.999987,1.3e-05,0.0,838,foreign bodies
+185,product,potato chips,2,flavoured potato chips,2,potato chips,0.999999,0.0,0.0,852,potato chips
+186,hazard,inspection issues,1,inspection issues,1,inspection issues,0.999997,0.999997,0.0,828,inspection issues
+186,product,ravioli,1,ravioli,3,various pasta products,0.858094,0.009835,2.8e-05,816,various pasta products
+187,hazard,peanuts and products thereof,1,peanuts and products thereof,2,insufficient labelling/documentation,0.999234,1e-06,0.0,803,insufficient labelling/documentation
+187,product,bean snack,1,bean snack,1,bean snack,0.99993,0.99993,-0.0,817,bean snack
+188,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.928062,0.928062,7e-06,838,milk and products thereof
+188,product,corn,1,corn,4,potato chips,0.988733,0.0,8e-06,844,potato chips
+189,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,820,salmonella
+189,product,pistachio nuts,1,pistachio nuts,1,pistachio nuts,0.99999,0.99999,-0.0,801,pistachio nuts
+190,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999999,0.999999,0.0,744,escherichia coli
+190,product,yoghurt,2,nuts and nuts products,2,yoghurt,0.999619,7.8e-05,3.4e-05,710,yoghurt
+191,hazard,salmonella,1,salmonella,1,salmonella,0.999997,0.999997,0.0,846,salmonella
+191,product,nut and fruit mixture,0,granola,2,breakfast cereals,0.505693,0.347557,1.8e-05,808,breakfast cereals
+192,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,0.0,825,salmonella
+192,product,flaxseed,0,chia seeds,1,chia seeds,0.703033,0.703033,5e-05,780,chia seeds
+193,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.99999,0.99999,0.0,865,listeria monocytogenes
+193,product,chicken preparations,1,chicken preparations,9,ready cooked sliced chicken tikka breast,0.996033,0.0,8e-06,873,ready cooked sliced chicken tikka breast
+194,hazard,cashew,1,cashew,8,nuts,0.999734,0.000102,0.0,842,nuts
+194,product,dried almonds,0,almonds,1,almonds,0.962505,0.962505,2.8e-05,786,almonds
+195,hazard,almond,1,almond,1,almond,0.999874,0.999874,1e-06,747,almond
+195,product,curry,1,curry,9,curry sauces,0.979089,0.001519,2.2e-05,685,curry sauces
+196,hazard,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,2,sulphates/sulphites,0.998808,0.000417,0.0,801,sulphates/sulphites
+196,product,ginger slices,4,ginger powder,4,ginger slices,0.999999,0.0,0.0,757,ginger slices
+197,hazard,milk and products thereof,1,milk and products thereof,9,undeclared constituent,0.667332,0.127362,1.4e-05,791,undeclared constituent
+197,product,barbeque flavour corn snack,0,corn,5,potato chips,0.733304,1e-06,3e-06,809,potato chips
+198,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999993,0.999993,0.0,839,listeria monocytogenes
+198,product,potato salad,0,salads,3,chilled salads,0.999804,1.2e-05,0.0,826,chilled salads
+199,hazard,milk and products thereof,1,milk and products thereof,9,insufficient labelling/documentation,0.819948,6e-06,1.1e-05,824,insufficient labelling/documentation
+199,product,cinnamon rolls,1,cinnamon rolls,6,rolls,0.818311,0.050703,0.000154,797,rolls
+200,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.985677,0.985677,0.000378,766,milk and products thereof
+200,product,cakes,1,cakes,1,cakes,0.994898,0.994898,4.8e-05,773,cakes
+201,hazard,milk and products thereof,1,milk and products thereof,2,allergens,0.999797,1e-06,0.0,889,allergens
+201,product,dietary supplement,1,dietary supplement,1,dietary supplement,0.997246,0.997246,1e-05,885,dietary supplement
+202,hazard,foreign bodies,2,plastic fragment,2,foreign bodies,1.0,0.0,0.0,921,foreign bodies
+202,product,chicken based products,3,cooked chicken,3,chicken based products,0.99981,0.0,0.0,906,chicken based products
+203,hazard,peanuts and products thereof,1,peanuts and products thereof,9,nuts,0.999719,0.000154,0.0,884,nuts
+203,product,cookies,1,cookies,1,cookies,0.999615,0.999615,4e-06,876,cookies
+204,hazard,soybeans and products thereof,1,soybeans and products thereof,2,misbranding,0.612488,8.6e-05,0.0,772,misbranding
+204,product,frozen ready to cook chicken,2,chicken breast,6,chicken products - frozen,0.952637,0.000194,1.3e-05,737,chicken products - frozen
+205,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.990592,0.990592,3.8e-05,904,milk and products thereof
+205,product,energy drink,0,food supplement,9,dietary capsules,0.466384,3.3e-05,5.6e-05,886,dietary capsules
+206,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999997,0.999997,-0.0,1038,listeria monocytogenes
+206,product,sunflower seed,1,sunflower seed,1,sunflower seed,0.999735,0.999735,1e-06,1034,sunflower seed
+207,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,0.0,823,listeria monocytogenes
+207,product,bars,1,bars,1,bars,0.931312,0.931312,1e-06,819,bars
+208,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999996,0.999996,0.0,818,listeria monocytogenes
+208,product,sunflower seed,1,sunflower seed,1,sunflower seed,0.999759,0.999759,2e-06,796,sunflower seed
+209,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,720,salmonella
+209,product,mung bean sprouts,2,bean sprouts,1,bean sprouts,0.926199,0.926199,1e-06,687,bean sprouts
+210,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999994,0.999994,0.0,883,listeria monocytogenes
+210,product,cereal bars,0,protein balls,1,protein balls,0.984717,0.984717,4e-06,881,protein balls
+211,hazard,peanuts and products thereof,1,peanuts and products thereof,1,peanuts and products thereof,0.999964,0.999964,0.0,857,peanuts and products thereof
+211,product,snacks (various),2,cookies,10,sugar confectionary,0.589759,3.7e-05,8e-05,829,sugar confectionary
+212,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999995,0.999995,0.0,843,listeria monocytogenes
+212,product,chocolate bars,2,cereal bars,6,dark chocolates,0.616382,5.7e-05,6e-06,810,dark chocolates
+213,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999997,0.999997,0.0,806,listeria monocytogenes
+213,product,frozen peas,1,frozen peas,1,frozen peas,0.999998,0.999998,0.0,788,frozen peas
+214,hazard,salmonella,1,salmonella,1,salmonella,0.999998,0.999998,0.0,868,salmonella
+214,product,macadamia nuts,1,macadamia nuts,1,macadamia nuts,0.999337,0.999337,9.4e-05,843,macadamia nuts
+215,hazard,soybeans and products thereof,1,soybeans and products thereof,2,incorrect labeling,0.829691,0.0,1.2e-05,844,incorrect labeling
+215,product,desserts,0,pudding,3,confectionery,0.999648,0.0,0.0,819,confectionery
+216,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999993,0.999993,0.0,865,listeria monocytogenes
+216,product,chicken preparations,1,chicken preparations,2,ready to eat - cook meals,0.963766,0.002583,0.00027,850,ready to eat - cook meals
+217,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.99966,0.99966,0.0,909,escherichia coli
+217,product,chicken products - frozen,4,chicken preparations,4,chicken products - frozen,0.932114,1.3e-05,2.4e-05,885,chicken products - frozen
+218,hazard,eggs and products thereof,1,eggs and products thereof,8,undeclared constituent,0.978505,5.6e-05,1e-06,751,undeclared constituent
+218,product,mozzarella cheese,1,mozzarella cheese,1,mozzarella cheese,0.988784,0.988784,0.000232,777,mozzarella cheese
+219,hazard,unauthorised import,1,unauthorised import,2,inspection issues,0.998031,0.0,1e-06,943,inspection issues
+219,product,frozen fish fillets,1,frozen fish fillets,3,fish products,0.990545,2e-06,0.0,944,fish products
+220,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.826586,0.826586,8.6e-05,877,milk and products thereof
+220,product,dark chocolate coated almonds,3,chocolate bars,3,dark chocolate coated almonds,0.741452,0.018562,1e-06,875,dark chocolate coated almonds
+221,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999996,0.999996,0.0,1037,listeria monocytogenes
+221,product,hot dogs,6,thermal processed pork meat,6,hot dogs,0.996146,0.0,1e-06,1041,hot dogs
+222,hazard,cereals containing gluten and products thereof,2,soybeans and products thereof,2,cereals containing gluten and products thereof,0.953956,4e-05,1e-06,858,cereals containing gluten and products thereof
+222,product,flavoured whey protein preparations,1,flavoured whey protein preparations,1,flavoured whey protein preparations,0.880731,0.880731,1e-06,843,flavoured whey protein preparations
+223,hazard,soybeans and products thereof,4,eggs and products thereof,2,undeclared constituent,0.999995,0.0,2e-06,953,undeclared constituent
+223,product,shrimps,5,lasagne,4,various pasta products,0.607217,0.082178,0.000174,920,various pasta products
+224,hazard,plastic fragment,1,plastic fragment,1,plastic fragment,0.999977,0.999977,-0.0,755,plastic fragment
+224,product,black peppercorn,0,orange peppers,3,black pepper,1.0,0.0,0.0,747,black pepper
+225,hazard,metal fragment,1,metal fragment,1,metal fragment,0.999996,0.999996,0.0,950,metal fragment
+225,product,ground beef,1,ground beef,1,ground beef,0.999779,0.999779,5.3e-05,944,ground beef
+226,hazard,misdescription,2,inspection issues,1,inspection issues,0.999696,0.999696,2e-06,1032,inspection issues
+226,product,other not classified meat products,1,other not classified meat products,10,thermal processed pork meat,0.432564,0.018711,0.002012,1035,thermal processed pork meat
+227,hazard,salmonella,1,salmonella,1,salmonella,0.999998,0.999998,0.0,849,salmonella
+227,product,macadamia nuts,1,macadamia nuts,1,macadamia nuts,0.999964,0.999964,0.0,816,macadamia nuts
+228,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,-0.0,1046,salmonella
+228,product,omega seed mix,0,sesame,2,sesame seeds,0.999938,1.7e-05,2e-06,1013,sesame seeds
+229,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,934,salmonella
+229,product,omega seed mix,0,sesame,1,sesame,0.920506,0.920506,8e-06,917,sesame
+230,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.881937,0.881937,7.1e-05,843,milk and products thereof
+230,product,ice cream,1,ice cream,1,ice cream,0.997962,0.997962,0.000287,830,ice cream
+231,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999995,0.999995,1e-06,911,listeria monocytogenes
+231,product,salmon,1,salmon,3,fish and fish products,0.925506,4e-06,7e-06,880,fish and fish products
+232,hazard,plastic fragment,1,plastic fragment,2,foreign bodies,1.0,0.0,0.0,871,foreign bodies
+232,product,chicken based products,1,chicken based products,3,cooked chicken,0.635336,0.350866,8e-06,883,cooked chicken
+233,hazard,eggs and products thereof,1,eggs and products thereof,9,tampering,0.932419,3.1e-05,0.0,837,tampering
+233,product,soup,1,soup,1,soup,0.979444,0.979444,0.00013,827,soup
+234,hazard,processing,1,processing,2,other,0.968197,0.007627,9e-06,815,other
+234,product,chicken breast,5,chicken based products,10,frozen poultry products,0.574553,3.6e-05,0.000103,818,frozen poultry products
+235,hazard,peanuts and products thereof,1,peanuts and products thereof,1,peanuts and products thereof,0.759925,0.759925,4.2e-05,839,peanuts and products thereof
+235,product,coconut almond butter,0,almond products,4,"nuts, nut products and seeds",0.996158,2e-06,2.9e-05,829,"nuts, nut products and seeds"
+236,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,0.0,837,listeria monocytogenes
+236,product,mashed chickpeas (hummus),1,mashed chickpeas (hummus),8,dip-sauce,0.98353,1.4e-05,0.0,847,dip-sauce
+237,hazard,other,5,incorrect use by dates,1,incorrect use by dates,1.0,1.0,0.0,688,incorrect use by dates
+237,product,mung bean sprouts,2,bean sprouts,1,bean sprouts,0.999816,0.999816,6.1e-05,669,bean sprouts
+238,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.980401,0.980401,0.0,813,milk and products thereof
+238,product,cookies,1,cookies,9,chocolate bars,0.545904,8.4e-05,3e-06,805,chocolate bars
+239,hazard,milk and products thereof,1,milk and products thereof,10,undeclared constituent,0.868442,3e-06,0.000212,844,undeclared constituent
+239,product,desserts,0,biscuits,4,bread and products therefor,0.907371,0.0,1e-06,809,bread and products therefor
+240,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,-0.0,819,salmonella
+240,product,bread mix,3,bread,3,bread mix,0.999685,0.0,0.0,795,bread mix
+241,hazard,salmonella,1,salmonella,1,salmonella,0.999994,0.999994,0.0,908,salmonella
+241,product,potato chips,2,prepared dishes and snacks,2,potato chips,0.880292,1e-06,3.4e-05,911,potato chips
+242,hazard,spoilage,1,spoilage,1,spoilage,1.0,1.0,0.0,681,spoilage
+242,product,sauce,1,sauce,3,tomato sauce,0.92458,0.002292,3e-06,682,tomato sauce
+243,hazard,salmonella,1,salmonella,1,salmonella,0.999997,0.999997,0.0,842,salmonella
+243,product,baking mix,2,various bakery products,2,baking mix,0.998706,0.0,0.0,805,baking mix
+244,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,0.0,803,salmonella
+244,product,candies,2,chocolate products,3,confectionery,0.424784,0.291949,2e-05,764,confectionery
+245,hazard,eggs and products thereof,1,eggs and products thereof,2,incorrect labeling,0.999988,0.0,-0.0,837,incorrect labeling
+245,product,soup,1,soup,2,chicken noodle soup,0.970169,0.000913,9.8e-05,790,chicken noodle soup
+246,hazard,cashew,1,cashew,1,cashew,0.999954,0.999954,2.3e-05,852,cashew
+246,product,dried almonds,0,almonds,1,almonds,0.622933,0.622933,0.000491,802,almonds
+247,hazard,nuts,1,nuts,1,nuts,0.999996,0.999996,2e-06,719,nuts
+247,product,salads,1,salads,2,pasta salad,0.948412,0.000355,4e-06,710,pasta salad
+248,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999997,0.999997,0.0,692,listeria monocytogenes
+248,product,cheese,2,cow milk cheese,7,cheese products,0.485774,9e-06,1.4e-05,664,cheese products
+249,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999999,0.999999,0.0,751,escherichia coli
+249,product,ricotta cheese,1,ricotta cheese,2,cottage cheese,0.727102,0.267486,9e-06,719,cottage cheese
+250,hazard,metal fragment,1,metal fragment,1,metal fragment,0.936204,0.936204,2e-06,851,metal fragment
+250,product,quorn preparation,0,minced pork,4,meat and meat products (other than poultry),0.855164,0.0,1e-06,827,meat and meat products (other than poultry)
+251,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999989,0.999989,1e-06,839,listeria monocytogenes
+251,product,cheese - made from raw milk,1,cheese - made from raw milk,1,cheese - made from raw milk,0.809778,0.809778,0.00061,806,cheese - made from raw milk
+252,hazard,milk and products thereof,1,milk and products thereof,5,undeclared constituent,0.716556,2e-06,1.4e-05,986,undeclared constituent
+252,product,pig meat - pork,0,salami,10,dry sausage,0.282973,0.171632,0.00073,963,dry sausage
+253,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999997,0.999997,0.0,900,listeria monocytogenes
+253,product,chilled ready to eat salad and side dishes,10,salads,2,prepacked salad,0.999972,1e-06,2e-06,875,prepacked salad
+254,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999961,0.999961,0.0,837,listeria monocytogenes
+254,product,frozen pizza,1,frozen pizza,1,frozen pizza,0.999998,0.999998,2e-06,799,frozen pizza
+255,hazard,metal fragment,1,metal fragment,2,foreign bodies,1.0,0.0,0.0,948,foreign bodies
+255,product,thermal processed beef meat,2,other not classified meat products,2,thermal processed beef meat,0.997103,0.0,0.0,976,thermal processed beef meat
+256,hazard,other not classified chemical hazards,1,other not classified chemical hazards,2,contaminant,0.978982,4.9e-05,0.0,820,contaminant
+256,product,soup,1,soup,1,soup,0.999432,0.999432,8e-06,791,soup
+257,hazard,chemical compound (unauthorised),1,chemical compound (unauthorised),8,"antibiotics, vet drugs",0.597909,0.386039,3.1e-05,964,"antibiotics, vet drugs"
+257,product,Catfishes (freshwater),1,Catfishes (freshwater),4,frozen fish products,0.958156,0.000143,0.000475,946,frozen fish products
+258,hazard,peanuts and products thereof,1,peanuts and products thereof,1,peanuts and products thereof,0.999981,0.999981,0.0,835,peanuts and products thereof
+258,product,sauce,4,seasoning,2,sauces,0.928015,0.0,1.5e-05,828,sauces
+259,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999998,0.999998,0.0,815,listeria monocytogenes
+259,product,ice cream,1,ice cream,3,ices and desserts,0.965055,0.000378,1e-06,794,ices and desserts
+260,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999971,0.999971,0.0,858,escherichia coli
+260,product,ground beef,0,veal,1,veal,0.999499,0.999499,1.3e-05,833,veal
+261,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999988,0.999988,-0.0,870,escherichia coli
+261,product,ground beef,3,other not classified meat products,3,ground beef,0.999996,0.0,0.0,875,ground beef
+262,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999982,0.999982,1e-06,866,listeria monocytogenes
+262,product,chilled ham,0,ham,1,ham,0.957626,0.957626,0.000122,857,ham
+263,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,830,salmonella
+263,product,ginger powder,1,ginger powder,1,ginger powder,0.999987,0.999987,0.0,814,ginger powder
+264,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999925,0.999925,0.0,844,escherichia coli
+264,product,ground beef,1,ground beef,1,ground beef,0.999995,0.999995,0.000246,840,ground beef
+265,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999877,0.999877,0.0,984,escherichia coli
+265,product,other not classified meat products,0,veal,1,veal,0.750891,0.750891,0.001335,982,veal
+266,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999992,0.999992,0.0,950,listeria monocytogenes
+266,product,turkey,4,sandwiches,4,turkey,0.47867,0.009188,0.000438,943,turkey
+267,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999978,0.999978,0.0,839,escherichia coli
+267,product,flour,1,flour,1,flour,0.999964,0.999964,1.4e-05,808,flour
+268,hazard,soybeans and products thereof,1,soybeans and products thereof,2,incorrect labeling,0.99998,0.0,1e-06,910,incorrect labeling
+268,product,baguettes,4,sandwiches,2,prepared dishes and snacks,0.446216,0.419181,0.0,909,prepared dishes and snacks
+269,hazard,plastic fragment,1,plastic fragment,1,plastic fragment,0.989672,0.989672,0.0,829,plastic fragment
+269,product,other types of meat,5,other not classified meat products,2,minced beef,0.547636,0.000205,1e-05,847,minced beef
+270,hazard,soybeans and products thereof,1,soybeans and products thereof,3,incorrect labeling,0.986899,0.0,7e-06,829,incorrect labeling
+270,product,cookies,1,cookies,9,donuts,0.999082,3e-06,1e-06,796,donuts
+271,hazard,improper packaging,0,soybeans and products thereof,2,sulphur dioxide and sulphites,0.999991,2e-06,0.0,865,sulphur dioxide and sulphites
+271,product,sandwiches,2,ham,2,sandwiches,0.992893,3.1e-05,8.8e-05,828,sandwiches
+272,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,0.9933,0.9933,0.0,690,cereals containing gluten and products thereof
+272,product,black pepper,1,black pepper,6,ground black pepper,0.999994,0.0,0.0,677,ground black pepper
+273,hazard,rubber fragments,1,rubber fragments,2,plastic fragment,0.741994,0.124972,0.0,728,plastic fragment
+273,product,potato salad,1,potato salad,1,potato salad,0.876581,0.876581,1.4e-05,775,potato salad
+274,hazard,other not classified,1,other not classified,2,packaging defect,0.999996,3e-06,0.0,959,packaging defect
+274,product,yoghurt,1,yoghurt,1,yoghurt,0.999971,0.999971,7e-06,970,yoghurt
+275,hazard,norovirus,1,norovirus,1,norovirus,0.999997,0.999997,0.0,828,norovirus
+275,product,cakes,1,cakes,10,biscuits,0.729212,2.3e-05,1.1e-05,798,biscuits
+276,hazard,inspection issues,1,inspection issues,1,inspection issues,0.999791,0.999791,1e-06,849,inspection issues
+276,product,pork belly,2,frozen pork meat,2,pork belly,0.999997,0.0,-0.0,816,pork belly
+277,hazard,peanuts and products thereof,1,peanuts and products thereof,7,undeclared constituent,0.999897,8.8e-05,0.0,596,undeclared constituent
+277,product,hot sauce,0,chilli sauce,2,sauce,0.999946,0.0,0.0,600,sauce
+278,hazard,milk and products thereof,1,milk and products thereof,4,undeclared constituent,0.965429,0.0,4e-06,849,undeclared constituent
+278,product,chicken based products,1,chicken based products,4,cooked sausages,0.998345,0.0,1e-06,822,cooked sausages
+279,hazard,glass fragment,1,glass fragment,1,glass fragment,0.999984,0.999984,1e-06,619,glass fragment
+279,product,risotto rice,0,rice snack,3,rice,0.99242,0.0,1e-06,583,rice
+280,hazard,peanuts and products thereof,1,peanuts and products thereof,1,peanuts and products thereof,0.99996,0.99996,1e-06,826,peanuts and products thereof
+280,product,milk chocolate covered raisins,1,milk chocolate covered raisins,1,milk chocolate covered raisins,0.999999,0.999999,0.0,811,milk chocolate covered raisins
+281,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,0.996591,0.996591,0.0,846,cereals containing gluten and products thereof
+281,product,infant food,0,breakfast cereals,3,breakfast cereals for babies,0.984093,0.0,0.0,809,breakfast cereals for babies
+282,hazard,milk and products thereof,1,milk and products thereof,7,undeclared constituent,0.417307,0.002259,5.4e-05,836,undeclared constituent
+282,product,beer,2,marshmalows,2,beer,0.99999,0.0,0.0,801,beer
+283,hazard,mustard and products thereof,1,mustard and products thereof,1,mustard and products thereof,0.999978,0.999978,2.5e-05,809,mustard and products thereof
+283,product,soup,1,soup,1,soup,0.999566,0.999566,8.3e-05,790,soup
+284,hazard,other not classified,0,other,9,novel food,0.906532,0.001922,4.7e-05,721,novel food
+284,product,betel nuts,0,walnuts,3,nuts,0.999984,0.0,-0.0,724,nuts
+285,hazard,clostridium botulinum,1,clostridium botulinum,1,clostridium botulinum,0.745318,0.745318,8e-06,697,clostridium botulinum
+285,product,soup,1,soup,1,soup,0.80243,0.80243,0.003857,664,soup
+286,hazard,peanuts and products thereof,1,peanuts and products thereof,1,peanuts and products thereof,0.999765,0.999765,0.0,826,peanuts and products thereof
+286,product,baklava,1,baklava,1,baklava,0.999289,0.999289,1.4e-05,825,baklava
+287,hazard,fish and products thereof,1,fish and products thereof,2,undeclared constituent,0.999864,0.0,1e-06,893,undeclared constituent
+287,product,chicken based products,1,chicken based products,10,prepared salads,0.923771,2e-06,1.4e-05,877,prepared salads
+288,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.997228,0.997228,4.1e-05,918,milk and products thereof
+288,product,dark chocolates,1,dark chocolates,10,chocolate,0.920758,0.000373,1.9e-05,886,chocolate
+289,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999988,0.999988,0.0,889,escherichia coli
+289,product,salads,1,salads,3,prepacked salad,0.980309,9e-06,8e-06,865,prepacked salad
+290,hazard,clostridium botulinum,1,clostridium botulinum,1,clostridium botulinum,0.999998,0.999998,0.0,847,clostridium botulinum
+290,product,salmon,1,salmon,6,black caviar,0.956169,3e-05,6.9e-05,795,black caviar
+291,hazard,almond,1,almond,1,almond,0.819211,0.819211,8e-06,760,almond
+291,product,biscuits,1,biscuits,3,cookies,0.999989,0.0,0.0,753,cookies
+292,hazard,eggs and products thereof,1,eggs and products thereof,2,undeclared constituent,0.999989,0.0,-0.0,880,undeclared constituent
+292,product,pig meat - pork,7,Not classified pork meat,10,ham,0.407732,1.1e-05,8.2e-05,876,ham
+293,hazard,inspection issues,1,inspection issues,1,inspection issues,0.999991,0.999991,-0.0,961,inspection issues
+293,product,various beef products,0,wraps,10,sausage,0.453178,0.258213,0.001306,943,sausage
+294,hazard,peanuts and products thereof,1,peanuts and products thereof,3,undeclared constituent,0.986167,0.0,0.0,847,undeclared constituent
+294,product,chicken preparations,2,wraps,3,chicken based products,0.982486,9e-06,6e-06,843,chicken based products
+295,hazard,glass fragment,1,glass fragment,2,foreign bodies,1.0,0.0,0.0,883,foreign bodies
+295,product,chicken,0,chicken based products,3,chilled salads,0.504113,0.000347,0.000401,895,chilled salads
+296,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.886462,0.886462,0.000644,682,milk and products thereof
+296,product,coconut juice,1,coconut juice,1,coconut juice,0.999466,0.999466,1e-06,668,coconut juice
+297,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.940871,0.940871,8e-06,964,milk and products thereof
+297,product,jam,8,fruit mix,8,jam,0.999766,0.0,0.0,929,jam
+298,hazard,sesame seeds and products thereof,1,sesame seeds and products thereof,2,pistachio nut,0.999998,1e-06,0.0,707,pistachio nut
+298,product,halva,2,sesame paste,2,halva,1.0,0.0,0.0,715,halva
+299,hazard,misbranding,1,misbranding,1,misbranding,0.999998,0.999998,0.0,847,misbranding
+299,product,sandwiches,4,chicken based products,2,chicken preparations,0.906904,0.000139,1.2e-05,826,chicken preparations
+300,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,6,allergens,0.997001,3e-06,0.0,816,allergens
+300,product,potato salad,1,potato salad,3,prepared dishes and snacks,0.967404,0.000261,5.9e-05,834,prepared dishes and snacks
+301,hazard,salmonella,1,salmonella,1,salmonella,0.999977,0.999977,0.0,886,salmonella
+301,product,sweets,2,dietary supplement,2,sweets,0.988612,0.0,1e-06,857,sweets
+302,hazard,fish and products thereof,3,sesame seeds and products thereof,10,crustaceans and products thereof,0.557851,1.9e-05,4.5e-05,852,crustaceans and products thereof
+302,product,crustaceans and products thereof,0,food supplement,1,food supplement,0.985051,0.985051,5e-06,850,food supplement
+303,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999998,0.999998,0.0,867,listeria monocytogenes
+303,product,turnips,1,turnips,1,turnips,0.999443,0.999443,1.1e-05,832,turnips
+304,hazard,other not classified,2,insects,1,insects,1.0,1.0,0.0,666,insects
+304,product,corn,1,corn,3,pop corn,0.99661,4.7e-05,0.005712,671,pop corn
+305,hazard,mustard and products thereof,1,mustard and products thereof,1,mustard and products thereof,0.99995,0.99995,2e-06,760,mustard and products thereof
+305,product,spice mix,1,spice mix,2,spice mixture,0.999702,7e-06,1e-06,740,spice mixture
+306,hazard,abnormal smell,4,bad smell / off odor,10,almond,0.97617,0.0,0.0,837,almond
+306,product,cheese sauce,0,cheese,3,blue cheese,0.483396,0.0,3e-06,786,blue cheese
+307,hazard,other,2,other not classified,3,insects,0.999962,0.0,0.0,834,insects
+307,product,marshmalows,1,marshmalows,2,candies,0.991412,0.0,0.0,825,candies
+308,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,851,salmonella
+308,product,green cardamon,0,cardamon seeds,1,cardamon seeds,0.996449,0.996449,0.0,809,cardamon seeds
+309,hazard,heavy metals,1,heavy metals,1,heavy metals,0.998844,0.998844,0.0,789,heavy metals
+309,product,seaweeds salads,0,algae,2,seaweed preparations,0.99787,0.0,0.0,759,seaweed preparations
+310,hazard,salmonella,1,salmonella,1,salmonella,0.999998,0.999998,0.0,829,salmonella
+310,product,glass jars of tartar sauce,0,onions,1,onions,0.99974,0.99974,0.0,794,onions
+311,hazard,almond,1,almond,1,almond,0.999989,0.999989,1e-06,836,almond
+311,product,biscuits,0,iced tea,4,fruit pies,0.645156,0.0,0.000189,783,fruit pies
+312,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,0.0,855,salmonella
+312,product,turmeric powder (curcuma),0,ground turmeric,2,spices,0.999877,0.0,0.0,805,spices
+313,hazard,peanuts and products thereof,1,peanuts and products thereof,1,peanuts and products thereof,0.999975,0.999975,0.0,886,peanuts and products thereof
+313,product,ice cream,1,ice cream,1,ice cream,0.999955,0.999955,0.000164,874,ice cream
+314,hazard,poor hygienic state,1,poor hygienic state,1,poor hygienic state,1.0,1.0,0.0,934,poor hygienic state
+314,product,sweets,0,cakes,9,confectionery,0.957044,0.0,2e-06,905,confectionery
+315,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999976,0.999976,0.0,872,escherichia coli
+315,product,sausage,0,fresh pork leg,6,pig meat - pork,0.379698,0.00022,0.000441,807,pig meat - pork
+316,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,0.0,822,listeria monocytogenes
+316,product,potato salad,0,salads,3,prepared salads,0.689525,0.096279,1.7e-05,821,prepared salads
+317,hazard,cereals containing gluten and products thereof,3,milk and products thereof,2,incorrect labeling,0.999622,0.0,0.0,886,incorrect labeling
+317,product,waffles,1,waffles,1,waffles,0.999987,0.999987,8e-06,859,waffles
+318,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,800,salmonella
+318,product,dietary supplement,0,mitragyna speciosa (kratom),1,mitragyna speciosa (kratom),0.999475,0.999475,0.0,766,mitragyna speciosa (kratom)
+319,hazard,plastic fragment,1,plastic fragment,1,plastic fragment,0.999999,0.999999,-0.0,1120,plastic fragment
+319,product,margarine,1,margarine,4,spread,0.999669,1.2e-05,1e-06,1074,spread
+320,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.629521,0.629521,0.000387,813,milk and products thereof
+320,product,potato chips,1,potato chips,1,potato chips,0.999993,0.999993,1e-06,860,potato chips
+321,hazard,bulging packaging,1,bulging packaging,2,packaging defect,0.999994,0.0,-0.0,835,packaging defect
+321,product,soda drink,0,carbonated beverage,1,carbonated beverage,0.474991,0.474991,0.000128,861,carbonated beverage
+322,hazard,metal fragment,1,metal fragment,1,metal fragment,0.988666,0.988666,0.0,908,metal fragment
+322,product,Precooked cooked pork meat products,0,precooked cooked beef meat products,3,canned chicken,0.992631,1e-06,1e-06,906,canned chicken
+323,hazard,plastic fragment,1,plastic fragment,2,foreign bodies,0.890294,0.109706,-0.0,789,foreign bodies
+323,product,chocolate bars,2,protein bar,1,protein bar,0.99999,0.99999,2e-06,799,protein bar
+324,hazard,inspection issues,1,inspection issues,1,inspection issues,0.999996,0.999996,0.0,1022,inspection issues
+324,product,ravioli,1,ravioli,5,various pasta products,0.439264,0.057619,0.000212,1012,various pasta products
+325,hazard,other,1,other,6,other not classified hazards for foreign bodies,0.523933,0.00035,0.158331,800,other not classified hazards for foreign bodies
+325,product,turmeric powder (curcuma),0,ground turmeric,4,food supplement,0.999853,0.0,0.0,813,food supplement
+326,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,-0.0,833,salmonella
+326,product,sprouting seeds,0,sprouts,2,vegetable mix,0.99994,2.8e-05,-0.0,792,vegetable mix
+327,hazard,incorrect labeling,3,misbranding,1,misbranding,0.998857,0.998857,0.0,859,misbranding
+327,product,ham,3,cooked ham,3,ham,0.989705,0.000312,0.00019,827,ham
+328,hazard,taste disturbance,3,bad smell / off odor,3,taste disturbance,0.973239,0.0,-0.0,799,taste disturbance
+328,product,flavoured drinks,0,soft drinks,2,carbonated beverage,0.993374,3e-06,0.0,807,carbonated beverage
+329,hazard,crustaceans and products thereof,2,molluscs and products thereof,1,molluscs and products thereof,0.804084,0.804084,3e-06,634,molluscs and products thereof
+329,product,frozen pork,0,pork preparation,8,vacuum packed marinated pork,0.999903,0.0,0.0,598,vacuum packed marinated pork
+330,hazard,inspection issues,1,inspection issues,1,inspection issues,0.999997,0.999997,0.0,846,inspection issues
+330,product,chicken,0,fresh poultry and poultry prepations,1,fresh poultry and poultry prepations,0.965559,0.965559,0.000167,785,fresh poultry and poultry prepations
+331,hazard,sulphur dioxide and sulphites,2,eggs and products thereof,2,sulphur dioxide and sulphites,1.0,0.0,0.0,746,sulphur dioxide and sulphites
+331,product,wine,1,wine,3,alcoholic beverages,0.938885,0.002186,0.000667,718,alcoholic beverages
+332,hazard,misdescription,0,peanuts and products thereof,3,undeclared constituent,0.968216,0.00097,2.9e-05,855,undeclared constituent
+332,product,chicken based products,1,chicken based products,9,sandwiches,0.916753,1.3e-05,0.000129,839,sandwiches
+333,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999989,0.999989,0.0,839,listeria monocytogenes
+333,product,mixed vegetables,1,mixed vegetables,3,frozen vegetables,0.999999,0.0,0.0,803,frozen vegetables
+334,hazard,salmonella,1,salmonella,1,salmonella,0.999998,0.999998,0.0,850,salmonella
+334,product,chicken based products,1,chicken based products,2,chicken preparations,0.507776,0.327845,3.1e-05,798,chicken preparations
+335,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,-0.0,862,salmonella
+335,product,milk proteins,3,milk powder,2,whey protein,0.999922,1e-06,1e-06,831,whey protein
+336,hazard,peanuts and products thereof,8,incorrect labeling,8,peanuts and products thereof,0.987909,0.0,0.0,842,peanuts and products thereof
+336,product,peanuts,1,peanuts,10,snack mix,0.969738,1.7e-05,3.9e-05,821,snack mix
+337,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,0.0,869,listeria monocytogenes
+337,product,chicken based products,1,chicken based products,3,cooked chicken,0.976898,0.0,1e-06,838,cooked chicken
+338,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,0.999511,0.999511,0.0,848,cereals containing gluten and products thereof
+338,product,millet,1,millet,1,millet,0.594653,0.594653,0.001584,833,millet
+339,hazard,metal fragment,1,metal fragment,3,foreign bodies,0.999618,0.000368,0.0,645,foreign bodies
+339,product,frozen pre-fried breaded fish portions,0,Fishes not identified,3,structured/textured fish meat products or fish paste,0.998967,0.0,0.0,665,structured/textured fish meat products or fish paste
+340,hazard,eggs and products thereof,8,cereals containing gluten and products thereof,5,insufficient labelling/documentation,0.980086,0.0,2e-06,881,insufficient labelling/documentation
+340,product,Fishes not identified,1,Fishes not identified,10,chicken based products,0.917986,1e-06,0.000133,870,chicken based products
+341,hazard,inspection issues,1,inspection issues,1,inspection issues,0.99999,0.99999,0.0,863,inspection issues
+341,product,frozen dumplings with beef,0,dumplings,1,dumplings,0.999976,0.999976,1e-06,854,dumplings
+342,hazard,other not classified chemical hazards,1,other not classified chemical hazards,2,chemical,0.969535,0.030207,3e-06,700,chemical
+342,product,coffee drink,2,coffee beans,2,coffee drink,0.998852,2e-06,0.0,680,coffee drink
+343,hazard,incorrect labeling,1,incorrect labeling,3,labelling/misdescription,0.999943,0.0,0.0,780,labelling/misdescription
+343,product,carbonated beverage,8,lemonade (lemon soda),8,carbonated beverage,0.533415,1.9e-05,0.000636,751,carbonated beverage
+344,hazard,milk and products thereof,1,milk and products thereof,2,allergens,0.447675,0.11319,1.5e-05,764,allergens
+344,product,mayonnaise,1,mayonnaise,1,mayonnaise,0.996046,0.996046,2e-06,746,mayonnaise
+345,hazard,spoilage,1,spoilage,1,spoilage,1.0,1.0,0.0,717,spoilage
+345,product,ketchup,1,ketchup,9,sauce,0.952531,0.0,0.0,729,sauce
+346,hazard,pistachio nut,1,pistachio nut,1,pistachio nut,0.948015,0.948015,5e-06,878,pistachio nut
+346,product,chocolates,6,pistachio nuts,10,pastry,0.300978,2.6e-05,5.1e-05,834,pastry
+347,hazard,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,0.781166,0.781166,0.0,874,sulphur dioxide and sulphites
+347,product,mango,1,mango,2,dried mushrooms,0.715571,0.232312,0.000505,802,dried mushrooms
+348,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,835,salmonella
+348,product,chicken based products,1,chicken based products,2,chicken preparations,0.995513,0.00019,1e-06,803,chicken preparations
+349,hazard,eggs and products thereof,1,eggs and products thereof,3,undeclared constituent,0.999953,0.0,0.0,841,undeclared constituent
+349,product,ravioli,8,ready to eat - cook meals,8,ravioli,0.980333,0.0,2e-06,832,ravioli
+350,hazard,walnut,1,walnut,1,walnut,0.999697,0.999697,1.5e-05,875,walnut
+350,product,pesto sauce (pesto verde),0,mashed chickpeas (hummus),5,green pesto basil sauce,0.957012,0.0,8e-06,869,green pesto basil sauce
+351,hazard,soybeans and products thereof,1,soybeans and products thereof,10,undeclared constituent,0.999625,0.0,0.0,929,undeclared constituent
+351,product,bars,0,chocolate bars,4,cakes,0.996904,0.0,0.0,911,cakes
+352,hazard,plastic fragment,1,plastic fragment,1,plastic fragment,0.988313,0.988313,-0.0,819,plastic fragment
+352,product,other not classified meat products,2,fruit pies,4,bakery products,0.865145,4.7e-05,2e-06,808,bakery products
+353,hazard,salmonella,1,salmonella,1,salmonella,0.999998,0.999998,0.0,856,salmonella
+353,product,fresh processed beef meat products,0,raw beef meat,1,raw beef meat,0.997662,0.997662,2.6e-05,829,raw beef meat
+354,hazard,eggs and products thereof,1,eggs and products thereof,2,undeclared constituent,0.999997,0.0,0.0,874,undeclared constituent
+354,product,wraps,1,wraps,2,chicken based products,0.645555,2.6e-05,0.000111,854,chicken based products
+355,hazard,walnut,1,walnut,2,mislabelled,0.69475,0.298808,2.4e-05,800,mislabelled
+355,product,candies,1,candies,3,chocolate,0.638078,0.076208,7e-06,791,chocolate
+356,hazard,metal fragment,1,metal fragment,1,metal fragment,0.754766,0.754766,1e-06,892,metal fragment
+356,product,pork sausage,0,chicken based products,2,sausage,0.999615,8e-06,1e-06,891,sausage
+357,hazard,almond,1,almond,5,chemical compound (unauthorised),0.769391,0.227431,1e-06,847,chemical compound (unauthorised)
+357,product,vanilla drink,1,vanilla drink,9,nutrition shake,0.492592,0.255553,5.2e-05,832,nutrition shake
+358,hazard,spoilage,1,spoilage,1,spoilage,1.0,1.0,0.0,970,spoilage
+358,product,chilli sauce,0,green basil pesto,2,sauces,0.510257,2e-06,1.5e-05,985,sauces
+359,hazard,stones,1,stones,1,stones,0.629761,0.629761,0.0,722,stones
+359,product,red rice,0,rice,1,rice,0.997844,0.997844,3e-06,684,rice
+360,hazard,insects,1,insects,1,insects,0.999998,0.999998,-0.0,677,insects
+360,product,dried figs,1,dried figs,5,dried fruits,0.99922,0.000488,0.0,659,dried fruits
+361,hazard,milk and products thereof,1,milk and products thereof,4,undeclared constituent,0.919121,0.0,2e-06,901,undeclared constituent
+361,product,chicken preparations,5,ready to eat - cook meals,3,chicken based products,0.979817,0.0,3e-06,897,chicken based products
+362,hazard,undeclared constituent,4,milk and products thereof,4,undeclared constituent,0.815606,0.0,1.9e-05,865,undeclared constituent
+362,product,chicken preparations,6,chicken based products,4,ready to eat - cook meals,0.871572,0.000177,1.3e-05,862,ready to eat - cook meals
+363,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999997,0.999997,0.0,842,listeria monocytogenes
+363,product,brie cheese,1,brie cheese,2,soft ripened cheese,0.758433,0.238651,-0.0,842,soft ripened cheese
+364,hazard,milk and products thereof,1,milk and products thereof,8,undeclared constituent,0.882562,0.112205,1e-06,811,undeclared constituent
+364,product,seasoning,1,seasoning,6,vegetable mix,0.532217,4e-06,2.5e-05,779,vegetable mix
+365,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.994712,0.994712,3.1e-05,908,milk and products thereof
+365,product,cakes,1,cakes,4,biscuits,0.827644,9.3e-05,0.000192,855,biscuits
+366,hazard,inspection issues,1,inspection issues,1,inspection issues,0.500222,0.500222,3.2e-05,930,inspection issues
+366,product,Catfishes (freshwater),1,Catfishes (freshwater),2,frozen fish products,0.749604,0.235873,1.9e-05,947,frozen fish products
+367,hazard,peanuts and products thereof,1,peanuts and products thereof,1,peanuts and products thereof,0.998963,0.998963,0.0,683,peanuts and products thereof
+367,product,cooked chicken,7,chicken preparations,3,marinated chicken meat,0.626002,0.000363,0.000439,680,marinated chicken meat
+368,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,0.99837,0.99837,0.0,796,cereals containing gluten and products thereof
+368,product,flour,1,flour,1,flour,0.999607,0.999607,0.0,766,flour
+369,hazard,salmonella,1,salmonella,1,salmonella,0.999976,0.999976,1e-06,1015,salmonella
+369,product,turkey and turkey preparations,1,turkey and turkey preparations,1,turkey and turkey preparations,0.996297,0.996297,1e-05,999,turkey and turkey preparations
+370,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.991165,0.991165,5.9e-05,829,milk and products thereof
+370,product,pastry products,4,other not classified meat products,4,pastry products,0.95576,0.0,3.5e-05,825,pastry products
+371,hazard,glass fragment,1,glass fragment,1,glass fragment,0.998996,0.998996,0.0,821,glass fragment
+371,product,energy drink,1,energy drink,8,sport drink,0.58376,0.000121,1.5e-05,822,sport drink
+372,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999996,0.999996,0.0,775,listeria monocytogenes
+372,product,avocados,0,grated coconut,9,pumpkin seeds,0.999919,0.0,0.0,745,pumpkin seeds
+373,hazard,eggs and products thereof,1,eggs and products thereof,9,undeclared constituent,0.999996,0.0,-0.0,801,undeclared constituent
+373,product,cakes,0,bread,5,sliced bread,0.915701,0.03037,1.3e-05,827,sliced bread
+374,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999997,0.999997,0.0,880,listeria monocytogenes
+374,product,tahini,1,tahini,9,spreads,0.495705,0.001349,1e-05,851,spreads
+375,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999988,0.999988,0.0,957,listeria monocytogenes
+375,product,chicken based products,5,wraps,10,prepared dishes and snacks,0.570756,0.00168,0.000391,951,prepared dishes and snacks
+376,hazard,milk and products thereof,3,insufficient labelling/documentation,2,incorrect labeling,0.729021,0.157662,4.4e-05,822,incorrect labeling
+376,product,hazelnuts,1,hazelnuts,2,chocolate and hazelnut spread,0.994014,7e-06,4e-06,786,chocolate and hazelnut spread
+377,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999636,0.999636,0.0,734,escherichia coli
+377,product,alfalfa sprouts,1,alfalfa sprouts,1,alfalfa sprouts,0.997801,0.997801,5e-06,718,alfalfa sprouts
+378,hazard,soybeans and products thereof,1,soybeans and products thereof,2,undeclared constituent,1.0,0.0,0.0,885,undeclared constituent
+378,product,cooked chicken,3,other not classified meat products,2,chicken based products,0.836512,1e-06,1.9e-05,864,chicken based products
+379,hazard,eggs and products thereof,1,eggs and products thereof,1,eggs and products thereof,0.999925,0.999925,0.0,737,eggs and products thereof
+379,product,Fishes not identified,1,Fishes not identified,2,fish products,0.978981,0.0,1e-06,738,fish products
+380,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999997,0.999997,0.0,839,listeria monocytogenes
+380,product,salmon,1,salmon,6,fish and fish products,0.997906,7.2e-05,2e-06,808,fish and fish products
+381,hazard,plastic fragment,1,plastic fragment,2,foreign bodies,1.0,0.0,0.0,836,foreign bodies
+381,product,soup,1,soup,3,chicken based products,0.997014,0.0,0.0,815,chicken based products
+382,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.899958,0.899958,0.000218,959,milk and products thereof
+382,product,almond milk,1,almond milk,1,almond milk,0.998893,0.998893,2.9e-05,942,almond milk
+383,hazard,incorrect use by dates,1,incorrect use by dates,1,incorrect use by dates,1.0,1.0,0.0,886,incorrect use by dates
+383,product,pork sausage,1,pork sausage,1,pork sausage,0.679894,0.679894,9.5e-05,858,pork sausage
+384,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,8,allergens,0.987919,0.000134,2e-06,925,allergens
+384,product,corn,1,corn,9,pasta products,0.442996,0.209257,0.000303,927,pasta products
+385,hazard,eggs and products thereof,1,eggs and products thereof,10,plastic fragment,0.470852,5.4e-05,1.8e-05,850,plastic fragment
+385,product,seasoning,1,seasoning,3,seasoning mix,0.99883,0.0,0.0,841,seasoning mix
+386,hazard,plastic fragment,1,plastic fragment,3,foreign bodies,0.996825,0.003173,0.0,838,foreign bodies
+386,product,cooked chicken,2,chicken based products,2,cooked chicken,0.972785,0.000143,2e-06,833,cooked chicken
+387,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999997,0.999997,-0.0,850,escherichia coli
+387,product,milk,1,milk,1,milk,0.996014,0.996014,0.0,793,milk
+388,hazard,heavy metals,1,heavy metals,1,heavy metals,0.999995,0.999995,0.0,853,heavy metals
+388,product,mineral water,0,water for human consumption,3,bottled mineral water,0.850349,0.0,2e-06,839,bottled mineral water
+389,hazard,mislabelled,2,sesame seeds and products thereof,1,sesame seeds and products thereof,0.998611,0.998611,0.0,840,sesame seeds and products thereof
+389,product,bean curd,0,bean sauce,5,prepared dish,0.999807,0.0,1e-06,797,prepared dish
+390,hazard,packaging defect,1,packaging defect,1,packaging defect,0.999999,0.999999,-0.0,811,packaging defect
+390,product,sport drink,0,blackcurrant drink concentrate,8,apple juice,0.991865,0.0,0.0,832,apple juice
+391,hazard,milk and products thereof,1,milk and products thereof,2,allergens,0.970052,0.016691,0.0,835,allergens
+391,product,bars,4,cereal bars,10,sandwiches,0.919564,0.0,2.4e-05,830,sandwiches
+392,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.998848,0.998848,0.00018,845,milk and products thereof
+392,product,chocolate chips,0,crackers,3,chocolate products,0.629768,1e-06,3.3e-05,847,chocolate products
+393,hazard,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,2,sulphates/sulphites,0.999768,0.000217,-0.0,835,sulphates/sulphites
+393,product,dried apples,0,apple juice,2,dried fruits,0.999999,0.0,-0.0,781,dried fruits
+394,hazard,foreign bodies,5,plastic fragment,4,other not classified hazards for foreign bodies,0.995455,0.0,0.0,888,other not classified hazards for foreign bodies
+394,product,chicken based products,2,cooked chicken,3,chicken products - frozen,0.905935,3.6e-05,2.8e-05,908,chicken products - frozen
+395,hazard,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,2,sulphates/sulphites,0.999607,0.000296,0.0,951,sulphates/sulphites
+395,product,dried apples,0,apple juice,3,dried fruits,1.0,0.0,0.0,878,dried fruits
+396,hazard,milk and products thereof,1,milk and products thereof,8,undeclared constituent,0.96374,0.003165,4e-06,883,undeclared constituent
+396,product,soy milk product,0,non-alcoholic beverages,9,drink powder,0.98937,1e-06,1.9e-05,868,drink powder
+397,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,5,allergens,0.961683,0.000371,4e-06,842,allergens
+397,product,brownies,2,cakes,3,baking mix,0.934394,0.0,2e-06,822,baking mix
+398,hazard,bone fragment,1,bone fragment,1,bone fragment,0.999998,0.999998,0.0,846,bone fragment
+398,product,chicken breast,5,chicken based products,5,chicken breast,0.438152,0.021814,1e-05,826,chicken breast
+399,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,874,salmonella
+399,product,massala spice mixture,2,masala spice mix,1,masala spice mix,0.996267,0.996267,2e-06,842,masala spice mix
+400,hazard,milk and products thereof,1,milk and products thereof,9,incorrect labeling,0.879393,0.000155,3.1e-05,1051,incorrect labeling
+400,product,thermal processed beef meat,1,thermal processed beef meat,2,ready to eat - cook meals,0.999945,0.0,0.0,1045,ready to eat - cook meals
+401,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.964014,0.964014,0.002075,902,milk and products thereof
+401,product,corn,1,corn,3,candies,0.678039,0.0,1e-06,901,candies
+402,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.99976,0.99976,0.0,808,escherichia coli
+402,product,flour,1,flour,1,flour,0.999998,0.999998,1e-06,787,flour
+403,hazard,soybeans and products thereof,1,soybeans and products thereof,2,undeclared constituent,1.0,0.0,0.0,851,undeclared constituent
+403,product,cooked chicken,7,chicken products - frozen,5,frozen chicken,0.787838,0.01443,9.3e-05,822,frozen chicken
+404,hazard,incorrect labeling,2,insufficient labelling/documentation,1,insufficient labelling/documentation,0.999946,0.999946,0.0,846,insufficient labelling/documentation
+404,product,chicken,4,chicken based products,1,chicken based products,0.999926,0.999926,0.0,811,chicken based products
+405,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,1.0,1.0,0.0,784,listeria monocytogenes
+405,product,frozen diced chicken roast,1,frozen diced chicken roast,1,frozen diced chicken roast,0.99989,0.99989,0.0,770,frozen diced chicken roast
+406,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,0.0,809,listeria monocytogenes
+406,product,various chicken meat products,0,cooked chicken,2,chicken based products,0.93046,0.063319,0.0,793,chicken based products
+407,hazard,poor or insufficient controls,4,clostridium botulinum,1,clostridium botulinum,0.999983,0.999983,-0.0,938,clostridium botulinum
+407,product,cooking sauce,3,sauce,3,cooking sauce,0.999991,0.0,0.0,926,cooking sauce
+408,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999998,0.999998,0.0,839,listeria monocytogenes
+408,product,precooked cooked beef meat products,2,beef,2,precooked cooked beef meat products,0.999939,1e-06,1e-06,841,precooked cooked beef meat products
+409,hazard,milk and products thereof,1,milk and products thereof,8,undeclared constituent,0.979391,6e-06,2e-06,902,undeclared constituent
+409,product,chocolate mousse,2,dark chocolates,6,chocolate bars,0.854183,1.6e-05,3.6e-05,859,chocolate bars
+410,hazard,pseudomonas spp.,1,pseudomonas spp.,2,coliforms,0.998565,0.0,0.0,850,coliforms
+410,product,bottled water,1,bottled water,1,bottled water,0.999998,0.999998,0.0,799,bottled water
+411,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.977835,0.977835,8e-06,812,milk and products thereof
+411,product,pasta,3,ready to eat - cook meals,3,pasta,0.999894,0.0,0.0,835,pasta
+412,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999994,0.999994,1e-06,838,listeria monocytogenes
+412,product,sausage,2,sausage products,1,sausage products,0.999947,0.999947,2.8e-05,836,sausage products
+413,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,0.0,945,listeria monocytogenes
+413,product,cheese,1,cheese,3,cheese products,0.99861,0.0,0.0,930,cheese products
+414,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,0.0,844,listeria monocytogenes
+414,product,mozzarella,2,mozzarella cheese,1,mozzarella cheese,0.980469,0.980469,3e-06,822,mozzarella cheese
+415,hazard,mustard and products thereof,2,celery and products thereof,1,celery and products thereof,0.999673,0.999673,-0.0,789,celery and products thereof
+415,product,instant beef noodle soup,0,thermal processed beef meat,3,prepared dishes and snacks,0.999997,0.0,2e-06,802,prepared dishes and snacks
+416,hazard,soybeans and products thereof,1,soybeans and products thereof,2,almond,0.994918,0.00506,1e-06,881,almond
+416,product,nut mix,0,snack mix,3,nut and raisin mix,0.994963,0.000179,3e-06,853,nut and raisin mix
+417,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,0.0,806,salmonella
+417,product,pineapples,0,fruit mix,1,fruit mix,0.986552,0.986552,1.4e-05,743,fruit mix
+418,hazard,fish and products thereof,1,fish and products thereof,2,incorrect labeling,0.920677,0.077973,1e-05,862,incorrect labeling
+418,product,infant formula,1,infant formula,5,probiotic food supplement,0.999678,0.0,1e-06,805,probiotic food supplement
+419,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,-0.0,825,salmonella
+419,product,tahini,1,tahini,1,tahini,0.999995,0.999995,7e-06,787,tahini
+420,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999997,0.999997,0.0,803,listeria monocytogenes
+420,product,sandwiches,1,sandwiches,1,sandwiches,0.99993,0.99993,3e-06,786,sandwiches
+421,hazard,eggs and products thereof,1,eggs and products thereof,2,undeclared constituent,0.999997,0.0,0.0,881,undeclared constituent
+421,product,burrito (ready to eat),2,chicken based products,2,burrito (ready to eat),0.720643,0.080854,0.000364,866,burrito (ready to eat)
+422,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.99998,0.99998,0.0,860,escherichia coli
+422,product,veal,1,veal,9,frozen raw ground beef,0.999894,0.0,0.0,827,frozen raw ground beef
+423,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999998,0.999998,0.0,808,listeria monocytogenes
+423,product,dressing,2,salad dressing,10,bread,0.999273,0.0,6.9e-05,774,bread
+424,hazard,plastic fragment,1,plastic fragment,1,plastic fragment,1.0,1.0,-0.0,874,plastic fragment
+424,product,butter,5,pastry tartlets,1,pastry tartlets,0.999273,0.999273,1.2e-05,884,pastry tartlets
+425,hazard,plastic fragment,1,plastic fragment,1,plastic fragment,1.0,1.0,0.0,840,plastic fragment
+425,product,lamb,1,lamb,1,lamb,0.997693,0.997693,8.6e-05,846,lamb
+426,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.992788,0.992788,0.000131,759,milk and products thereof
+426,product,spring rolls,1,spring rolls,1,spring rolls,0.999969,0.999969,6.9e-05,708,spring rolls
+427,hazard,sesame seeds and products thereof,1,sesame seeds and products thereof,10,listeria spp,0.544022,4.8e-05,7.3e-05,868,listeria spp
+427,product,energy and protein bars,1,energy and protein bars,2,protein balls,0.892983,0.106652,0.0,869,protein balls
+428,hazard,norovirus,1,norovirus,1,norovirus,0.999981,0.999981,0.0,840,norovirus
+428,product,oysters,1,oysters,1,oysters,0.999969,0.999969,0.000507,809,oysters
+429,hazard,celery and products thereof,1,celery and products thereof,9,dairy products,0.946948,1.7e-05,1e-06,799,dairy products
+429,product,cola drink,1,cola drink,2,carbonated beverage,0.766429,0.146276,1.5e-05,803,carbonated beverage
+430,hazard,milk and products thereof,1,milk and products thereof,8,undeclared constituent,0.763337,0.170323,0.000191,861,undeclared constituent
+430,product,spring rolls,1,spring rolls,1,spring rolls,0.999888,0.999888,0.000103,838,spring rolls
+431,hazard,incorrect use by dates,1,incorrect use by dates,1,incorrect use by dates,0.999997,0.999997,-0.0,934,incorrect use by dates
+431,product,frozen doner kebabs,0,chicken based products,5,ready to eat - cook meals,0.873954,0.026391,0.000146,891,ready to eat - cook meals
+432,hazard,eggs and products thereof,2,milk and products thereof,6,undeclared constituent,0.998134,0.0,0.0,870,undeclared constituent
+432,product,Fishes not identified,1,Fishes not identified,2,fish products,0.869069,2e-06,0.000138,844,fish products
+433,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.970265,0.970265,0.000424,792,milk and products thereof
+433,product,spring rolls,1,spring rolls,1,spring rolls,0.999919,0.999919,1.2e-05,793,spring rolls
+434,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.999844,0.999844,1e-06,831,milk and products thereof
+434,product,spring rolls,1,spring rolls,1,spring rolls,0.999293,0.999293,0.000361,811,spring rolls
+435,hazard,brazil nut,1,brazil nut,8,nuts,0.999592,2e-06,0.0,828,nuts
+435,product,mixed nuts,0,nuts,7,mix of nuts,0.796984,9e-06,7e-06,830,mix of nuts
+436,hazard,insufficient labelling/documentation,3,incorrect labeling,3,insufficient labelling/documentation,0.963156,0.016062,1e-06,924,insufficient labelling/documentation
+436,product,bars,0,chocolate bars,2,yoghurt,0.998721,0.0,1.9e-05,912,yoghurt
+437,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,0.0,904,salmonella
+437,product,pancakes,1,pancakes,2,baking mix,0.999946,0.0,4e-06,903,baking mix
+438,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,0.0,877,listeria monocytogenes
+438,product,salmon,1,salmon,1,salmon,0.999981,0.999981,1e-06,838,salmon
+439,hazard,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,2,sulphates/sulphites,0.932407,0.067543,0.0,886,sulphates/sulphites
+439,product,dried mushrooms,4,mushrooms,4,dried mushrooms,0.981551,0.0,1e-06,890,dried mushrooms
+440,hazard,eggs and products thereof,1,eggs and products thereof,9,tampering,0.994588,0.0,0.0,809,tampering
+440,product,cakes,1,cakes,3,pancakes,0.309422,0.273064,0.000358,794,pancakes
+441,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,-0.0,871,listeria monocytogenes
+441,product,fresh mushrooms,1,fresh mushrooms,7,mushrooms,0.99545,1e-06,2e-06,863,mushrooms
+442,hazard,patulin,1,patulin,1,patulin,1.0,1.0,0.0,794,patulin
+442,product,apple juice,6,fruit juice,10,cranberry juice,0.579363,0.01544,6.1e-05,799,cranberry juice
+443,hazard,insufficient labelling/documentation,0,incorrect use by dates,1,incorrect use by dates,1.0,1.0,0.0,815,incorrect use by dates
+443,product,frozen sausage rolls,1,frozen sausage rolls,10,assorted bread roll selection,0.867099,0.0,9e-06,823,assorted bread roll selection
+444,hazard,damaged packaging,6,packaging defect,1,packaging defect,0.99975,0.99975,0.0,902,packaging defect
+444,product,fish products,1,fish products,3,Fishes not identified,0.922482,6e-05,1.4e-05,935,Fishes not identified
+445,hazard,moulds,1,moulds,1,moulds,0.999998,0.999998,1.3e-05,900,moulds
+445,product,dip-sauce,1,dip-sauce,6,cheese dip,0.911912,0.008665,5.5e-05,906,cheese dip
+446,hazard,undeclared additive,1,undeclared additive,1,undeclared additive,0.999994,0.999994,-0.0,945,undeclared additive
+446,product,dumplings,1,dumplings,7,pastry products,0.999981,0.0,-0.0,892,pastry products
+447,hazard,inspection issues,1,inspection issues,1,inspection issues,0.999997,0.999997,0.0,863,inspection issues
+447,product,frozen pizza,2,pizza,8,crispbread,0.356465,0.153314,0.002224,834,crispbread
+448,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.787669,0.787669,0.000369,819,milk and products thereof
+448,product,structured/textured fish meat products or fish paste,0,frozen fish fillets,3,cod,0.595425,0.0,3e-06,823,cod
+449,hazard,milk and products thereof,1,milk and products thereof,2,insufficient labelling/documentation,0.999951,0.0,1e-06,838,insufficient labelling/documentation
+449,product,ice cream,1,ice cream,1,ice cream,0.507459,0.507459,2.3e-05,820,ice cream
+450,hazard,salmonella,1,salmonella,1,salmonella,0.999998,0.999998,0.0,861,salmonella
+450,product,curry,1,curry,1,curry,0.999795,0.999795,2e-06,785,curry
+451,hazard,cyclospora,1,cyclospora,1,cyclospora,1.0,1.0,0.0,870,cyclospora
+451,product,salads,1,salads,3,prepacked salad,0.999939,0.0,0.0,832,prepacked salad
+452,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.463029,0.463029,0.000151,732,milk and products thereof
+452,product,chocolate drink powder,1,chocolate drink powder,3,cakes,0.4259,0.02598,0.00025,709,cakes
+453,hazard,eggs and products thereof,1,eggs and products thereof,2,soybeans and products thereof,0.599351,3.1e-05,1e-06,811,soybeans and products thereof
+453,product,Fishes not identified,0,ready-to-eat seafood sticks,2,seafood,0.989927,0.008301,0.0,785,seafood
+454,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,0.0,943,listeria monocytogenes
+454,product,sandwiches,2,chicken based products,1,chicken based products,0.974767,0.974767,5e-06,888,chicken based products
+455,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,824,salmonella
+455,product,onions,1,onions,1,onions,0.999992,0.999992,9e-06,777,onions
+456,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,-0.0,895,salmonella
+456,product,peaches,1,peaches,1,peaches,0.999981,0.999981,1.2e-05,851,peaches
+457,hazard,crustaceans and products thereof,3,incorrect labeling,2,fish and products thereof,0.999945,0.0,0.0,895,fish and products thereof
+457,product,ready to eat - cook meals,0,pastry products,8,pesto,0.65934,1e-06,3.6e-05,845,pesto
+458,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999998,0.999998,0.0,850,listeria monocytogenes
+458,product,cooked chicken,0,chicken breast,2,chicken based products,0.972679,0.005266,1.6e-05,823,chicken based products
+459,hazard,milk and products thereof,1,milk and products thereof,9,undeclared constituent,0.812811,0.160052,7.4e-05,808,undeclared constituent
+459,product,candies,0,fruit juice,4,sorbets,0.972243,0.0,0.0,820,sorbets
+460,hazard,peanuts and products thereof,1,peanuts and products thereof,1,peanuts and products thereof,0.999978,0.999978,0.0,772,peanuts and products thereof
+460,product,candies,1,candies,3,confectionery,0.988102,0.010977,1e-06,759,confectionery
+461,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999996,0.999996,0.0,839,escherichia coli
+461,product,ground beef,1,ground beef,9,raw beef meat,0.977968,3.1e-05,1e-06,811,raw beef meat
+462,hazard,plastic fragment,1,plastic fragment,1,plastic fragment,0.622459,0.622459,0.0,799,plastic fragment
+462,product,cheddar cheese,1,cheddar cheese,9,cheese spread,0.997281,0.001168,1e-06,766,cheese spread
+463,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.999976,0.999976,1e-06,851,milk and products thereof
+463,product,dark chocolates,1,dark chocolates,4,anchovy paste,0.553679,0.230808,1.1e-05,844,anchovy paste
+464,hazard,eggs and products thereof,1,eggs and products thereof,9,undeclared constituent,0.999997,0.0,0.0,750,undeclared constituent
+464,product,ready to eat - cook meals,1,ready to eat - cook meals,2,prepared dishes and snacks,0.99851,0.0,0.0,763,prepared dishes and snacks
+465,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999999,0.999999,0.0,827,listeria monocytogenes
+465,product,goat cheese,2,raw goat milk cheese,2,goat cheese,0.999917,1e-06,-0.0,800,goat cheese
+466,hazard,other not classified chemical hazards,1,other not classified chemical hazards,3,taste disturbance,0.998876,0.0,0.0,795,taste disturbance
+466,product,milk,0,ice cream,1,ice cream,0.998735,0.998735,1e-06,821,ice cream
+467,hazard,unauthorised substance ethylene oxide,1,unauthorised substance ethylene oxide,1,unauthorised substance ethylene oxide,0.999997,0.999997,0.0,843,unauthorised substance ethylene oxide
+467,product,sesame seeds,3,snack mix,1,snack mix,0.999441,0.999441,1e-06,810,snack mix
+468,hazard,plastic fragment,1,plastic fragment,1,plastic fragment,1.0,1.0,0.0,795,plastic fragment
+468,product,cereal-based baby food,0,breakfast cereals,2,baby food,0.999996,0.0,0.0,768,baby food
+469,hazard,moulds,1,moulds,1,moulds,1.0,1.0,0.0,832,moulds
+469,product,non-alcoholic beer,1,non-alcoholic beer,1,non-alcoholic beer,0.999998,0.999998,0.0,840,non-alcoholic beer
+470,hazard,salmonella,1,salmonella,1,salmonella,0.999998,0.999998,0.0,881,salmonella
+470,product,halva,1,halva,1,halva,0.999955,0.999955,0.001927,833,halva
+471,hazard,unauthorised substance ethylene oxide,1,unauthorised substance ethylene oxide,1,unauthorised substance ethylene oxide,0.999998,0.999998,-0.0,865,unauthorised substance ethylene oxide
+471,product,cookies,1,cookies,1,cookies,0.997513,0.997513,7.5e-05,849,cookies
+472,hazard,pathogenic bacteria,2,escherichia coli,1,escherichia coli,0.999995,0.999995,0.0,877,escherichia coli
+472,product,lettuce,0,organic chilled hummus,2,various vegetable preparations,0.962689,0.00013,7e-06,851,various vegetable preparations
+473,hazard,pecan nut,1,pecan nut,1,pecan nut,0.999992,0.999992,1e-06,834,pecan nut
+473,product,cookies,1,cookies,1,cookies,0.467658,0.467658,2.2e-05,823,cookies
+474,hazard,milk and products thereof,1,milk and products thereof,10,coconut,0.49099,0.075296,5.6e-05,813,coconut
+474,product,ready to eat - cook meals,2,curry,2,ready to eat - cook meals,0.999251,3.8e-05,1.1e-05,773,ready to eat - cook meals
+475,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,2,cereals,0.990767,0.008308,0.0,812,cereals
+475,product,various food products,0,sesame confection,2,"soups, broths, sauces and condiments",0.996984,0.000105,0.0,797,"soups, broths, sauces and condiments"
+476,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,0.0,854,salmonella
+476,product,chicken,2,chicken based products,4,chicken preparations,0.508415,0.022338,3e-06,800,chicken preparations
+477,hazard,unauthorised substance ethylene oxide,1,unauthorised substance ethylene oxide,1,unauthorised substance ethylene oxide,1.0,1.0,0.0,878,unauthorised substance ethylene oxide
+477,product,tahini,1,tahini,1,tahini,0.999998,0.999998,0.0,843,tahini
+478,hazard,plastic fragment,1,plastic fragment,3,foreign bodies,0.554453,0.445516,0.0,828,foreign bodies
+478,product,cooked chicken,3,chicken based products,4,chicken preparations,0.526623,3.6e-05,2.7e-05,850,chicken preparations
+479,hazard,soybeans and products thereof,1,soybeans and products thereof,8,undeclared constituent,0.98875,1e-06,2e-06,831,undeclared constituent
+479,product,garlic powder,1,garlic powder,1,garlic powder,0.999964,0.999964,0.0,784,garlic powder
+480,hazard,eggs and products thereof,1,eggs and products thereof,2,undeclared constituent,0.998685,0.0,2e-06,835,undeclared constituent
+480,product,prepared salads,1,prepared salads,6,prepacked salad,0.704996,0.015575,0.000139,835,prepacked salad
+481,hazard,allergens,2,fish and products thereof,7,undeclared constituent,0.999984,0.0,0.0,916,undeclared constituent
+481,product,ready to eat - cook meals,1,ready to eat - cook meals,2,chicken based products,0.97744,1e-06,1e-06,911,chicken based products
+482,hazard,metal fragment,1,metal fragment,1,metal fragment,0.999999,0.999999,0.0,729,metal fragment
+482,product,pepperoni,1,pepperoni,1,pepperoni,0.999982,0.999982,0.0,734,pepperoni
+483,hazard,clostridium botulinum,1,clostridium botulinum,1,clostridium botulinum,1.0,1.0,0.0,836,clostridium botulinum
+483,product,mushrooms,1,mushrooms,1,mushrooms,0.999998,0.999998,0.0,847,mushrooms
+484,hazard,soybeans and products thereof,1,soybeans and products thereof,2,incorrect labeling,0.984184,1e-06,2e-06,870,incorrect labeling
+484,product,pasta products,2,pasta,2,pasta products,0.993902,0.005728,8e-06,826,pasta products
+485,hazard,milk and products thereof,1,milk and products thereof,2,allergens,0.976382,0.022962,1.5e-05,775,allergens
+485,product,corn,1,corn,2,pop corn,0.95521,1e-06,0.012267,780,pop corn
+486,hazard,eggs and products thereof,1,eggs and products thereof,1,eggs and products thereof,0.999998,0.999998,-0.0,864,eggs and products thereof
+486,product,rice cakes,2,pancakes,2,rice cakes,0.999993,0.0,-0.0,892,rice cakes
+487,hazard,glass fragment,1,glass fragment,1,glass fragment,0.999988,0.999988,0.0,740,glass fragment
+487,product,spreads,5,hazelnuts,3,spread,0.999243,0.0,0.0,719,spread
+488,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.999987,0.999987,0.0,795,milk and products thereof
+488,product,cookies,1,cookies,10,chocolate and chocolate products,0.709713,0.007884,1.6e-05,776,chocolate and chocolate products
+489,hazard,unauthorised substance ethylene oxide,1,unauthorised substance ethylene oxide,1,unauthorised substance ethylene oxide,1.0,1.0,0.0,787,unauthorised substance ethylene oxide
+489,product,herbal infusion,0,soft drinks,1,soft drinks,0.965853,0.965853,9e-06,809,soft drinks
+490,hazard,listeria monocytogenes,1,listeria monocytogenes,2,salmonella,0.998536,0.001455,0.0,799,salmonella
+490,product,ground beef,0,pet feed,1,pet feed,0.834589,0.834589,5e-06,815,pet feed
+491,hazard,almond,1,almond,8,allergens,0.889484,3e-05,1e-06,835,allergens
+491,product,dried fruits with chocolate,1,dried fruits with chocolate,1,dried fruits with chocolate,0.685209,0.685209,2.3e-05,828,dried fruits with chocolate
+492,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,0.0,858,salmonella
+492,product,sesame oil,1,sesame oil,1,sesame oil,0.566714,0.566714,0.000112,818,sesame oil
+493,hazard,bacillus spp.,1,bacillus spp.,1,bacillus spp.,0.90529,0.90529,7e-05,804,bacillus spp.
+493,product,chilli powder,0,curd cheese,9,chilli,0.994079,1e-06,1e-06,765,chilli
+494,hazard,sesame seeds and products thereof,1,sesame seeds and products thereof,1,sesame seeds and products thereof,1.0,1.0,-0.0,838,sesame seeds and products thereof
+494,product,prepared dish,0,chicken based products,2,prepared salads,0.480587,2.9e-05,1.5e-05,829,prepared salads
+495,hazard,hazelnut,2,cashew,2,hazelnut,0.999989,0.0,0.0,960,hazelnut
+495,product,peanuts,1,peanuts,5,"nuts, nut products and seeds",0.88378,3.8e-05,0.000103,930,"nuts, nut products and seeds"
+496,hazard,milk and products thereof,1,milk and products thereof,2,allergens,0.660276,0.195177,1.8e-05,832,allergens
+496,product,tortilla chips,1,tortilla chips,4,potato chips,0.992913,0.005376,0.0,841,potato chips
+497,hazard,fish and products thereof,1,fish and products thereof,9,undeclared constituent,0.999881,0.0,0.0,728,undeclared constituent
+497,product,sauce,1,sauce,4,sauces,0.98513,1e-06,2e-06,704,sauces
+498,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,8,incorrect labeling,0.998786,1e-05,0.0,810,incorrect labeling
+498,product,pickled beetroot,1,pickled beetroot,1,pickled beetroot,0.999996,0.999996,0.0,815,pickled beetroot
+499,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.948539,0.948539,0.000957,786,milk and products thereof
+499,product,sweets,0,milk,9,ice cream,0.42381,0.146465,0.000665,741,ice cream
+500,hazard,sesame seeds and products thereof,1,sesame seeds and products thereof,1,sesame seeds and products thereof,0.999999,0.999999,0.0,916,sesame seeds and products thereof
+500,product,grissini breadsticks,1,grissini breadsticks,3,bread,0.999977,0.0,-0.0,896,bread
+501,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999997,0.999997,0.0,818,listeria monocytogenes
+501,product,cream cheese,3,ice cream,3,cream cheese,0.999759,0.0,0.0,801,cream cheese
+502,hazard,glass fragment,1,glass fragment,6,foreign bodies,0.711869,0.287621,-0.0,879,foreign bodies
+502,product,vegetable preparation,0,bakery products,1,bakery products,0.675457,0.675457,2.7e-05,863,bakery products
+503,hazard,processing,1,processing,1,processing,0.885228,0.885228,0.000601,819,processing
+503,product,beans - canned,0,beans,8,bean sauce,0.376774,0.365182,0.001428,813,bean sauce
+504,hazard,soybeans and products thereof,1,soybeans and products thereof,8,undeclared constituent,0.961722,6e-06,2e-06,858,undeclared constituent
+504,product,noodles,0,soy products,2,bean snack,0.975376,0.023667,4e-06,815,bean snack
+505,hazard,other,0,microbiological contamination,9,processing,0.705727,0.001473,2.9e-05,825,processing
+505,product,cakes,1,cakes,10,confectionery for decoration,0.710409,0.119652,0.000132,818,confectionery for decoration
+506,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.963146,0.963146,1e-06,766,escherichia coli
+506,product,oysters,1,oysters,1,oysters,0.999992,0.999992,4e-06,714,oysters
+507,hazard,milk and products thereof,1,milk and products thereof,10,incorrect labeling,0.938884,0.000617,0.000185,856,incorrect labeling
+507,product,cereal bars,7,high protein bars,1,high protein bars,0.883792,0.883792,0.0,849,high protein bars
+508,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.998481,0.998481,2.3e-05,842,milk and products thereof
+508,product,ice cream cones,0,desserts,4,ice cream,0.999274,0.0,0.0,813,ice cream
+509,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,1.0,1.0,0.0,904,listeria monocytogenes
+509,product,korean kimchi,0,cabbage,2,prepared dish,0.766356,0.226534,8e-06,873,prepared dish
+510,hazard,sulphates/sulphites,2,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,0.808004,0.808004,0.0,894,sulphur dioxide and sulphites
+510,product,dried apricots,1,dried apricots,1,dried apricots,0.999995,0.999995,1e-06,864,dried apricots
+511,hazard,other,2,chemical compound (unauthorised),5,compositional deviation,0.971696,4e-06,-0.0,857,compositional deviation
+511,product,food supplement,2,dietary supplement,1,dietary supplement,0.961102,0.961102,7e-06,845,dietary supplement
+512,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,-0.0,971,salmonella
+512,product,seasoning,1,seasoning,1,seasoning,0.971298,0.971298,6.9e-05,925,seasoning
+513,hazard,peanuts and products thereof,1,peanuts and products thereof,2,insufficient labelling/documentation,0.964353,0.014643,1e-06,813,insufficient labelling/documentation
+513,product,dark chocolates,1,dark chocolates,3,chocolate bars,0.997733,0.0,1e-06,785,chocolate bars
+514,hazard,unauthorised substance ethylene oxide,1,unauthorised substance ethylene oxide,1,unauthorised substance ethylene oxide,0.999999,0.999999,0.0,911,unauthorised substance ethylene oxide
+514,product,ice cream,1,ice cream,1,ice cream,0.996854,0.996854,8e-06,910,ice cream
+515,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.990345,0.990345,1.4e-05,769,milk and products thereof
+515,product,potato chips,1,potato chips,1,potato chips,0.999976,0.999976,-0.0,795,potato chips
+516,hazard,sulphur dioxide,1,sulphur dioxide,1,sulphur dioxide,0.999998,0.999998,0.0,798,sulphur dioxide
+516,product,dried shrimp noodles,1,dried shrimp noodles,6,shrimps,0.619964,0.004447,6.5e-05,770,shrimps
+517,hazard,plastic fragment,1,plastic fragment,2,foreign bodies,1.0,0.0,0.0,923,foreign bodies
+517,product,chicken based products,1,chicken based products,3,chicken dippers,0.957885,0.03832,6e-06,937,chicken dippers
+518,hazard,salmonella,1,salmonella,1,salmonella,0.999998,0.999998,0.0,949,salmonella
+518,product,appetizer,0,wraps,3,meat and meat products (other than poultry),0.876092,0.0,2.1e-05,919,meat and meat products (other than poultry)
+519,hazard,improper conditions,7,processing,4,incorrect use by dates,0.995637,0.0,2.6e-05,822,incorrect use by dates
+519,product,fajita meal,0,chillies,10,baguettes,0.551284,1e-06,1.5e-05,823,baguettes
+520,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,1.0,1.0,0.0,860,listeria monocytogenes
+520,product,organic tofu,1,organic tofu,1,organic tofu,0.999995,0.999995,0.0,857,organic tofu
+521,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,1.0,1.0,0.0,826,listeria monocytogenes
+521,product,thermal processed pork meat,1,thermal processed pork meat,3,pig meat - pork,0.999378,0.0,0.0,792,pig meat - pork
+522,hazard,other,1,other,10,microbiological contamination,0.428982,1.2e-05,0.003896,796,microbiological contamination
+522,product,feed materials,2,pet feed,2,feed materials,0.999978,0.0,0.0,797,feed materials
+523,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999998,0.999998,0.0,865,listeria monocytogenes
+523,product,salmon,1,salmon,7,fish and fish products,0.999986,0.0,0.0,834,fish and fish products
+524,hazard,sulphur dioxide,1,sulphur dioxide,9,undeclared additive,0.999999,0.0,-0.0,851,undeclared additive
+524,product,fruits and vegetables,0,dates,3,dried mushrooms,0.99998,0.0,-0.0,842,dried mushrooms
+525,hazard,bulging packaging,2,packaging defect,1,packaging defect,0.980117,0.980117,0.000454,789,packaging defect
+525,product,dietary supplement,1,dietary supplement,1,dietary supplement,0.831469,0.831469,2.2e-05,816,dietary supplement
+526,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999997,0.999997,0.0,782,listeria monocytogenes
+526,product,cauliflower,1,cauliflower,1,cauliflower,0.999985,0.999985,9e-06,792,cauliflower
+527,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.995677,0.995677,4e-06,694,milk and products thereof
+527,product,ice cream,0,lollipops,10,sugar confectionary,0.411567,0.100859,4.5e-05,662,sugar confectionary
+528,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999995,0.999995,1e-06,841,listeria monocytogenes
+528,product,salads,1,salads,9,mixed vegetables,0.823886,0.000133,7.2e-05,813,mixed vegetables
+529,hazard,hazelnut,1,hazelnut,1,hazelnut,0.999999,0.999999,0.0,782,hazelnut
+529,product,milk chocolates,1,milk chocolates,10,chocolate eggs,0.944393,1.7e-05,2.8e-05,742,chocolate eggs
+530,hazard,mustard and products thereof,1,mustard and products thereof,1,mustard and products thereof,0.997848,0.997848,3e-06,822,mustard and products thereof
+530,product,pickled vegetables,0,flour,2,crackers,0.997419,0.001453,1.2e-05,826,crackers
+531,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,0.0,889,salmonella
+531,product,tahini (sesame paste),1,tahini (sesame paste),1,tahini (sesame paste),0.999923,0.999923,0.000263,845,tahini (sesame paste)
+532,hazard,microbiological contamination,0,salmonella,10,listeria spp,0.988212,1.2e-05,2.5e-05,1102,listeria spp
+532,product,milk and milk products,2,butter,1,butter,0.958461,0.958461,7.9e-05,1098,butter
+533,hazard,milk and products thereof,1,milk and products thereof,8,undeclared constituent,0.938743,9.2e-05,0.0,818,undeclared constituent
+533,product,oats,1,oats,1,oats,0.598019,0.598019,0.010589,822,oats
+534,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,948,salmonella
+534,product,frozen breaded chicken goujons,0,chicken based products,3,chicken meat products,0.755852,0.000107,4.2e-05,874,chicken meat products
+535,hazard,milk and products thereof,1,milk and products thereof,1,milk and products thereof,0.519341,0.519341,2.2e-05,937,milk and products thereof
+535,product,sauerkraut meal,1,sauerkraut meal,2,fish products,0.808234,8e-06,5.9e-05,929,fish products
+536,hazard,misdescription,0,unauthorised operator,1,unauthorised operator,0.956026,0.956026,0.0,920,unauthorised operator
+536,product,butter oil,0,butter,7,milk and milk products,0.517438,1.3e-05,0.000155,913,milk and milk products
+537,hazard,listeria monocytogenes,1,listeria monocytogenes,1,listeria monocytogenes,0.999998,0.999998,0.0,835,listeria monocytogenes
+537,product,fresh mushrooms,1,fresh mushrooms,3,golden enoki mushrooms,0.597104,0.187887,0.000262,840,golden enoki mushrooms
+538,hazard,plastic fragment,1,plastic fragment,1,plastic fragment,0.999999,0.999999,0.0,761,plastic fragment
+538,product,vegetable based products,0,frozen vegetables,1,frozen vegetables,0.999976,0.999976,0.0,746,frozen vegetables
+539,hazard,cronobacter spp,2,salmonella,2,cronobacter spp,0.999997,2e-06,-0.0,821,cronobacter spp
+539,product,infant formula,1,infant formula,3,baby food,0.968183,0.001649,4.5e-05,770,baby food
+540,hazard,too high content of tetrahydrocannabinol (THC),1,too high content of tetrahydrocannabinol (THC),1,too high content of tetrahydrocannabinol (THC),0.999999,0.999999,0.0,890,too high content of tetrahydrocannabinol (THC)
+540,product,cbd oil,1,cbd oil,3,cbd products,0.984657,0.000504,0.000382,867,cbd products
+541,hazard,heavy metals,1,heavy metals,1,heavy metals,0.999113,0.999113,0.0,696,heavy metals
+541,product,dried plums,1,dried plums,1,dried plums,0.999995,0.999995,-0.0,733,dried plums
+542,hazard,other,1,other,3,chemical compound (unauthorised),0.998665,0.0,8e-06,924,chemical compound (unauthorised)
+542,product,tomatoes,1,tomatoes,1,tomatoes,0.999991,0.999991,0.0,917,tomatoes
+543,hazard,peanuts and products thereof,1,peanuts and products thereof,1,peanuts and products thereof,0.89694,0.89694,2.1e-05,797,peanuts and products thereof
+543,product,dark chocolates,2,chocolate and chocolate products,1,chocolate and chocolate products,0.830449,0.830449,3.5e-05,716,chocolate and chocolate products
+544,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,1039,salmonella
+544,product,pet feed,1,pet feed,1,pet feed,0.999985,0.999985,0.0,1029,pet feed
+545,hazard,glass fragment,1,glass fragment,1,glass fragment,1.0,1.0,0.0,804,glass fragment
+545,product,canned mussels,3,mussels,10,dried mushrooms,0.405857,0.197799,0.000228,816,dried mushrooms
+546,hazard,bulging packaging,6,other not classified,2,alcohol content,0.999795,1.7e-05,0.0,873,alcohol content
+546,product,beer,3,lime,2,alcoholic beverages,0.957776,0.0,5e-06,837,alcoholic beverages
+547,hazard,salmonella,1,salmonella,1,salmonella,0.999956,0.999956,1e-06,1132,salmonella
+547,product,bakery products,1,bakery products,10,chicken preparations,0.757284,0.000432,0.000223,1087,chicken preparations
+548,hazard,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,1,sulphur dioxide and sulphites,0.999224,0.999224,1e-06,830,sulphur dioxide and sulphites
+548,product,mango,1,mango,2,dried mushrooms,0.91722,6e-06,4e-06,785,dried mushrooms
+549,hazard,mustard and products thereof,2,soybeans and products thereof,2,mustard and products thereof,0.999998,0.0,0.0,892,mustard and products thereof
+549,product,sausage,1,sausage,1,sausage,0.938003,0.938003,1.5e-05,893,sausage
+550,hazard,fish and products thereof,1,fish and products thereof,5,undeclared constituent,0.837035,0.136642,1e-06,933,undeclared constituent
+550,product,meat and meat products (other than poultry),0,thermal processed pork meat,2,beef products,0.999821,0.0,0.0,897,beef products
+551,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,0.0,843,salmonella
+551,product,chocolate products,1,chocolate products,1,chocolate products,0.975269,0.975269,2e-06,815,chocolate products
+552,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,847,salmonella
+552,product,chocolate products,1,chocolate products,1,chocolate products,0.989877,0.989877,4e-06,803,chocolate products
+553,hazard,salmonella,1,salmonella,1,salmonella,0.999999,0.999999,0.0,855,salmonella
+553,product,poppy,2,blue poppy seeds,1,blue poppy seeds,0.999995,0.999995,0.0,810,blue poppy seeds
+554,hazard,peanuts and products thereof,1,peanuts and products thereof,1,peanuts and products thereof,0.998531,0.998531,1.5e-05,813,peanuts and products thereof
+554,product,desserts,1,desserts,3,ice cream,0.881769,2.4e-05,0.000777,774,ice cream
+555,hazard,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,1,cereals containing gluten and products thereof,0.999985,0.999985,0.0,791,cereals containing gluten and products thereof
+555,product,bulgur,0,beer,9,flour,0.999606,1e-05,1e-06,768,flour
+556,hazard,salmonella,1,salmonella,1,salmonella,1.0,1.0,0.0,878,salmonella
+556,product,peanuts,1,peanuts,10,snack crackers,0.752735,3e-06,9.7e-05,862,snack crackers
+557,hazard,"antibiotics, vet drugs",1,"antibiotics, vet drugs",8,chemical compound (unauthorised),0.963722,0.0,2.4e-05,824,chemical compound (unauthorised)
+557,product,dietary supplement,2,food supplement,2,dietary supplement,0.99816,8.7e-05,5e-06,853,dietary supplement
+558,hazard,escherichia coli,1,escherichia coli,1,escherichia coli,0.999999,0.999999,-0.0,843,escherichia coli
+558,product,protein bar,1,protein bar,1,protein bar,0.999985,0.999985,0.0,832,protein bar
+559,hazard,unauthorised substance ethylene oxide,1,unauthorised substance ethylene oxide,1,unauthorised substance ethylene oxide,0.999997,0.999997,0.0,817,unauthorised substance ethylene oxide
+559,product,ice cream,1,ice cream,1,ice cream,0.999997,0.999997,7e-06,810,ice cream
+560,hazard,cashew,1,cashew,1,cashew,0.999997,0.999997,0.0,972,cashew
+560,product,chilled prepared salad,0,salads,10,rice,0.569371,0.000357,0.000241,941,rice
+561,hazard,milk and products thereof,1,milk and products thereof,2,allergens,0.891349,0.103181,3e-06,789,allergens
+561,product,protein bar,1,protein bar,2,chocolate bars,0.78347,0.005619,0.0,788,chocolate bars
+562,hazard,plastic fragment,1,plastic fragment,1,plastic fragment,0.55447,0.55447,0.0,804,plastic fragment
+562,product,cookies,1,cookies,1,cookies,0.998522,0.998522,5e-06,820,cookies
+563,hazard,peanuts and products thereof,1,peanuts and products thereof,9,nuts,0.494032,0.435981,0.000442,823,nuts
+563,product,biscuits,1,biscuits,1,biscuits,0.968629,0.968629,0.0,809,biscuits
+564,hazard,almond,1,almond,7,walnut,0.947035,0.026039,4e-06,834,walnut
+564,product,chocolate confectionery,0,dried fruits with chocolate,10,chocolate,0.971139,0.0,1.4e-05,798,chocolate

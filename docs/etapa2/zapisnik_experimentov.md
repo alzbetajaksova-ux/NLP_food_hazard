@@ -66,7 +66,7 @@ Dlhší tréning a vyšší lr hlavy vyriešili problém z E1/E2: transformer je
 
 E3 nad E12kens: hierarchia zhorší ST1 (0,802 → 0,788, lebo hazard-category z transformera je lepšia než odvodená z hazardu) a produkt z titulku zhorší produkt (0,334 → 0,321). Kandidáti E3 majú správny produkt v top-10 v 77,0 % (E12kens 76,1 %). Záver: pri silnom modeli pomocné pravidlá nepomáhajú; E3 sa nepoužije.
 
-## E4: výber LLM z kandidátov E12kens (osoba 2, datalab), 20. 11. 2026
+## E4: výber LLM z kandidátov E12kens (datalab), 20. 11. 2026
 
 Qwen2.5-3B-Instruct vo float16 na Quadro RTX 4000 (8 GB, datalab; torch 2.15.0+cu132, transformers 5.23.0), model v GPU 5,85 GB. Pre hazard a product dostane LLM titulok, prvých 1 500 znakov textu a 10 kandidátov E12kens označených A až J. Nič sa negeneruje: berie sa pravdepodobnosť prvého tokenu odpovede pre písmená A až J (odpoveď je vždy platná, beh je deterministický). hazard-category a product-category ostávajú z E12kens. Celý valid (1 130 otázok) asi 0,2 s na otázku, spolu 5 minút vrátane načítania modelu. Odpovede sú v `results/etapa2/llm_cache/`, detail po správach v `results/etapa2/llm/`.
 
@@ -108,3 +108,21 @@ Zistenia:
 - S malou váhou LLM pomáha: mení odpoveď len tam, kde si klasifikátor nie je istý. Pri produkte sa presnosť top-1 zvýši z 54,3 % na 57,9 %.
 - Pri hazarde je zisk neistý: macro-F1 hazardu stúpne na 0,683, hoci správnych odpovedí pribudne len o 1 (7 zlých → správne, 6 opačne); zmena je v zriedkavých triedach a v CV sa nepotvrdila.
 - **Rozhodnutie:** hlavný variant E4 je `E4_Qwen253BInstruct_E12kens_f030_prod` (LLM len pri produkte, w = 0,3): zisk je stabilný pre w od 0,1 do 0,5 a v CV kladný v 98 % delení. Variant `f010` (oba štítky) ostáva ako ablácia.
+
+### E4 krok B: prompt s počtami a príkladmi z train, 20. 11. 2026
+
+Hypotéza z analýzy chýb v1: LLM nepozná konvencie datasetu (v train má „undeclared constituent“ 7 správ, „allergens“ 13, „milk and products thereof“ 588). Prompt **v2** pridáva ku každej možnosti počet trénovacích správ s touto triedou a jeden ich titulok (strednej dĺžky, prednostne obsahujúci názov triedy; `priklady_tried` v `e4_llm.py`), **v3** navyše informáciu, že možnosti zoradil klasifikátor a A je jeho najlepší tip. Prompt je asi o 300 tokenov dlhší; beh celého valid asi 4 minúty bez načítania modelu.
+
+| Prompt (valid) | presnosť LLM top-1 hazard / product | ST2 samotný LLM | ST2 zisk spojenia (CV), len product | ST2 zisk spojenia (CV), oba štítky |
+| --- | --- | --- | --- | --- |
+| v1 | 64,1 % / 42,7 % | 0,368 | +0,018 [+0,001; +0,034], 98 % | +0,018 [−0,007; +0,041], 95 % |
+| v2 (+ počty a príklady) | 54,5 % / 31,0 % | 0,292 | +0,016 [+0,003; +0,027], 98 % | +0,020 [−0,013; +0,046], 92 % |
+| v3 (+ poradie) | 61,9 % / 35,6 % | 0,316 | +0,009 [−0,008; +0,021], 93 % | +0,006 [−0,015; +0,027], 75 % |
+
+(E12kens: presnosť top-1 87,6 % / 54,3 %, ST2 0,495.)
+
+Zistenia:
+- Počty a príklady samotný výber LLM **zhoršili**. Model ich nevyužíva: pri zmene odpovede volí triedu početnejšiu v train než kandidát A len v 13 % (hazard) a 35 % (product) prípadov, všeobecné triedy volí ďalej („undeclared constituent“ 59-krát pri v2 oproti 50 pri v1) a pribudli nové („foreign bodies“ 29). Dlhší prompt zrejme 3B model skôr mätie.
+- Informácia o poradí (v3) samotný LLM o niečo zlepší oproti v2, no v spojení s klasifikátorom pomáha menej než v1: model sa viac drží A, takže pridáva menej novej informácie.
+- Hypotéza o konvenciách datasetu sa potvrdila v analýze chýb, ale model veľkosti 3B ju z metainformácie v prompte nedokáže využiť.
+- **Rozhodnutie:** hlavný variant E4 ostáva `E4_Qwen253BInstruct_E12kens_f030_prod` (prompt v1, LLM len pri produkte, w = 0,3). v2 a v3 sú ablácie promptu. Ďalšie varianty promptu na valid neskúšame, aby výber nebol príliš optimistický.
