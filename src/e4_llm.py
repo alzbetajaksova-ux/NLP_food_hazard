@@ -196,7 +196,7 @@ class Cache:
 class HFVyberac:
     """Lokálny model (transformers): pravdepodobnosti písmen A, B, C … ako prvého tokenu odpovede."""
 
-    def __init__(self, cesta):
+    def __init__(self, cesta, styri_bity=False):
         import torch
         from transformers import AutoModelForCausalLM, AutoTokenizer
         if not torch.cuda.is_available():
@@ -205,8 +205,17 @@ class HFVyberac:
         print(f"načítavam model z {cesta} …", flush=True)
         t0 = time.time()
         self.tok = AutoTokenizer.from_pretrained(cesta)
-        # Quadro RTX 4000 (Turing) nemá bf16, preto float16
-        self.model = AutoModelForCausalLM.from_pretrained(cesta, dtype=torch.float16).to("cuda").eval()
+        # Quadro RTX 4000 (Turing) nemá bf16, preto float16 (aj ako výpočtový typ pri 4-bit)
+        if styri_bity:
+            # 4-bit NF4 (bitsandbytes): už skvantovaný checkpoint sa načíta priamo, plný sa skvantuje pri načítaní;
+            # výpočtový typ sa nastaví na float16 aj vtedy, keď checkpoint uvádza bfloat16
+            from transformers import BitsAndBytesConfig
+            kvant = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_use_double_quant=True,
+                                       bnb_4bit_compute_dtype=torch.float16)
+            self.model = AutoModelForCausalLM.from_pretrained(cesta, dtype=torch.float16, quantization_config=kvant,
+                                                              device_map={"": 0}).eval()
+        else:
+            self.model = AutoModelForCausalLM.from_pretrained(cesta, dtype=torch.float16).to("cuda").eval()
         self.id_pismen = []
         for p in PISMENA:
             ids = self.tok.encode(p, add_special_tokens=False)
@@ -214,6 +223,7 @@ class HFVyberac:
             self.id_pismen.append(ids[0])
         self.info = {"gpu": torch.cuda.get_device_name(0), "torch": torch.__version__,
                      "transformers": __import__("transformers").__version__,
+                     "kvantizacia": "4-bit NF4 (bitsandbytes), výpočty float16" if styri_bity else "žiadna, float16",
                      "pamat_GPU_GB": round(torch.cuda.memory_allocated() / 1024**3, 2)}
         print(f"model načítaný za {time.time() - t0:.0f} s, {self.info}", flush=True)
 
@@ -276,6 +286,8 @@ def main():
     ap.add_argument("--model", default="skuska", help="názov modelu (pri hf názov z Hugging Face, napr. "
                                                        "Qwen/Qwen2.5-3B-Instruct); je aj v kľúči cache")
     ap.add_argument("--model-cesta", help="backend hf: priečinok so stiahnutým modelom")
+    ap.add_argument("--4bit", dest="styri_bity", action="store_true",
+                    help="backend hf: model v 4 bitoch (bitsandbytes), napr. 7B na 8 GB GPU")
     ap.add_argument("--k", type=int, default=10, help="koľko kandidátov dostane LLM")
     ap.add_argument("--max-znakov", type=int, default=1500, help="koľko znakov textu správy ide do promptu")
     ap.add_argument("--prah", type=float, default=0.0,
@@ -342,7 +354,7 @@ def main():
                     if vyberac is None:
                         if not a.model_cesta:
                             sys.exit("pri backende hf treba --model-cesta (priečinok so stiahnutým modelom)")
-                        vyberac = HFVyberac(a.model_cesta)
+                        vyberac = HFVyberac(a.model_cesta, a.styri_bity)
                     pp, mimo, tokeny = vyberac.pravdepodobnosti(text, len(kandidati))
                     zaznam = {"odpoved": PISMENA[max(range(len(pp)), key=pp.__getitem__)],
                               "p": pp, "p_mimo_pismen": mimo, "tokeny": tokeny}
@@ -424,7 +436,8 @@ def main():
            "statistika": statistika, "trvanie_s": round(trvanie, 1),
            "trvanie_s_na_volanie": round(trvanie / max(1, sum(s["volania"] for s in statistika.values())), 3),
            "python": platform.python_version(), "cas": time.strftime("%Y-%m-%d %H:%M:%S"),
-           **({"prostredie": vyberac.info} if vyberac else {}),
+           **({"prostredie": {**vyberac.info, "max_pamat_GPU_GB":
+                              round(vyberac.torch.cuda.max_memory_allocated() / 1024**3, 2)}} if vyberac else {}),
            "skore": {k: round(v, 4) for k, v in s_llm.items()}}
     os.makedirs(os.path.join(VYSLEDKY, "logy"), exist_ok=True)
     with open(os.path.join(VYSLEDKY, "logy", f"{system}_{a.split}.json"), "w", encoding="utf-8") as f:
