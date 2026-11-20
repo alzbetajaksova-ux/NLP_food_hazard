@@ -16,7 +16,7 @@ Použili sme **Qwen2.5-3B-Instruct** (Qwen Team, 2024) s otvorenými váhami, sp
 - nevyžaduje platené API, dáta neopúšťajú školský server a výsledok nezávisí od zmien vzdialenej služby;
 - pri lokálnom modeli máme prístup k pravdepodobnostiam odpovedí, nielen k vygenerovanému textu, čo využíva spojenie s klasifikátorom (nižšie).
 
-Ako abláciu veľkosti modelu sme skúsili **Qwen2.5-7B-Instruct** v 4 bitoch (checkpoint `unsloth/Qwen2.5-7B-Instruct-bnb-4bit`, kvantizácia NF4 z bitsandbytes podľa Dettmers et al., 2023, výpočty v bfloat16). Licencie oboch modelov: [overiť na kartách modelov na Hugging Face].
+Ako abláciu veľkosti modelu sme skúsili **Qwen2.5-7B-Instruct** v 4 bitoch (checkpoint `unsloth/Qwen2.5-7B-Instruct-bnb-4bit`, kvantizácia NF4 z bitsandbytes podľa Dettmers et al., 2023, výpočty v bfloat16). Model 3B je pod licenciou Qwen Research License Agreement (Alibaba Cloud, 19. 9. 2024), ktorá povoľuje použitie len na nekomerčné, výskumné alebo hodnotiace účely; školský projekt do nich patrí. Váhy modelu v repozitári nešírime, ukladáme len jeho odpovede. Model 7B je pod licenciou Apache 2.0.
 
 ### Ako sa model pýta
 
