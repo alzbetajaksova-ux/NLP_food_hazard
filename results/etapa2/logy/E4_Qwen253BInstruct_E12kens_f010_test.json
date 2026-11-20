@@ -1,0 +1,43 @@
+{
+  "system": "E4_Qwen253BInstruct_E12kens_f010",
+  "split": "test",
+  "backend": "hf",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "k": 10,
+  "max_znakov": 1500,
+  "prompt": "v1",
+  "prah": 0.0,
+  "fuzia": 0.1,
+  "stitky_llm": [
+    "hazard",
+    "product"
+  ],
+  "hierarchia": false,
+  "kandidati": "E12kens",
+  "statistika": {
+    "hazard": {
+      "volania": 0,
+      "z_cache": 997,
+      "nezhoda": 0,
+      "zmenene": 14
+    },
+    "product": {
+      "volania": 0,
+      "z_cache": 997,
+      "nezhoda": 0,
+      "zmenene": 73
+    }
+  },
+  "trvanie_s": 0.9,
+  "trvanie_s_na_volanie": 0.917,
+  "python": "3.12.10",
+  "cas": "2026-11-20 15:05:08",
+  "skore": {
+    "ST1": 0.7515,
+    "ST2": 0.4977,
+    "hazard-category": 0.7882,
+    "product-category": 0.716,
+    "hazard": 0.6447,
+    "product": 0.3497
+  }
+}

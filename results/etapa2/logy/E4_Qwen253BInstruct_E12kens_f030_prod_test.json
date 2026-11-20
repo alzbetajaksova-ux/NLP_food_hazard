@@ -1,0 +1,50 @@
+{
+  "system": "E4_Qwen253BInstruct_E12kens_f030_prod",
+  "split": "test",
+  "backend": "hf",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "k": 10,
+  "max_znakov": 1500,
+  "prompt": "v1",
+  "prah": 0.0,
+  "fuzia": 0.3,
+  "stitky_llm": [
+    "product"
+  ],
+  "hierarchia": false,
+  "kandidati": "E12kens",
+  "statistika": {
+    "hazard": {
+      "volania": 997,
+      "z_cache": 0,
+      "nezhoda": 0,
+      "zmenene": 0
+    },
+    "product": {
+      "volania": 997,
+      "z_cache": 0,
+      "nezhoda": 0,
+      "zmenene": 193
+    }
+  },
+  "trvanie_s": 289.9,
+  "trvanie_s_na_volanie": 0.145,
+  "python": "3.12.10",
+  "cas": "2026-11-20 14:58:13",
+  "prostredie": {
+    "gpu": "Quadro RTX 4000",
+    "torch": "2.15.0+cu132",
+    "transformers": "5.23.0",
+    "kvantizacia": "žiadna, float16",
+    "pamat_GPU_GB": 5.85,
+    "max_pamat_GPU_GB": 5.98
+  },
+  "skore": {
+    "ST1": 0.7515,
+    "ST2": 0.5121,
+    "hazard-category": 0.7882,
+    "product-category": 0.716,
+    "hazard": 0.6594,
+    "product": 0.363
+  }
+}
