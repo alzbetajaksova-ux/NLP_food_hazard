@@ -1,0 +1,51 @@
+{
+  "system": "E4_Qwen257BInstructbnb4_E12kens_v2",
+  "split": "valid",
+  "backend": "hf",
+  "model": "unsloth/Qwen2.5-7B-Instruct-bnb-4bit",
+  "k": 10,
+  "max_znakov": 1500,
+  "prompt": "v2",
+  "prah": 0.0,
+  "fuzia": null,
+  "stitky_llm": [
+    "hazard",
+    "product"
+  ],
+  "hierarchia": false,
+  "kandidati": "E12kens",
+  "statistika": {
+    "hazard": {
+      "volania": 565,
+      "z_cache": 0,
+      "nezhoda": 0,
+      "zmenene": 217
+    },
+    "product": {
+      "volania": 565,
+      "z_cache": 0,
+      "nezhoda": 0,
+      "zmenene": 295
+    }
+  },
+  "trvanie_s": 3536.6,
+  "trvanie_s_na_volanie": 3.13,
+  "python": "3.12.10",
+  "cas": "2026-11-20 13:45:38",
+  "prostredie": {
+    "gpu": "Quadro RTX 4000",
+    "torch": "2.15.0+cu132",
+    "transformers": "5.23.0",
+    "kvantizacia": "4-bit NF4 (bitsandbytes), výpočty bfloat16, double quant True",
+    "pamat_GPU_GB": 5.17,
+    "max_pamat_GPU_GB": 5.67
+  },
+  "skore": {
+    "ST1": 0.8021,
+    "ST2": 0.3764,
+    "hazard-category": 0.8533,
+    "product-category": 0.7546,
+    "hazard": 0.4633,
+    "product": 0.263
+  }
+}

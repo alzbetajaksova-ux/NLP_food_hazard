@@ -126,3 +126,33 @@ Zistenia:
 - Informácia o poradí (v3) samotný LLM o niečo zlepší oproti v2, no v spojení s klasifikátorom pomáha menej než v1: model sa viac drží A, takže pridáva menej novej informácie.
 - Hypotéza o konvenciách datasetu sa potvrdila v analýze chýb, ale model veľkosti 3B ju z metainformácie v prompte nedokáže využiť.
 - **Rozhodnutie:** hlavný variant E4 ostáva `E4_Qwen253BInstruct_E12kens_f030_prod` (prompt v1, LLM len pri produkte, w = 0,3). v2 a v3 sú ablácie promptu. Ďalšie varianty promptu na valid neskúšame, aby výber nebol príliš optimistický.
+
+### E4 krok C: väčší model Qwen2.5-7B-Instruct v 4 bitoch, 20. 11. 2026
+
+Ablácia veľkosti modelu: `unsloth/Qwen2.5-7B-Instruct-bnb-4bit` (bitsandbytes NF4, double quant), notebook `notebooks/etapa2_e4c_7b_datalab.ipynb`. Checkpoint má vlastný `quantization_config` s výpočtami v **bfloat16**, ktorý má prednosť pred nastavením v skripte (varovanie transformers pri načítaní; overené výpisom `config.json` na datalabe). Turing bfloat16 nemá natívne, preto je beh pomalší. V logoch behov v1 a v2 bol pôvodne nesprávny text „výpočty float16“ a ručne sa opravil podľa `config.json`; od commitu 918b5b7 skript zapisuje skutočné nastavenie. Rovnaké kandidáty, prompty a nastavenie ako pri 3B, len valid.
+
+| Model, prompt (valid) | čas na otázku | GPU pamäť | presnosť LLM top-1 hazard / product | ST2 samotný LLM | ST2 zisk spojenia (CV), len product | ST2 zisk spojenia (CV), oba štítky |
+| --- | --- | --- | --- | --- | --- | --- |
+| 3B fp16, v1 | 0,31 s | 5,9 GB (po načítaní) | 64,1 % / 42,7 % | 0,368 | +0,018 [+0,001; +0,034], 98 % | +0,018 [−0,007; +0,041], 95 % |
+| 7B 4-bit, v1 | 1,92 s | 5,2 GB (max 5,5) | 61,4 % / 48,1 % | 0,425 | +0,023 [+0,004; +0,037], 99 % | +0,021 [−0,006; +0,043], 92 % |
+| 7B 4-bit, v2 | 3,13 s | 5,2 GB (max 5,7) | 60,5 % / 43,0 % | 0,376 | +0,019 [+0,002; +0,031], 99 % | +0,024 [−0,006; +0,051], 96 % |
+
+Spojenia s váhou vybranou na celom valid (optimistické), bootstrap 1000 oproti E12kens (ST2 0,4949):
+
+| Systém | w | ST2 | rozdiel [95 % CI] |
+| --- | --- | --- | --- |
+| `E4_Qwen253BInstruct_E12kens_f030_prod` (hlavný) | 0,3 | 0,5171 | +0,022 [+0,010; +0,036] |
+| `E4_Qwen253BInstruct_E12kens_f010` | 0,1 | 0,5247 | +0,030 [+0,008; +0,045] |
+| `E4_Qwen257BInstructbnb4_E12kens_f020_prod` | 0,2 | 0,5224 | +0,027 [+0,015; +0,038] |
+| `E4_Qwen257BInstructbnb4_E12kens_f010` | 0,1 | 0,5273 | +0,032 [+0,010; +0,047] |
+| `E4_Qwen257BInstructbnb4_E12kens_v2_f010` | 0,1 | 0,5323 | +0,037 [+0,013; +0,054] |
+
+Priamo 7B oproti hlavnému 3B (`..._f030_prod`): `7B f020_prod` +0,005 [−0,007; +0,014], `7B f010` +0,010 [−0,012; +0,026]. Ani jeden rozdiel nie je preukázateľný.
+
+Zistenia:
+- Samotný 7B je menej zlý ako 3B (ST2 0,425 oproti 0,368), ale stále o 0,070 [−0,116; −0,041] horší než E12kens. Zlepšenie je pri produkte (presnosť top-1 48,1 % oproti 42,7 %), pri hazarde je 7B o niečo horší.
+- Chyba so všeobecnými triedami hazardu ostáva, len sa presunula: zo 164 zmien správne → zlé je 92 na „allergens“ a 32 na „undeclared constituent“ (3B: 36 a 50). Pri produkte je zmien správne → zlé menej (84 oproti 113).
+- Kalibrácia sa nezlepšila: pri p > 0,99 je 7B správny v 70 % (hazard) a 56 % (product), 3B v 71 % a 54 %.
+- Prompt v2 ani 7B model nevyužíva: samotný výber je horší než pri v1. Výsledok spojenia v2 pri oboch štítkoch je najvyšší, ale rozdiel oproti v1 je v rámci šumu CV.
+- 7B je asi 6-krát pomalší (1,9 s na otázku pri v1, celý valid 35 minút). Zisk v spojení je o 0,005 vyšší a nie je preukázateľný.
+- **Rozhodnutie:** hlavný variant E4 ostáva `E4_Qwen253BInstruct_E12kens_f030_prod`. 7B je ablácia veľkosti modelu: väčší model sám vyberá lepšie, ale v spojení s klasifikátorom prínos nezvýši preukázateľne.
