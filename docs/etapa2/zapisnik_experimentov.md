@@ -65,3 +65,23 @@ Dlhší tréning a vyšší lr hlavy vyriešili problém z E1/E2: transformer je
 **E12kens** (hazard-category z E2ens, product-category z E0_svmvyber, hazard a product z E1bens): na valid ST1 0,802 a ST2 0,495. Oproti E0: ST1 +0,066 [+0,034; +0,104], ST2 +0,079 [+0,047; +0,112]; oproti E2kens: ST2 +0,048 [+0,020; +0,083], lepší v 100 % výberov. **Zatiaľ najlepší systém.** Pravidlá kombinácie boli určené na valid, preto je výsledok mierne optimistický; potvrdí ho test.
 
 E3 nad E12kens: hierarchia zhorší ST1 (0,802 → 0,788, lebo hazard-category z transformera je lepšia než odvodená z hazardu) a produkt z titulku zhorší produkt (0,334 → 0,321). Kandidáti E3 majú správny produkt v top-10 v 77,0 % (E12kens 76,1 %). Záver: pri silnom modeli pomocné pravidlá nepomáhajú; E3 sa nepoužije.
+
+## E4: výber LLM z kandidátov E12kens (osoba 2, datalab), 20. 11. 2026
+
+Qwen2.5-3B-Instruct vo float16 na Quadro RTX 4000 (8 GB, datalab; torch 2.15.0+cu132, transformers 5.23.0), model v GPU 5,85 GB. Pre hazard a product dostane LLM titulok, prvých 1 500 znakov textu a 10 kandidátov E12kens označených A až J. Nič sa negeneruje: berie sa pravdepodobnosť prvého tokenu odpovede pre písmená A až J (odpoveď je vždy platná, beh je deterministický). hazard-category a product-category ostávajú z E12kens. Celý valid (1 130 otázok) asi 0,2 s na otázku, spolu 5 minút vrátane načítania modelu. Odpovede sú v `results/etapa2/llm_cache/`, detail po správach v `results/etapa2/llm/`.
+
+| Systém (valid) | LLM zmenil hazard / product | hazard | product | ST2 | ST2 − E12kens [95 % CI] |
+| --- | --- | --- | --- | --- | --- |
+| E12kens | – | 0,655 | 0,334 | 0,495 | – |
+| E4 (LLM vždy) | 191 / 302 | 0,459 | 0,269 | 0,368 | −0,127 [−0,167; −0,097] |
+| E4, prah istoty 0,7 | 172 / 260 | 0,480 | 0,290 | 0,385 | −0,110 [−0,151; −0,082] |
+| E4, prah istoty 0,9 | 156 / 225 | 0,498 | 0,307 | 0,407 | −0,088 [−0,128; −0,059] |
+
+Samotný výber LLM zhoršuje ST2 vo všetkých variantoch (presnosť top-1: hazard 87,6 % → 64,1 %, product 54,3 % → 42,7 %). ST1 sa nemení (0,802).
+
+Analýza chýb (detail po správach):
+- **Hazard:** 144 zmien zo správnej odpovede na zlú, 11 opačne. Takmer všetky zlé zmeny vyberú všeobecnú triedu namiesto konkrétnej, ktorú používa dataset: konkrétny alergén (milk, gluten, soybeans, eggs … „and products thereof“) → „undeclared constituent“ (46) alebo „allergens“ (31); listeria monocytogenes → microbiological contamination. LLM nepozná konvenciu označovania datasetu.
+- **Product:** 113 zlých zmien, 47 dobrých; chyby sú takmer synonymá a rozdiely v úrovni podrobnosti (soup / soups, biscuits / cookies, corn / pop corn, chicken based products / chicken preparations).
+- **Kalibrácia:** pri istote LLM nad 0,99 je jeho výber správny len v 71 % (hazard) a 54 % (product), preto prah istoty nepomáha.
+
+Predbežne (váha vybraná na tých istých dátach, potrebné overiť krížovou validáciou): spojenie log p_klasifikátora + w · log p_LLM zlepší ST2 na 0,525 (w = 0,1, oba štítky) a 0,517 (w = 0,3, len product); pri produkte je zisk stabilný pre w od 0,1 do 0,5, pri hazarde len pri w = 0,1.

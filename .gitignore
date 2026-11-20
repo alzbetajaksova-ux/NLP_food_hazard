@@ -11,3 +11,6 @@ results/etapa2/*/E1ens_*
 results/etapa2/*/E1bens_*
 results/etapa2/*/E2k_s*
 results/etapa2/*/E3_*
+
+# 2. etapa, E4: zip s výsledkami z datalabu (obsah je rozbalený v results/etapa2/)
+/vysledky_e4*.zip
